@@ -1,0 +1,313 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (keposhkas) e eu irei fazê-lo por um preço razoável! :D */
+
+@font-face {
+  font-family: 'flaticon';
+  src: url('https://files.jcink.net/uploads/tarotrp/fonts/Flaticon.eot');
+  src: url('https://files.jcink.net/uploads/tarotrp/fonts/Flaticon.eot') format('embedded-opentype'), url('https://files.jcink.net/uploads/tarotrp/fonts/Flaticon.ttf') format('truetype'), url('https://files.jcink.net/uploads/tarotrp/fonts/Flaticon.woff') format('woff'), url('https://files.jcink.net/uploads/tarotrp/fonts/Flaticon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+  
+:root {
+  --gbA-mbg: #101010;
+  --gbA-c1: #244028;
+  --gbA-c2: #7B6E3D;
+  --gbA-c3: #b99e59;
+  --gbA-c4: #538353;
+  --gbA-l1: #313131;
+  --gbA-l2: #d1d1d1;
+}
+
+.arcaneWrapped {
+  margin: 10px auto;
+  margin-top: -100px;
+  width: calc(100% - 200px);
+  min-width: 1050px;
+  max-width: 1550px;
+  height: 95vh;
+  outline: 1px solid #244028;
+  display: flex;
+}
+
+.arcaneSidebar {
+    inset: 0;
+    z-index: 1;
+    width: 24%;
+    border-right: 1px solid #313131;
+    background: #101010;
+    align-self: stretch;
+}
+  
+.arcaneSidebar .sticky {
+  position: sticky;
+  top: 10px;
+}
+
+.arcaneSidebar titulo {
+    background: #0707079e;
+    width: auto;
+    border-bottom: 1px solid #313131;
+    padding: 10px;
+    font: 900 26px / 100% 'Arsenica';
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 1px 1px 1px black;
+    color: #36613c;
+    padding-left: 20px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px !important;
+}
+  
+.arcaneSidebar titulo::before {
+  content: "\f117";
+  font-family: Flaticon;
+  font-size: 60px;
+  position: absolute;
+  opacity: .18;
+  font-weight: 100;
+  color: #6fbd79;
+  transform: rotate(10deg);
+  top: 20px;
+  right: 0;
+}
+  
+.arcaneSidebar ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+}
+  
+.arcaneSidebar li {
+  counter-increment: rt;
+}
+  
+.arcaneSidebar li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+  
+.arcaneSidebar a {
+	color: #d1d1d1;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	font: 700 11px/120% 'Montserrat';
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	position: relative;
+	margin: 0 5px;
+}
+        
+.arcaneSidebar a:hover {
+	color: #baa56c;
+	transition: all 0.3s ease;
+	transform: translateY(-3px);
+}
+
+.arcaneSidebar a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #b99e59;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s;
+}
+
+.arcaneSidebar a:hover::before {
+  width: 100%;
+}
+
+a.menu.active {
+    color: #538353;
+	position: relative !important;
+}
+
+a.menu.active:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #538353;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s;
+}
+  
+.arcaneSidebar h1 {
+	font: 700 15px / 100% 'Montserrat';
+	text-transform: uppercase;
+	margin: 0px;
+	margin-bottom: -10px;
+	margin-top: 10px;
+	color: #c9c9d1;
+	border-bottom: 1px solid #313131;
+	border-top: 1px solid #313131;
+	position: relative;
+	letter-spacing: 0.5px;
+	background: #030806;
+	display: block;
+	text-align: left;
+	padding: 10px;
+	padding-left: 20px;
+}
+
+.arcaneGuidebookBase {
+  width: 85%;
+  position: relative;
+  background-blend-mode: multiply;
+  background-color: rgb(7 7 7 / 80%);
+  padding: 0px;
+  font-size: 13px;
+  line-height: 120%;
+  text-align: justify;
+}
+  
+.arcaneGuidebookBase:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: -1;
+  height: 100%;
+  background-image: url(https://i.imgur.com/UNjoe5j.png);
+}
+  
+.arcaneGuidebookBase .container {
+  position: relative;
+  height: 100%;
+}
+  
+.arcaneGuidebookBase section {
+  transition: 600ms;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.arcaneGuidebookBase .show {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.arcaneGuidebookBase .hide {
+	visibility: hidden;
+	opacity: 0;
+}
+  
+.arcaneGuidebookBase .title {
+    width: 100%;
+    background: #0000008f;
+    padding: 10.5px;
+    font: 700 25px/100% 'Arsenica';
+    text-transform: uppercase;
+    border-bottom: 1px solid #313131;
+    display: flex;
+    padding-left: 20px;
+  align-items: center;
+}
+
+.arcaneGuidebookBase .subtitle {
+    font: 700 13px/100% 'Montserrat';
+    margin-left: 10px;
+    opacity: .8;
+}
+ 
+.arcaneGuidebookBase .info {
+  font-family: Poppins;
+  font-size: 13px;
+  color: #d1d1d1;
+  padding: 20px;
+  font-style: normal;
+  text-align: justify;
+}
+  
+.arcaneGuidebookBase img {
+    width: 81.5px;
+    height: 81.5px;
+    border: 1px solid #244028;
+    padding: 4px;
+    position: relative;
+    top: 2px;
+    margin-right: 15px;
+    z-index: 4;
+}
+  
+.arcaneGuidebookBase .box {
+    border: 1px solid #313131;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    line-height: 165%;
+}
+  
+.arcaneGuidebookBase .box .information {
+    border-bottom: 2px solid #B89E59;
+    font: 700 13px 'Montserrat';
+    text-transform: uppercase;
+}
+  
+.arcaneGuidebookBase .box a {
+  border-bottom: 2px solid #538353;
+  font: 700 13px 'Montserrat';
+  text-transform: uppercase;
+  color: #538353;
+  text-decoration: none;
+}
+
+.arcaneGuidebookBase .box .fec {
+  background: #a33939;
+  padding: 1px 4px 4px 4px;
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.arcaneGuidebookBase .box .abe {
+  background: #518542;
+  padding: 1px 4px 4px 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+  
+.arcaneGuidebookBase .bs {
+  padding: 25px;
+  position: relative;
+}
+  
+.arcaneGuidebookBase .bs {
+  padding: 25px;
+  position: relative;
+}
+  
+.arcaneGuidebookBase .title2 {
+font: 800 26px / 100% 'Montserrat';
+    color: #558555;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #313131;
+}
+
+.arcaneGuidebookBase .title3 {
+font: 700 16px / 100% 'Montserrat';
+    color: #b5a05ee3;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+  
+.arcaneGuidebookBase p {
+  font-family: Poppins;
+    font-size: 13px;
+    color: #d1d1d1;
+    font-style: normal;
+    text-align: justify;
+  }
