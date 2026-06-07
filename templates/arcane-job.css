@@ -1,0 +1,211 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aqira');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {font-family: 'obrige'; src:url(https://dl.dropbox.com/s/qwfni6oii9x2a2l/la%20obrige.otf?dl=0);}
+@charset "UTF-8";
+@font-face {font-family: "honeybee";src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot");src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot?#iefix") format("embedded-opentype"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.woff") format("woff"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.ttf") format("truetype"),url("//solrainha.github.io/honeybee/honeybee.svg#honeybee") format("svg");font-weight: normal;font-style: normal;}
+[data-icon]:before {font-family: "honeybee" !important;content: attr(data-icon);font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"]:before,[class*=" th-"]:before {font-family: "honeybee" !important;font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"],[class*=" th-"]{display:inline-grid;}
+
+#arcane-job {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  --width: 630px;
+  --bg-dark: #0B0B0B;
+  --bg-light: #424242;
+  --t-font: 'Aqira';
+  --m-font: 'Lunasima';
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  outline: 1px solid var(--bg-light);
+  outline-offset: -3px;
+  position: relative;
+  padding: 10px;
+  background: var(--bg-dark);
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  outline: 1px solid var(--bg-light);
+  outline-offset: -3px;
+  position: relative;
+  padding: 5px;
+  background: var(--bg-dark);
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .header {
+  padding: 45px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #292929;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ppt) center / cover;
+    background-blend-mode: multiply;
+    filter: brightness(.5) saturate(.8)
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .header .title {
+  position: relative;
+  color: var(--ppt-2);
+  font: 500 40px var(--t-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.9);
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .header .subtitle {
+  position: relative;
+  color: var(--ppt-2);
+  font: 500 12px var(--m-font);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.8);
+  margin-top: -5px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .txt {
+  text-align: justify;
+  color: #ABABAB;
+  font: 500 13px var(--m-font);
+  line-height: 132%;
+  padding: 20px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .line {
+  margin: 0 auto;
+  height:2px;
+  background-color: var(--ppt-2);
+  width:80%;
+  display:block;
+  position: relative;
+  top: -10px;
+  transition: 500ms;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .job {
+  text-align: left;
+  font: 700 17px 'Obrige';
+  text-transform: uppercase;
+  color: var(--ppt-2);
+  padding-left: 10px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .class {
+  text-align: left;
+  font: 700 13px var(--m-font);
+  text-transform: uppercase;
+  color: var(--ppt-2);
+  padding-left: 10px;
+  margin-top: -7px;
+  opacity: .8;
+  margin-bottom: 5px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .cls {
+  text-transform: normal;
+  color: #ABABAB;
+  padding-left: 10px;
+  padding-right: 20px;
+  text-align: justify;
+  color: #ABABAB;
+  font: 500 13px var(--m-font);
+  line-height: 132%;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .cls b {
+  font: 700 13px var(--m-font);
+  text-transform: uppercase;
+  color: var(--ppt-2);
+  opacity: .8;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .box {
+  background: #141414;
+  padding: 10px;
+  border: 1px solid #1a1918;
+  outline: 1px solid #242322;
+  outline-offset: -3px;
+  margin-bottom: 5px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .box .oc {
+  background: var(--bg-dark);
+  border: 1px solid #1a1918;
+  outline: 1px solid #242322;
+  outline-offset: -3px;
+  text-align: left;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: -10px;
+  position: relative;
+  left: -4px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .toc {
+  background: #121212;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  outline: 1px solid #292626;
+  outline-offset: -3px;
+  opacity: .8;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .set {
+  font: 500 12px var(--m-font);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #d8d8d8;
+  word-spacing: 130%;
+    margin-bottom: 2px;
+}
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .name {
+font: 500 18px 'obrige';
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--ppt-2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    margin-bottom: -5px;
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] ~.container .set::before {
+    content: "\ebc6 ";
+  font-family: "honeybee";
+  padding-right: 2px;
+  color: var(--ppt-2);
+}
+
+#arcane-job a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ #arcane-job:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:2px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
