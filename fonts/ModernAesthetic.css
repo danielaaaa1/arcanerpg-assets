@@ -1,0 +1,12 @@
+/* Nem todos os arquivos hospedados neste repositório são de minha autoria. Algumas fontes, ícones e recursos gráficos pertencem aos seus respectivos criadores e estão armazenados aqui apenas para garantir o funcionamento dos códigos e templates utilizados no Arcane RPG.
+
+Todos os créditos e direitos permanecem com seus autores originais. */
+
+@font-face {
+    font-family: 'Modern Aesthetic';
+    src: url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/fonts/ModernAesthetic.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/fonts/ModernAesthetic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
