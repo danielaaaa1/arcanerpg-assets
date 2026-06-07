@@ -1,0 +1,411 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (keposhkas) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes!!! créditos para todos os criadores */
+@import url('https://fonts.cdnfonts.com/css/ahganirya');
+@import url('https://fonts.cdnfonts.com/css/asphaltic-grain-condensed-perso');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+@font-face {font-family: 'obrige'; src:url(https://dl.dropbox.com/s/qwfni6oii9x2a2l/la%20obrige.otf?dl=0);}
+
+#arcane-pd {
+  position: relative;
+  margin-top: -50px;
+  --width: 980px;
+  --bg-light: #F2EAE1;
+  --bg-dark: #2D2714;
+  --bg-esp: #181A1C;
+  --s-font: 'Ahganirya', sans-serif;
+  --m-font: 'obrige';
+  --sub-font: 'BioRhyme', sans-serif;
+  --not-font: 'ASPHALTIC GRAIN CONDENSED PERSO';
+  --txt-font: 'Sedan', serif;
+}
+
+#arcane-pd *[data-flex] {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#arcane-pd *[data-flex="column"] {
+  flex-direction:column;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  position: relative;
+  padding: 20px;
+  background: var(--bg-light);
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head1 {
+  margin-top: 10px;
+  position: relative;
+  left: -5px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head1>span {
+  gap:10px;
+  position: relative;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head1>span pd {
+  flex-grow:1;
+  gap:5px;
+  font: 500 40px var(--m-font);
+  line-height: 20px;
+  font-style: italic;
+  color: var(--bg-dark);
+  margin-bottom:-10px;
+  position: relative;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head1>span pd:before, .pd-head1>span pd:after {
+  content:'';
+  height:2px;
+  border-top:3px solid var(--bg-dark);
+  border-bottom:1px solid var(--bg-dark);
+  flex-grow:1;
+  align-self:flex-end;
+  margin-bottom:13px;
+  margin-left: 10px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head2 {
+  margin-top: 2px;
+  position: relative;
+  display: flex;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head2 .title {
+  color: var(--bg-dark);
+  font: 700 50px var(--m-font);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: center;
+  position: relative;
+  top: 8px;
+  left: 51px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head2 .title e {
+  background: url(https://i.imgur.com/HdZcRtu.png) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 3px 4px rgba(0,0,0,0.27);
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head2 img {
+  height: 115px;
+  filter: grayscale(25%);
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head3  {
+  border-bottom: 5px double var(--bg-dark);
+  margin-top: -20px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head3 .subtitle {
+  color: var(--bg-dark);
+  font: 700 12px var(--sub-font);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: center;
+  position: relative;
+  top: -13px;
+  left: 40px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-head3 .subtitle:after, .pd-head3 .subtitle:before {
+  content: "✶";
+  position: relative;
+  top: 5px;
+  margin: 3px;
+  font-size: 25px;
+  color: var(--bg-dark);
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not {
+  display: flex;
+  position: relative;
+  text-align: left;
+  margin-top: 10px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .box {
+  width: 350px;
+  font: 700 12px var(--sub-font);
+  color: var(--bg-esp);
+  line-height: 12px;
+  text-transform: uppercase;  
+  text-indent: 0px;
+  text-align: left;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not esp {
+  color: var(--bg-light);
+  text-shadow: 1px 0px 4px var(--bg-esp);
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not img {
+  width: 65px;
+  margin: 5px;
+  float: left;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .page {
+   width:100%;
+   text-align:center; 
+   position: relative;
+   top: -6px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .page pg {
+   position:relative; 
+   padding:5px;
+   background: var(--bg-light);
+   display: inline-block;
+   z-index: 1;
+   float: right;
+  position: relative;
+  top: 7px;
+  left: -6px;
+  font-size: 10px;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .page a {
+  color: var(--bg-dark);
+  text-decoration: none;
+  transition: all 1s ease-out;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .page a:hover {
+  color: #75716d;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-not .page::after {
+   content:'';
+   width: 90%;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 10px;
+   height: 15px;
+   background: var(--bg-dark);
+   z-index:0;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-info {
+  width: 290px;
+  background: var(--bg-dark);
+  margin-left: 5px;
+  position: relative;
+  padding: 5px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-info .notice {
+  font: 700 15px var(--sub-font);
+  text-transform: uppercase;
+  color: var(--bg-light);
+  text-align: left;
+  border-bottom: 1px dotted white;
+  margin-bottom: 4px;
+  position: relative;
+  margin-left: 4px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-info .txt {
+  font: 700 10px var(--sub-font);
+  text-transform: uppercase;
+  color: var(--bg-light);
+  text-align: left;
+  left: 5px;
+  position: relative;
+  opacity: .9;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-info .txt a {
+  font: 700 10px var(--sub-font);
+  text-transform: uppercase;
+  color: var(--bg-light);
+  text-align: left;
+  position: relative;
+  opacity: .9;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news {
+  margin-top: 15px;
+  padding: 10px;
+  position: relative;
+  border:solid 3px var(--bg-dark);
+  border-top-left-radius: 295px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 25px;
+  border-bottom-left-radius:15px 255px;
+   text-align: left;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news hr {
+   height:3px;
+  background:var(--bg-esp);
+  border:0;
+  margin-top:5px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news img {
+  height:185px;
+  width:300px;
+  object-fit:cover;
+  object-position:center;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-right {
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(1) sepia(1);
+  float: right;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-left {
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(1) sepia(1);
+  float: left;
+  padding-right: 10px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-normal {
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(1) sepia(1);
+  margin-bottom: 10px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-right hr {
+  height:6px;
+  background:var(--bg-esp);
+  border:0;
+  margin:0;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-left hr {
+  height:6px;
+  background:var(--bg-esp);
+  border:0;
+  margin:0;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .img-normal hr {
+  height:6px;
+  background:var(--bg-esp);
+  border:0;
+  margin:0;
+  width: 32.7%;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .flex {
+  display: flex;
+  width: 200px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .name {
+  font: 700 60px var(--not-font);
+  color: var(--bg-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 80%;
+  margin-bottom: 8px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .author {
+  font: 700 20px var(--not-font);
+  color: var(--bg-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 80%;
+  margin-bottom: 8px;
+  opacity: .8;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-box {
+ contain: size;
+ overflow-y: auto;
+ overscroll-behavior: contain;
+ height: 190px;
+ width: 590px;
+ color: black;
+ font: 500 14px var(--txt-font);
+ letter-spacing: 0.3px;
+ border-bottom: 6px double var(--bg-esp);
+ padding-left: 2px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-box::-webkit-scrollbar {
+       width: 5px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-box::-webkit-scrollbar-track {
+    background: var(--bg-light);  
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-box::-webkit-scrollbar-thumb {
+    background-color: var(--bg-esp);
+    border-radius: 2px;
+    border: 2px solid #dbcab6;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .notice-box {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px dotted var(--bg-light);
+  font: 500 11.5px var(--sub-font);
+  color: var(--bg-light);
+  line-height: 12px;
+  background: var(--bg-dark);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .notice-box i {
+  font-size: 20px;
+  margin: 5px;
+  position: relative;
+  float: left;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-n {
+  font: 500 14px var(--txt-font);
+  letter-spacing: 0.3px;
+  width: 100%;
+  color: black;
+}
+
+#arcane-pd a[href="https://is.gd/arcanerpg"] ~.container .pd-news .txt-n hr {
+  height:3px;
+  background:var(--bg-esp);
+  border:0;
+  margin-bottom:10px;
+  width: 100%;
+}
+
+ #arcane-pd a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#arcane-pd:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:6px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
