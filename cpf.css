@@ -1,11 +1,15 @@
-@charset "UTF-8"; @font-face {
-      font-family: 'cappuccicons';
-      src: url('https://dl.dropboxusercontent.com/scl/fi/5hvd3vbr5jqc4xjk8uaxn/cappuccicons.eot?rlkey=ndj5frsfvruexg0yhxktbhxm1&st=z76i0xr6&dl=0');
-      src: url('https://dl.dropboxusercontent.com/scl/fi/5hvd3vbr5jqc4xjk8uaxn/cappuccicons.eot?rlkey=ndj5frsfvruexg0yhxktbhxm1&st=z76i0xr6&dl=0#iefix') format('embedded-opentype'), url('https://dl.dropboxusercontent.com/scl/fi/uw59udzll9tzft8uo0qxp/cappuccicons.ttf?rlkey=cnxrb3o6rb2emzcqzimu2toxk&st=cp39xndx&dl=0') format('truetype'), url('https://dl.dropboxusercontent.com/scl/fi/dvp7jv9wtyejnk71d8ec0/cappuccicons.woff?rlkey=7b46gousvvfstx6trpi7dsr4p&st=buix51zi&dl=0') format('woff'), url('https://dl.dropboxusercontent.com/scl/fi/5o7yndfgs0mqd078skvem/cappuccicons.svg?rlkey=24mdte8tho12sa2ji3btkhc22&st=gmsyaeim&dl=0#cappuccicons') format('svg');
-      font-weight: normal;
-      font-style: normal;
-      font-display: block;
-    }
+@charset "UTF-8";
+@font-face {
+    font-family: 'cappuccicons';
+    src: url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/cappuccicons.eot');
+    src: url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/cappuccicons.eot#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/cappuccicons.ttf') format('truetype'),
+         url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/cappuccicons.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/cappuccicons.svg#cappuccicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
     i.cp,span.cp {
       font-family: 'cappuccicons'!important;
