@@ -5,7 +5,7 @@
 @import url('https://fonts.cdnfonts.com/css/asphaltic-grain-condensed-perso');
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
-@font-face {font-family: 'obrige'; src:url(https://dl.dropbox.com/s/qwfni6oii9x2a2l/la%20obrige.otf?dl=0);}
+@font-face {font-family: 'obrige'; src:url(https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/fonts/la-obrige.otf);}
 
 #arcane-pd {
   position: relative;
