@@ -1,0 +1,347 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aqira');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+#arcane-tp {
+  position: relative;
+  margin-top: 10px;
+  --width: 630px;
+  --bg-dark: #0b0b0b;
+  --bg-light: #424242;
+  --bg-light-2: #4F4F4F;
+  --bg-light-3: #949494;
+  --acc-ac: #5C5D76; /* roxo */
+  --acc-ac-2: #12251D; /* verde */
+  --acc-ac-3: #7B6E3D; /* dourado */
+  --acc-ac-4: #B99E59; /* dourado mais claro */
+  --acc-ac-5: #538353; /* verde mais claro */
+  --acc-ac-6: #ABABAB; /* claro */
+  --t-font: "Aqira";
+  --m-font: "Lunasima", sans-serif;
+  --a-font: "EB Garamond", serif;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  outline: 1px solid var(--bg-light);
+  outline-offset: -3px;
+  position: relative;
+  padding: 10px;
+  background: var(--bg-dark);
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .com {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  margin-top: -35px;
+  left: 5px;
+  float: left;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .com .box {
+  color: var(--acc-ac-6);
+  font: 900 11px "Roboto Mono", monospace;
+  text-transform: uppercase;
+  position: relative;
+  background: rgba(8, 8, 8,0.69);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid #1b1b1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  gap: 5px;
+  margin: 2px;
+  white-space: normal;
+  padding: 5px 12px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .com .box i {
+  font-size: 18px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .com .box a {
+  color: var(--acc-ac-6);
+  text-decoration: none;
+  transition: 500ms;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .com .box a:hover {
+  color: var(--acc-ac-6);
+  text-decoration-style: wavy;
+  text-decoration-line: underline;
+  text-decoration-color: var(--acc-ac);
+  transition: 500ms;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .header {
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  height: 240px;
+  width: 610px;
+  transition: 1000ms;
+  filter: sepia(0.75);
+  background: repeating-linear-gradient(90deg, #0002 0 2px, transparent 4px 37vmin);
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .header::after {
+  content:"";
+  background: linear-gradient(180deg, transparent 0%, var(--bg-dark) 100%);
+  height:240px;
+  width:610px;
+  display:block;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .header:hover { 
+  transition: 1000ms;
+ 	filter: sepia(0);
+}
+
+.waves {
+  position: relative;
+  width: 610px;
+  left: 0px;
+  top: 0px;
+  height: 15vh;
+  margin-top: -50px;
+}
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-85px, 0, 0);
+  }
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .title { 
+  font: 500 30px var(--t-font);
+  color: var(--acc-ac-3);
+  text-align: left;
+  padding-left: 5px;
+  text-transform: uppercase;
+  position: relative;
+  top: -20px;
+  margin-top: -5px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .title i { 
+  font: 500 25px var(--t-font);
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .subtitle { 
+  font: 500 12px var(--m-font);
+  color: var(--acc-ac-3);
+  text-align: left;
+  padding-left: 35px;
+  text-transform: uppercase;
+  position: relative;
+  top: -20px;
+  margin-top: -5px;
+  opacity: .7;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .txt { 
+  font: 500 13px var(--m-font);
+  color: var(--acc-ac-6);
+  text-align: justify;
+  padding: 20px;
+  background: rgba(36, 64, 40, 0.2);
+  margin-top: -16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .txt::first-letter {
+  font: 700 italic 18px eb garamond;
+  color: #D1D1D1;
+  opacity: .8;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .line {
+  margin: 0 auto;
+  height:2px;
+  background-color: var(--acc-ac-3);
+  width:70%;
+  display:block;
+  position: relative;
+  top: -4px;
+  margin-top:2px;
+  transition: 500ms;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .line:hover {
+  width: 100%;
+  transition: 500ms;
+}
+
+/*********** LOJA/ESTOQUE ***********/
+details summary {
+  font: 500 26px var(--t-font);
+  color: var(--acc-ac-3);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 600ms;
+}
+
+details summary:hover {
+  color: var(--acc-ac);
+  transition: 600ms;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp {
+  width: 600px; 
+  border: 1px solid var(--acc-ac-3); 
+  padding: 0px;
+  margin: auto; 
+  position: relative; 
+  background-color: #0A0A0A;  
+  border-radius: 2px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .right {
+  position:absolute; 
+  height: 100%; 
+  border-left: 1px solid var(--acc-ac-3); 
+  left: 36px; 
+  top: 0;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .left {
+  position: absolute; 
+  height: 100%;  
+  right: 0; 
+  top: 0; 
+  width: 80px; 
+  background-image: url(https://images2.imgbox.com/6e/af/avTw22oQ_o.png);
+  background-position: 25% 75%;
+  background-size: 89%;
+  border-left: 1px solid var(--acc-ac-2);
+  border-right:0;
+  padding: 0px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .flex {
+  margin: 25px; 
+  margin-left:10px; 
+  display:flex; 
+  position:relative; 
+  gap:10px; 
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .icon {
+  width:50px; 
+  height:50px; 
+  border-radius:5%;
+  background: rgba(8, 8, 8, 1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid #1b1b1b;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: var(--acc-ac-6); 
+  font-size: 15px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .name {
+  color: var(--acc-ac-6);
+  font: 900 13px "Roboto Mono", monospace;
+  text-transform: uppercase;
+  background: #131313;
+  border: 1px solid var(--bg-light);
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .desc { 
+  background: rgba(8, 8, 8, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid #1b1b1b;
+  flex: 1; 
+  padding: 10px; 
+  text-align: left; 
+  font: 500 13px var(--m-font);
+  color: var(--acc-ac-6);
+  width: 300px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .price { 
+  background: rgba(8, 8, 8, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid #1b1b1b;
+  padding: 10px; 
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 0px;
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] ~.container .temp .price .pr {
+  text-align: center; 
+  font: 500 13px var(--m-font);
+  color: var(--acc-ac-6);
+  position: relative;
+  top: -4px;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+ display: none; 
+ content: "— ";
+}
+
+#arcane-tp a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ #arcane-tp:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:2px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
