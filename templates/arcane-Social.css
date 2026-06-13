@@ -11,16 +11,16 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 }
 
 #arcane-Social {
-  width: min(820px, 100%);
-  margin: 0 auto;
-  max-width: 100%;
   position: relative;
-  padding: 12px;
+  width: min(820px, 100%);
+  max-width: 100%;
+  margin: 0 auto 22px;
+  padding: 12px 12px 0;
   background:
-    radial-gradient(circle at 16% 8%, rgba(83, 131, 83, .12), transparent 22%),
-    radial-gradient(circle at 82% 12%, rgba(185, 158, 89, .12), transparent 24%),
-    linear-gradient(140deg, rgba(23, 41, 26, .34), transparent 42%),
-    rgba(16, 16, 16, .82);
+    radial-gradient(circle at 16% 8%, rgba(83,131,83,.12), transparent 22%),
+    radial-gradient(circle at 82% 12%, rgba(185,158,89,.12), transparent 24%),
+    linear-gradient(140deg, rgba(23,41,26,.34), transparent 42%),
+    rgb(8 8 8);
   --bg-main: #080808;
   --bg-darker: #080808;
   --bg-transparent: #00000070;
@@ -32,26 +32,42 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   --text-dark: #000;
   --text-accent: #b99e59;
   --text-green: #538353;
-  font: 13px / 150% Poppins, sans-serif;
+  --ar-frame: radial-gradient(20px at 20px 20px, #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) -20px -20px, linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - 40px + 1px) repeat-x, linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+  font: 13px/150% Poppins, sans-serif;
   color: var(--text-color);
   text-align: justify;
-  outline: 1px solid var(--lines);
- outline-offset: -11px;
+  overflow: visible;
 }
 
 #arcane-Social::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 5px 5px 20px;
+  z-index: 0;
   background: var(--bg-green);
-  mask: radial-gradient(20px at 20px 20px, #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) -20px -20px, linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - 40px + 1px) repeat-x, linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
-  margin: 5px;
+  -webkit-mask: var(--ar-frame);
+  mask: var(--ar-frame);
   pointer-events: none;
 }
 
 #arcane-Social > :not(.arc) {
   position: relative;
   z-index: 1;
+}
+
+#arcane-Social > .topo,
+#arcane-Social > .meio,
+#arcane-Social > .abaixo {
+  border-left: 1px solid var(--lines);
+  border-right: 1px solid var(--lines);
+}
+
+#arcane-Social > .topo {
+  border-top: 1px solid var(--lines);
+}
+
+#arcane-Social > .abaixo {
+  border-bottom: 1px solid var(--lines);
 }
 
 #arcane-Social .topo {
@@ -61,27 +77,24 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   grid-template-columns: 200px minmax(0, 1fr) 140px;
   gap: 10px;
   align-items: center;
-  position: relative;
   border-bottom: 1px solid var(--lines);
-  z-index: 99;
 }
 
 #arcane-Social .topo .icon img {
   display: block;
-  object-fit: cover;
-  border-radius: 100%;
   width: 150px;
   height: 150px;
   padding: 5px;
+  object-fit: cover;
   border: 4px solid var(--lines);
-  box-shadow: 0 0 0 1px #000, 0 0 24px rgba(31, 112, 57, 0.22), 0 0 10px rgba(123, 110, 61, 0.22);
-  transition: 0.35s;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px #000, 0 0 24px rgba(31,112,57,.22), 0 0 10px rgba(123,110,61,.22);
+  transition: .35s;
   cursor: pointer;
-  z-index: 99;
 }
 
 #arcane-Social .topo .icon img:hover {
-  box-shadow: 0 0 0 1px #000, 0 0 26px rgba(31, 112, 57, 0.3), 0 0 14px rgba(123, 110, 61, 0.28);
+  box-shadow: 0 0 0 1px #000, 0 0 26px rgba(31,112,57,.3), 0 0 14px rgba(123,110,61,.28);
 }
 
 #arcane-Social .topo .info {
@@ -94,37 +107,36 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 #arcane-Social .topo .info nome {
   max-width: 100%;
   display: block;
+  margin: 0 0 3px -2px;
   font: 500 1.3rem/100% "Modern Aesthetic";
   text-transform: uppercase;
   color: #7B6E3D;
-  margin-bottom: 3px;
-  margin-left: -2px;
 }
 
 #arcane-Social .topo .info user {
-  font: 700 0.6rem/100% "Montserrat";
+  display: block;
+  font: 700 .6rem/100% Montserrat;
   text-transform: uppercase;
   letter-spacing: 1px;
-  display: block;
   color: var(--text-color);
   cursor: pointer;
 }
 
 #arcane-Social .topo .info bio {
-  margin-top: 15px;
-  position: relative;
   display: block;
+  position: relative;
+  margin-top: 15px;
   font-size: 12px;
 }
 
-#arcane-Social .topo .info bio:before {
+#arcane-Social .topo .info bio::before {
   content: "";
   position: absolute;
   left: -54px;
   top: 50%;
   width: 9%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(185, 158, 89, .58), transparent);
+  background: linear-gradient(90deg, transparent, rgba(185,158,89,.58), transparent);
   z-index: 0;
 }
 
@@ -135,24 +147,24 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(rgba(23, 41, 26, 0.42), rgba(0, 0, 0, 0.08)), rgba(0, 0, 0, 0.34);
-  border: 1px solid rgba(123, 110, 61, 0.3);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.52), 0 0 14px rgba(21, 82, 40, 0.12);
+  background: linear-gradient(rgba(23,41,26,.42), rgba(0,0,0,.08)), rgba(0,0,0,.34);
+  border: 1px solid rgba(123,110,61,.3);
+  box-shadow: inset 0 0 20px rgba(0,0,0,.52), 0 0 14px rgba(21,82,40,.12);
 }
 
 #arcane-Social .topo .stats span {
   display: block;
+  padding: 10px 0;
   text-align: center;
   color: #7d7649;
-  padding: 10px 0;
-  font: 700 0.6rem/100% "Montserrat";
+  font: 700 .6rem/100% Montserrat;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
 }
 
 #arcane-Social .topo .stats span + span {
-  border-top: 1px solid rgba(123, 110, 61, 0.36);
+  border-top: 1px solid rgba(123,110,61,.36);
 }
 
 #arcane-Social .topo .stats b {
@@ -160,7 +172,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   margin-bottom: 5px;
   color: #a99b5d;
   font: 700 25px/1 "Modern Aesthetic";
-  letter-spacing: 0.2px;
+  letter-spacing: .2px;
 }
 
 #arcane-Social .botoes {
@@ -175,14 +187,14 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   text-align: center;
   cursor: pointer;
   color: #a99a5d;
-  font: 700 0.6rem/100% "Montserrat";
+  font: 700 .6rem/100% Montserrat;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(23, 41, 26, .48), rgba(16, 16, 16, .90)), rgba(16, 16, 16, .66);
+  background: linear-gradient(180deg, rgba(23,41,26,.48), rgba(16,16,16,.9)), rgba(16,16,16,.66);
   border: 1px solid var(--lines);
-  box-shadow: inset 0 0 12px rgba(83, 131, 83, .12), 0 0 0 1px rgba(185, 158, 89, .05);
-  transition: 0.35s;
+  box-shadow: inset 0 0 12px rgba(83,131,83,.12), 0 0 0 1px rgba(185,158,89,.05);
+  transition: .35s;
 }
 
 #arcane-Social .botoes a {
@@ -190,30 +202,38 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   padding: 9px 15px 8px;
 }
 
+#arcane-Social .tabs label {
+  min-width: 104px;
+  padding: 8px 15px 7px;
+}
+
 #arcane-Social .botoes a:hover,
-#arcane-Social .tabs label:hover {
+#arcane-Social .tabs label:hover,
+#arcane-Social #aba-fotos:checked ~ .tabs label[for="aba-fotos"],
+#arcane-Social #aba-feed:checked ~ .tabs label[for="aba-feed"] {
   color: #07110a;
   background: var(--bg-accent);
-  border-color: rgba(143, 132, 76, 0.95);
-  box-shadow: inset 0 0 12px rgba(255, 240, 170, 0.12), 0 0 18px rgba(55, 150, 83, 0.16);
+  border-color: rgba(143,132,76,.95);
+  box-shadow: inset 0 0 12px rgba(255,240,170,.12), 0 0 18px rgba(55,150,83,.16);
 }
 
 #arcane-Social .meio {
   padding: 15px 22px 16px;
-  border-bottom: 1px solid var(--lines);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  border-bottom: 1px solid var(--lines);
 }
 
 #arcane-Social .meio .destaque {
-  width: 86px;
+  width: 92px;
+  min-width: 92px;
   position: relative;
   text-align: center;
   color: var(--text-color);
-  font: 700 0.59rem/100% "Montserrat";
+  font: 700 .59rem/100% Montserrat;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -221,20 +241,26 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 #arcane-Social .meio .destaque span {
   display: block;
   margin-top: 5px;
-  margin-left: 10px;
+  text-align: center;
 }
 
 #arcane-Social .meio .destaque img {
-  width: 92px;
-  height: 92px;
-  display: block;
+  width: 92px!important;
+  min-width: 92px!important;
+  max-width: 92px!important;
+  height: 92px!important;
+  min-height: 92px!important;
+  max-height: 92px!important;
+  aspect-ratio: 1/1!important;
+  display: block!important;
   margin: 0 auto 6px;
-  object-fit: cover;
+  object-fit: cover!important;
+  object-position: center!important;
   padding: 4px;
   border: 2px solid #7B6E3D;
-  border-radius: 50%;
+  border-radius: 999px!important;
   filter: brightness(.70) contrast(1.14) saturate(.74);
-  box-shadow: 0 0 0 1px var(--ar-border), 0 0 13px rgba(0, 0, 0, .55);
+  box-shadow: 0 0 0 1px rgba(185,158,89,.25), 0 0 13px rgba(0,0,0,.55);
   transition: .3s ease;
   cursor: pointer;
 }
@@ -242,8 +268,8 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 #arcane-Social .meio .destaque:hover img {
   transform: translateY(-2px) scale(1.03);
   filter: brightness(.92) contrast(1.16) saturate(.95);
-  box-shadow: 0 0 16px rgba(83, 131, 83, .28), 0 0 0 1px rgba(185, 158, 89, .38);
-  border: 2px solid var(--text-green);
+  box-shadow: 0 0 16px rgba(83,131,83,.28), 0 0 0 1px rgba(185,158,89,.38);
+  border-color: var(--text-green);
 }
 
 #arcane-Social .abaixo {
@@ -257,22 +283,16 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 }
 
 #arcane-Social .tabs {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   padding: 10px 0 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   position: relative;
-  background: linear-gradient(90deg, transparent, rgba(23, 41, 26, .22), transparent);
+  background: linear-gradient(90deg, transparent, rgba(23,41,26,.22), transparent);
   border-top: 1px solid var(--lines);
   border-bottom: 1px solid var(--lines);
-}
-
-#arcane-Social .tabs label {
-  min-width: 104px;
-  padding: 8px 15px 7px;
 }
 
 #arcane-Social .painel {
@@ -287,32 +307,22 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   display: grid;
 }
 
-#arcane-Social .botoes a:hover,
-#arcane-Social .tabs label:hover,
-#arcane-Social #aba-fotos:checked ~ .tabs label[for="aba-fotos"],
-#arcane-Social #aba-feed:checked ~ .tabs label[for="aba-feed"] {
-  color: #07110a;
-  background: var(--bg-accent);
-  border-color: rgba(143, 132, 76, .95);
-  box-shadow: inset 0 0 12px rgba(255, 240, 170, .12), 0 0 18px rgba(55, 150, 83, .16);
-}
-
 #arcane-Social .galeria {
   margin: 0 22px 22px;
   padding: 12px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 7px;
-  background: linear-gradient(180deg, rgba(23, 41, 26, .32), rgba(0, 0, 0, .54));
-  border: 1px solid rgba(123, 110, 61, .28);
-  box-shadow: inset 0 0 24px rgba(0, 0, 0, .62), 0 8px 16px rgba(0, 0, 0, .35);
+  background: linear-gradient(180deg, rgba(23,41,26,.32), rgba(0,0,0,.54));
+  border: 1px solid rgba(123,110,61,.28);
+  box-shadow: inset 0 0 24px rgba(0,0,0,.62), 0 8px 16px rgba(0,0,0,.35);
 }
 
 #arcane-Social .foto {
   position: relative;
   overflow: hidden;
   aspect-ratio: 1;
-  border: 1px solid rgba(123, 110, 61, .36);
+  border: 1px solid rgba(123,110,61,.36);
   background: #020503;
 }
 
@@ -325,6 +335,11 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   transition: .35s;
 }
 
+#arcane-Social .foto:hover img {
+  filter: brightness(.52) contrast(1.18) saturate(.78);
+  transform: scale(1.04);
+}
+
 #arcane-Social .notas {
   position: absolute;
   inset: 0;
@@ -335,16 +350,20 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   color: #f7f4e8;
   font-size: 15px;
   font-weight: 600;
-  background: rgba(0, 0, 0, .48);
+  background: rgba(0,0,0,.48);
   opacity: 0;
   transition: .35s;
+}
+
+#arcane-Social .foto:hover .notas {
+  opacity: 1;
 }
 
 #arcane-Social .notas span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, .8);
+  text-shadow: 0 1px 4px rgba(0,0,0,.8);
 }
 
 #arcane-Social .notas .curtidas::before {
@@ -353,15 +372,6 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 
 #arcane-Social .notas .comentarios::before {
   content: "✦";
-}
-
-#arcane-Social .foto:hover img {
-  filter: brightness(.52) contrast(1.18) saturate(.78);
-  transform: scale(1.04);
-}
-
-#arcane-Social .foto:hover .notas {
-  opacity: 1;
 }
 
 #arcane-Social .feed-painel {
@@ -390,10 +400,10 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   align-items: center;
   gap: 11px;
   color: var(--text-lighter);
-  background: linear-gradient(180deg, rgba(4, 10, 7, .98), rgba(1, 4, 2, .98));
-  border: 1px solid rgba(123, 110, 61, .32);
+  background: linear-gradient(180deg, rgba(4,10,7,.98), rgba(1,4,2,.98));
+  border: 1px solid rgba(123,110,61,.32);
   border-radius: 14px;
-  box-shadow: inset 0 0 0 1px rgba(255, 240, 180, .03), 0 10px 22px rgba(0, 0, 0, .48), 0 0 20px rgba(10, 40, 22, .14);
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 10px 22px rgba(0,0,0,.48), 0 0 20px rgba(10,40,22,.14);
 }
 
 #arcane-Social .pensamento img,
@@ -408,8 +418,8 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   width: 42px;
   height: 42px;
   min-width: 42px;
-  border: 2px solid #9a7a44;
   padding: 2px;
+  border: 2px solid #9a7a44;
   filter: brightness(.72) contrast(1.08) saturate(.85);
 }
 
@@ -419,12 +429,12 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   display: flex;
   align-items: center;
   padding: 0 15px;
-  color: rgba(241, 236, 224, .72);
+  color: rgba(241,236,224,.72);
   font-size: 13px;
-  background: rgba(0, 0, 0, .26);
-  border: 1px solid rgba(123, 110, 61, .2);
+  background: rgba(0,0,0,.26);
+  border: 1px solid rgba(123,110,61,.2);
   border-radius: 999px;
-  box-shadow: inset 0 0 14px rgba(0, 0, 0, .42);
+  box-shadow: inset 0 0 14px rgba(0,0,0,.42);
 }
 
 #arcane-Social .pisca {
@@ -435,8 +445,13 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 }
 
 @keyframes pisca {
-  0%, 45%, 81%, 100% { opacity: 1; }
-  46%, 80% { opacity: .18; }
+  0%, 45%, 81%, 100% {
+    opacity: 1;
+  }
+
+  46%, 80% {
+    opacity: .18;
+  }
 }
 
 #arcane-Social .pensamento a {
@@ -452,24 +467,24 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   letter-spacing: .45px;
   text-transform: uppercase;
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(6, 20, 11, .92), rgba(1, 4, 2, .96));
-  border: 1px solid rgba(123, 110, 61, .62);
+  background: linear-gradient(180deg, rgba(6,20,11,.92), rgba(1,4,2,.96));
+  border: 1px solid rgba(123,110,61,.62);
   border-radius: 999px;
-  box-shadow: inset 0 0 10px rgba(33, 112, 58, .08), 0 0 8px rgba(0, 0, 0, .34);
+  box-shadow: inset 0 0 10px rgba(33,112,58,.08), 0 0 8px rgba(0,0,0,.34);
   transition: .3s;
 }
 
 #arcane-Social .pensamento a:hover {
   color: #07110a;
   background: var(--bg-accent);
-  border-color: rgba(143, 132, 76, .95);
+  border-color: rgba(143,132,76,.95);
 }
 
 #arcane-Social .post,
 #arcane-Social .mini-card {
-  background: linear-gradient(180deg, rgba(4, 10, 7, .98), rgba(1, 4, 2, .98));
-  border: 1px solid rgba(123, 110, 61, .32);
-  box-shadow: inset 0 0 0 1px rgba(255, 240, 180, .03), 0 12px 28px rgba(0, 0, 0, .58), 0 0 24px rgba(10, 40, 22, .18);
+  background: linear-gradient(180deg, rgba(4,10,7,.98), rgba(1,4,2,.98));
+  border: 1px solid rgba(123,110,61,.32);
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 12px 28px rgba(0,0,0,.58), 0 0 24px rgba(10,40,22,.18);
 }
 
 #arcane-Social .post {
@@ -481,7 +496,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 
 #arcane-Social .post:hover {
   transform: translateY(-2px);
-  box-shadow: inset 0 0 0 1px rgba(255, 240, 180, .03), 0 14px 30px rgba(0, 0, 0, .66), 0 0 24px rgba(10, 40, 22, .22);
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 14px 30px rgba(0,0,0,.66), 0 0 24px rgba(10,40,22,.22);
 }
 
 #arcane-Social .post-topo {
@@ -494,8 +509,8 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 #arcane-Social .post-topo img {
   width: 38px;
   height: 38px;
-  border: 2px solid #9a7a44;
   padding: 2px;
+  border: 2px solid #9a7a44;
   filter: brightness(.78) contrast(1.08) saturate(.9);
 }
 
@@ -536,14 +551,14 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   line-height: 1.4;
 }
 
+#arcane-Social .post-texto .texto {
+  padding-bottom: 1px;
+}
+
 #arcane-Social .texto b,
 #arcane-Social .likes-post b {
   font-weight: 700;
   color: var(--text-lighter);
-}
-
-#arcane-Social .post-texto .texto {
-  padding-bottom: 1px;
 }
 
 #arcane-Social .likes-post {
@@ -556,7 +571,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
 #arcane-Social .hora-post {
   display: block;
   margin-top: 6px;
-  color: rgba(241, 236, 224, .52);
+  color: rgba(241,236,224,.52);
   font-size: 9.5px;
   letter-spacing: .2px;
   text-transform: uppercase;
@@ -639,7 +654,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   color: #b7aa70;
   font-size: 12px;
   line-height: 1.35;
-  border-top: 1px solid rgba(123, 110, 61, .22);
+  border-top: 1px solid rgba(123,110,61,.22);
 }
 
 #arcane-Social .mini-card span i {
@@ -656,7 +671,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   line-height: 1;
   background: var(--bg-accent);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(143, 130, 72, .18);
+  box-shadow: 0 0 8px rgba(143,130,72,.18);
 }
 
 #arcane-Social .mini-card span strong {
@@ -672,17 +687,16 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   letter-spacing: .2px;
 }
 
-#arcane-Social:after {
-  content:"「arcane」";
-  position:absolute;
-  left:0;
-  bottom:-17px;
-  width:100%;
-  display:block;
-  text-align:center;
-  font:bold 8.5px "Consolas";
-  color:#969696;
-  opacity:.8;
-  text-transform:uppercase;
-  pointer-events:none;
+#arcane-Social::after {
+  content: "「arcane」";
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 6px;
+  color: #969696;
+  font: bold 8.5px Consolas, monospace;
+  line-height: 1;
+  text-align: center;
+  opacity: .8;
+  text-transform: uppercase;
 }
