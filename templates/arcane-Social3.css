@@ -1,0 +1,726 @@
+/* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
+Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
+Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
+para conversarmos sobre valores e demais detalhes. Beijocas */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+#arcane-Social,
+#arcane-Social * {
+  box-sizing: border-box;
+}
+
+#arcane-Social {
+  position: relative;
+  width: min(820px, 100%);
+  max-width: 100%;
+  margin: 0 auto 22px;
+  padding: 12px 12px 0;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(83,131,83,.12), transparent 22%),
+    radial-gradient(circle at 82% 12%, rgba(185,158,89,.12), transparent 24%),
+    linear-gradient(140deg, rgba(23,41,26,.34), transparent 42%),
+    rgb(8 8 8);
+  --bg-main: #080808;
+  --bg-darker: #080808;
+  --bg-transparent: #00000070;
+  --bg-green: #244028;
+  --bg-accent: #7B6E3D;
+  --lines: #313131;
+  --text-color: #d1d1d1;
+  --text-lighter: #fff;
+  --text-dark: #000;
+  --text-accent: #b99e59;
+  --text-green: #538353;
+  --ar-frame: radial-gradient(20px at 20px 20px, #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) -20px -20px, linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - 40px + 1px) repeat-x, linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+  font: 13px/150% Poppins, sans-serif;
+  color: var(--text-color);
+  text-align: justify;
+  overflow: visible;
+}
+
+#arcane-Social::before {
+  content: "";
+  position: absolute;
+  inset: 5px 5px 20px;
+  z-index: 0;
+  background: var(--bg-green);
+  -webkit-mask: var(--ar-frame);
+  mask: var(--ar-frame);
+  pointer-events: none;
+}
+
+#arcane-Social > :not(.arc) {
+  position: relative;
+  z-index: 1;
+}
+
+#arcane-Social > .topo,
+#arcane-Social > .meio,
+#arcane-Social > .abaixo {
+  border-left: 1px solid var(--lines);
+  border-right: 1px solid var(--lines);
+}
+
+#arcane-Social > .topo {
+  border-top: 1px solid var(--lines);
+}
+
+#arcane-Social > .abaixo {
+  border-bottom: 1px solid var(--lines);
+}
+
+#arcane-Social .topo {
+  min-height: 200px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 140px;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--lines);
+}
+
+#arcane-Social .topo .icon img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  object-fit: cover;
+  border: 4px solid var(--lines);
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px #000, 0 0 24px rgba(31,112,57,.22), 0 0 10px rgba(123,110,61,.22);
+  transition: .35s;
+  cursor: pointer;
+}
+
+#arcane-Social .topo .icon img:hover {
+  box-shadow: 0 0 0 1px #000, 0 0 26px rgba(31,112,57,.3), 0 0 14px rgba(123,110,61,.28);
+}
+
+#arcane-Social .topo .info {
+  min-width: 0;
+  position: relative;
+  right: 10px;
+  transform: translateY(-4px);
+}
+
+#arcane-Social .topo .info nome {
+  max-width: 100%;
+  display: block;
+  margin: 0 0 3px -2px;
+  font: 500 1.3rem/100% "Modern Aesthetic";
+  text-transform: uppercase;
+  color: #7B6E3D;
+}
+
+#arcane-Social .topo .info user {
+  display: block;
+  font: 700 .6rem/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#arcane-Social .topo .info bio {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+#arcane-Social .topo .info bio::before {
+  content: "";
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  width: 9%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(185,158,89,.58), transparent);
+  z-index: 0;
+}
+
+#arcane-Social .topo .stats {
+  width: 140px;
+  min-height: 158px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(23,41,26,.42), rgba(0,0,0,.08)), rgba(0,0,0,.34);
+  border: 1px solid rgba(123,110,61,.3);
+  box-shadow: inset 0 0 20px rgba(0,0,0,.52), 0 0 14px rgba(21,82,40,.12);
+}
+
+#arcane-Social .topo .stats span {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  color: #7d7649;
+  font: 700 .6rem/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#arcane-Social .topo .stats span + span {
+  border-top: 1px solid rgba(123,110,61,.36);
+}
+
+#arcane-Social .topo .stats b {
+  display: block;
+  margin-bottom: 5px;
+  color: #a99b5d;
+  font: 700 25px/1 "Modern Aesthetic";
+  letter-spacing: .2px;
+}
+
+#arcane-Social .botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+#arcane-Social .botoes a,
+#arcane-Social .tabs label {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #a99a5d;
+  font: 700 .6rem/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(23,41,26,.48), rgba(16,16,16,.9)), rgba(16,16,16,.66);
+  border: 1px solid var(--lines);
+  box-shadow: inset 0 0 12px rgba(83,131,83,.12), 0 0 0 1px rgba(185,158,89,.05);
+  transition: .35s;
+}
+
+#arcane-Social .botoes a {
+  min-width: 82px;
+  padding: 9px 15px 8px;
+}
+
+#arcane-Social .tabs label {
+  min-width: 104px;
+  padding: 8px 15px 7px;
+}
+
+#arcane-Social .botoes a:hover,
+#arcane-Social .tabs label:hover,
+#arcane-Social #aba-fotos:checked ~ .tabs label[for="aba-fotos"],
+#arcane-Social #aba-feed:checked ~ .tabs label[for="aba-feed"] {
+  color: #07110a;
+  background: var(--bg-accent);
+  border-color: rgba(143,132,76,.95);
+  box-shadow: inset 0 0 12px rgba(255,240,170,.12), 0 0 18px rgba(55,150,83,.16);
+}
+
+#arcane-Social .meio {
+  padding: 15px 22px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid var(--lines);
+}
+
+#arcane-Social .meio .destaque {
+  width: 92px;
+  min-width: 92px;
+  position: relative;
+  text-align: center;
+  color: var(--text-color);
+  font: 700 .59rem/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#arcane-Social .meio .destaque span {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#arcane-Social .meio .destaque img {
+  width: 92px!important;
+  min-width: 92px!important;
+  max-width: 92px!important;
+  height: 92px!important;
+  min-height: 92px!important;
+  max-height: 92px!important;
+  aspect-ratio: 1/1!important;
+  display: block!important;
+  margin: 0 auto 6px;
+  object-fit: cover!important;
+  object-position: center!important;
+  padding: 4px;
+  border: 2px solid #7B6E3D;
+  border-radius: 999px!important;
+  filter: brightness(.70) contrast(1.14) saturate(.74);
+  box-shadow: 0 0 0 1px rgba(185,158,89,.25), 0 0 13px rgba(0,0,0,.55);
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+#arcane-Social .meio .destaque:hover img {
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(.92) contrast(1.16) saturate(.95);
+  box-shadow: 0 0 16px rgba(83,131,83,.28), 0 0 0 1px rgba(185,158,89,.38);
+  border-color: var(--text-green);
+}
+
+#arcane-Social .abaixo {
+  position: relative;
+}
+
+#arcane-Social .abaixo > input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#arcane-Social .tabs {
+  margin: 15px 0;
+  padding: 10px 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  background: linear-gradient(90deg, transparent, rgba(23,41,26,.22), transparent);
+  border-top: 1px solid var(--lines);
+  border-bottom: 1px solid var(--lines);
+}
+
+#arcane-Social .painel {
+  display: none;
+}
+
+#arcane-Social #aba-fotos:checked ~ .galeria-painel {
+  display: block;
+}
+
+#arcane-Social #aba-feed:checked ~ .feed-painel {
+  display: grid;
+}
+
+#arcane-Social .galeria {
+  margin: 0 22px 22px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  background: linear-gradient(180deg, rgba(23,41,26,.32), rgba(0,0,0,.54));
+  border: 1px solid rgba(123,110,61,.28);
+  box-shadow: inset 0 0 24px rgba(0,0,0,.62), 0 8px 16px rgba(0,0,0,.35);
+}
+
+#arcane-Social .foto {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border: 1px solid rgba(123,110,61,.36);
+  background: #020503;
+}
+
+#arcane-Social .foto img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: brightness(.62) contrast(1.14) saturate(.7);
+  transition: .35s;
+}
+
+#arcane-Social .foto:hover img {
+  filter: brightness(.52) contrast(1.18) saturate(.78);
+  transform: scale(1.04);
+}
+
+#arcane-Social .notas {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: #f7f4e8;
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(0,0,0,.48);
+  opacity: 0;
+  transition: .35s;
+}
+
+#arcane-Social .foto:hover .notas {
+  opacity: 1;
+}
+
+#arcane-Social .notas span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 1px 4px rgba(0,0,0,.8);
+}
+
+#arcane-Social .notas .curtidas::before {
+  content: "♥";
+}
+
+#arcane-Social .notas .comentarios::before {
+  content: "✦";
+}
+
+#arcane-Social .feed-painel {
+  margin: 0 22px 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+#arcane-Social .feed-painel .pensamento {
+  grid-column: 1 / -1;
+}
+
+#arcane-Social .feed-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+#arcane-Social .pensamento {
+  min-height: auto;
+  margin: 0;
+  padding: 12px 13px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--text-lighter);
+  background: linear-gradient(180deg, rgba(4,10,7,.98), rgba(1,4,2,.98));
+  border: 1px solid rgba(123,110,61,.32);
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 10px 22px rgba(0,0,0,.48), 0 0 20px rgba(10,40,22,.14);
+}
+
+#arcane-Social .pensamento img,
+#arcane-Social .post-topo img {
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #020503;
+}
+
+#arcane-Social .pensamento img {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  padding: 2px;
+  border: 2px solid #9a7a44;
+  filter: brightness(.72) contrast(1.08) saturate(.85);
+}
+
+#arcane-Social .pensamento span {
+  height: 40px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: rgba(241,236,224,.72);
+  font-size: 13px;
+  background: rgba(0,0,0,.26);
+  border: 1px solid rgba(123,110,61,.2);
+  border-radius: 999px;
+  box-shadow: inset 0 0 14px rgba(0,0,0,.42);
+}
+
+#arcane-Social .pisca {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 600;
+  animation: pisca 1.05s infinite ease-in-out;
+}
+
+@keyframes pisca {
+  0%, 45%, 81%, 100% {
+    opacity: 1;
+  }
+
+  46%, 80% {
+    opacity: .18;
+  }
+}
+
+#arcane-Social .pensamento a {
+  min-width: 74px;
+  height: 38px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a99a5d;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .45px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(6,20,11,.92), rgba(1,4,2,.96));
+  border: 1px solid rgba(123,110,61,.62);
+  border-radius: 999px;
+  box-shadow: inset 0 0 10px rgba(33,112,58,.08), 0 0 8px rgba(0,0,0,.34);
+  transition: .3s;
+}
+
+#arcane-Social .pensamento a:hover {
+  color: #07110a;
+  background: var(--bg-accent);
+  border-color: rgba(143,132,76,.95);
+}
+
+#arcane-Social .post,
+#arcane-Social .mini-card {
+  background: linear-gradient(180deg, rgba(4,10,7,.98), rgba(1,4,2,.98));
+  border: 1px solid rgba(123,110,61,.32);
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 12px 28px rgba(0,0,0,.58), 0 0 24px rgba(10,40,22,.18);
+}
+
+#arcane-Social .post {
+  color: var(--text-lighter);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: .35s;
+}
+
+#arcane-Social .post:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 14px 30px rgba(0,0,0,.66), 0 0 24px rgba(10,40,22,.22);
+}
+
+#arcane-Social .post-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px 11px;
+}
+
+#arcane-Social .post-topo img {
+  width: 38px;
+  height: 38px;
+  padding: 2px;
+  border: 2px solid #9a7a44;
+  filter: brightness(.78) contrast(1.08) saturate(.9);
+}
+
+#arcane-Social .post-topo div {
+  flex: 1;
+  min-width: 0;
+}
+
+#arcane-Social .post-topo b {
+  display: block;
+  color: var(--text-lighter);
+  font: 700 13px/1.15 Poppins;
+}
+
+#arcane-Social .post-topo i {
+  color: var(--text-lighter);
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: .9;
+}
+
+#arcane-Social .foto-post {
+  width: calc(100% - 24px);
+  height: 205px;
+  margin: 0 12px;
+  display: block;
+  object-fit: cover;
+  object-position: center 45%;
+  border-radius: 4px;
+  filter: brightness(.72) contrast(1.06) saturate(.78);
+}
+
+#arcane-Social .texto {
+  padding: 8px 14px 14px;
+  color: var(--text-lighter);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+#arcane-Social .post-texto .texto {
+  padding-bottom: 1px;
+}
+
+#arcane-Social .texto b,
+#arcane-Social .likes-post b {
+  font-weight: 700;
+  color: var(--text-lighter);
+}
+
+#arcane-Social .likes-post {
+  padding: 8px 14px 0;
+  color: var(--text-lighter);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#arcane-Social .hora-post {
+  display: block;
+  margin-top: 6px;
+  color: rgba(241,236,224,.52);
+  font-size: 9.5px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+
+#arcane-Social .acoes {
+  padding: 11px 14px 6px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-lighter);
+  font-size: 14px;
+}
+
+#arcane-Social .acoes::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin-left: auto;
+  display: block;
+  opacity: .95;
+  background: center / 23px 23px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcane-Social .like-btn,
+#arcane-Social .comentar,
+#arcane-Social .compartilhar {
+  position: relative;
+  height: 24px;
+  min-width: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 29px;
+  color: var(--text-lighter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: default;
+  transition: .25s;
+}
+
+#arcane-Social .compartilhar {
+  width: 24px;
+  padding: 0;
+  font-size: 0;
+}
+
+#arcane-Social .like-btn::before,
+#arcane-Social .comentar::before,
+#arcane-Social .compartilhar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  display: block;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+}
+
+#arcane-Social .like-btn::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.8 4.6a5.4 5.4 0 0 0-7.7 0L12 5.7l-1.1-1.1a5.4 5.4 0 0 0-7.7 7.7L12 21l8.8-8.7a5.4 5.4 0 0 0 0-7.7z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcane-Social .comentar::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12a8.6 8.6 0 0 1-8.8 8.5 9.2 9.2 0 0 1-3.9-.9L3 21l1.5-4.8A8.2 8.2 0 0 1 3 12a8.6 8.6 0 0 1 9-8.5A8.6 8.6 0 0 1 21 12z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcane-Social .compartilhar::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 2 11 13' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcane-Social .like-btn:hover,
+#arcane-Social .comentar:hover,
+#arcane-Social .compartilhar:hover {
+  color: #c2b36f;
+  filter: drop-shadow(0 0 7px rgba(123,110,61,.25));
+}
+
+#arcane-Social .mini-card {
+  padding: 15px 16px;
+  color: #a99b5d;
+  border-radius: 10px;
+}
+
+#arcane-Social .mini-card b {
+  display: block;
+  margin-bottom: 9px;
+  color: #b6aa72;
+  font: 700 16px/1 Poppins;
+  letter-spacing: .3px;
+}
+
+#arcane-Social .mini-card span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 0;
+  color: #b7aa70;
+  font-size: 12px;
+  line-height: 1.35;
+  border-top: 1px solid rgba(123,110,61,.22);
+}
+
+#arcane-Social .mini-card span i {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #07110a;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--bg-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(143,130,72,.18);
+}
+
+#arcane-Social .mini-card span strong {
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+
+#arcane-Social .mini-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--text-green);
+  font-size: 11px;
+  letter-spacing: .2px;
+}
+
+#arcane-Social::after {
+  content: "「arcane」";
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 6px;
+  color: #969696;
+  font: bold 8.5px Consolas, monospace;
+  line-height: 1;
+  text-align: center;
+  opacity: .8;
+  text-transform: uppercase;
+}
