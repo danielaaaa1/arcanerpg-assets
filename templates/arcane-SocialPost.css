@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+#arcanePost,
+#arcanePost * {
+  box-sizing: border-box;
+}
+
+#arcanePost {
+  position: relative;
+  width: 390px;
+  max-width: 100%;
+  margin: 24px auto;
+  padding: 12px 12px 0;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(83,131,83,.12), transparent 22%),
+    radial-gradient(circle at 82% 12%, rgba(185,158,89,.12), transparent 24%),
+    linear-gradient(140deg, rgba(23,41,26,.34), transparent 42%),
+    #080808;
+  --bg-green: #244028;
+  --bg-accent: #7B6E3D;
+  --lines: #313131;
+  --text-color: #d1d1d1;
+  --text-lighter: #fff;
+  --text-green: #538353;
+  --ar-frame: radial-gradient(20px at 20px 20px, #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) -20px -20px, linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - 40px + 1px) repeat-x, linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+  color: var(--text-color);
+  font: 13px/150% Poppins, sans-serif;
+  text-align: left;
+  overflow: visible;
+}
+
+#arcanePost::before {
+  content: "";
+  position: absolute;
+  inset: 5px 5px 20px;
+  z-index: 0;
+  background: var(--bg-green);
+  -webkit-mask: var(--ar-frame);
+  mask: var(--ar-frame);
+  pointer-events: none;
+}
+
+#arcanePost .post {
+  position: relative;
+  z-index: 1;
+  color: var(--text-lighter);
+  background: linear-gradient(180deg, rgba(4,10,7,.98), rgba(1,4,2,.98));
+  border: 1px solid rgba(123,110,61,.32);
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(255,240,180,.03), 0 12px 28px rgba(0,0,0,.58), 0 0 24px rgba(10,40,22,.18);
+  overflow: hidden;
+}
+
+#arcanePost .post-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px 11px;
+}
+
+#arcanePost .post-topo img {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid #9a7a44;
+  background: #020503;
+  filter: brightness(.78) contrast(1.08) saturate(.9);
+}
+
+#arcanePost .post-topo div {
+  flex: 1;
+  min-width: 0;
+}
+
+#arcanePost .post-topo b {
+  display: block;
+  color: var(--text-lighter);
+  font: 700 13px/1.15 Poppins;
+}
+
+#arcanePost .post-topo i {
+  color: var(--text-lighter);
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: .9;
+}
+
+#arcanePost .foto-post {
+  width: calc(100% - 24px);
+  aspect-ratio: 1 / 1;
+  margin: 0 12px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(123,110,61,.25);
+  border-radius: 4px;
+  background: #020503;
+  filter: brightness(.72) contrast(1.06) saturate(.78);
+}
+
+#arcanePost .acoes {
+  padding: 11px 14px 6px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-lighter);
+  font-size: 14px;
+}
+
+#arcanePost .acoes::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin-left: auto;
+  display: block;
+  opacity: .95;
+  background: center / 23px 23px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcanePost .like-btn,
+#arcanePost .comentar,
+#arcanePost .compartilhar {
+  position: relative;
+  height: 24px;
+  min-width: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 29px;
+  color: var(--text-lighter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: default;
+}
+
+#arcanePost .compartilhar {
+  width: 24px;
+  padding: 0;
+  font-size: 0;
+}
+
+#arcanePost .like-btn::before,
+#arcanePost .comentar::before,
+#arcanePost .compartilhar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  display: block;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+}
+
+#arcanePost .like-btn::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.8 4.6a5.4 5.4 0 0 0-7.7 0L12 5.7l-1.1-1.1a5.4 5.4 0 0 0-7.7 7.7L12 21l8.8-8.7a5.4 5.4 0 0 0 0-7.7z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcanePost .comentar::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12a8.6 8.6 0 0 1-8.8 8.5 9.2 9.2 0 0 1-3.9-.9L3 21l1.5-4.8A8.2 8.2 0 0 1 3 12a8.6 8.6 0 0 1 9-8.5A8.6 8.6 0 0 1 21 12z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcanePost .compartilhar::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 2 11 13' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#arcanePost .likes-post {
+  padding: 8px 14px 0;
+  color: var(--text-lighter);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#arcanePost .likes-post b {
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+
+#arcanePost .texto {
+  padding: 8px 14px 14px;
+  color: var(--text-lighter);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+#arcanePost .texto b {
+  margin-right: 4px;
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+
+#arcanePost .hora-post {
+  display: block;
+  margin-top: 6px;
+  color: rgba(241,236,224,.52);
+  font-size: 9.5px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+
+#arcanePost::after {
+  content: "「arcane」";
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 6px;
+  color: #969696;
+  font: bold 8.5px Consolas, monospace;
+  line-height: 1;
+  text-align: center;
+  opacity: .8;
+  text-transform: uppercase;
+}
