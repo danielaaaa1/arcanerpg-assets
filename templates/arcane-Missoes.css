@@ -1,0 +1,231 @@
+/* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
+Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
+Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
+para conversarmos sobre valores e demais detalhes. Beijocas */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap");
+@import url("https://dl.dropboxusercontent.com/scl/fi/e60f07bouj3atl266f9h4/ModernAesthetic.css?rlkey=rku6fmvui6hmn88dr6j3bis32&dl=0");
+
+#arcane-Missoes {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  --bg-main: #080808;
+  --bg-darker: #080808;
+  --bg-transparent: #00000070;
+  --bg-green: #244028;
+  --bg-accent: #7b6e3d;
+  --lines: #313131;
+  --text-color: #d1d1d1;
+  --text-lighter: #fff;
+  --text-dark: #000;
+  --text-accent: #b99e59;
+  --text-green: #538353;
+  --width: 630px;
+  position: relative;
+  width: var(--width);
+  color: var(--text-color);
+  text-align: justify;
+  font: 13px / 150% Poppins, sans-serif;
+  margin: 0 auto;
+}
+
+#arcane-Missoes grupo,
+#arcane-Missoes missao,
+#arcane-Missoes topo,
+#arcane-Missoes premio,
+#arcane-Missoes texto,
+#arcane-Missoes dados,
+#arcane-Missoes dado,
+#arcane-Missoes mini,
+#arcane-Missoes info {
+  display: block;
+}
+
+#arcane-Missoes .container {
+  position: relative;
+  padding: 14px;
+  background: #090909;
+  border: 1px solid rgba(185, 158, 89, 0.25);
+  outline: 1px solid rgba(255, 255, 255, 0.04);
+  outline-offset: -6px;
+}
+
+/* grupo */
+
+#arcane-Missoes grupo {
+  margin-bottom: 10px;
+  padding: 18px 18px 16px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent),
+    var(--grupo);
+  border: 1px solid rgba(185, 158, 89, 0.22);
+}
+
+#arcane-Missoes grupo span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-accent);
+  font: 700 10px / 100% "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+#arcane-Missoes grupo h1 {
+  margin: 0;
+  color: #ababab;
+  font: 500 2rem / 100% "Modern Aesthetic";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.65);
+}
+
+#arcane-Missoes missao {
+  position: relative;
+  margin-top: 8px;
+  padding: 16px;
+  background: linear-gradient(90deg, rgba(18, 37, 29, 0.16), transparent 48%),
+    #0b0c0b;
+  border: 1px solid rgba(185, 158, 89, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    inset 0 0 28px rgba(0, 0, 0, 0.28);
+}
+
+#arcane-Missoes missao:before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  bottom: 16px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--text-accent), transparent);
+  opacity: 0.55;
+}
+
+#arcane-Missoes topo {
+  padding-left: 14px;
+  padding-bottom: 12px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid rgba(185, 158, 89, 0.2);
+}
+
+#arcane-Missoes topo h2 {
+  margin: 0 0 8px;
+  color: var(--text-accent);
+  font: 700 16px / 125% Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 0 #000;
+}
+
+#arcane-Missoes premio {
+  display: inline-block;
+  max-width: 100%;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(83, 131, 83, 0.28);
+  color: var(--text-green);
+  font: 700 10px / 140% "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#arcane-Missoes texto {
+  margin: 0 0 14px;
+  padding-left: 14px;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+}
+
+#arcane-Missoes dados {
+  margin-left: 14px;
+  display: grid;
+  gap: 7px;
+}
+
+#arcane-Missoes dado {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 10px;
+  align-items: stretch;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 37, 29, 0.32),
+    rgba(255, 255, 255, 0.018)
+  );
+  border: 1px solid rgba(185, 158, 89, 0.13);
+}
+
+#arcane-Missoes dado b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 8px;
+  background: rgba(123, 110, 61, 0.16);
+  border-right: 1px solid rgba(185, 158, 89, 0.18);
+  color: var(--text-accent);
+  font: 700 10px / 120% "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+#arcane-Missoes dado span {
+  display: block;
+  padding: 9px 10px 9px 0;
+  color: #ababab;
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+}
+
+#arcane-Missoes mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+#arcane-Missoes info {
+  padding: 9px 10px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(185, 158, 89, 0.13);
+}
+
+#arcane-Missoes info b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-accent);
+  font: 700 10px / 100% "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+#arcane-Missoes info span {
+  display: block;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-transform: uppercase;
+}
+
+#arcane-Missoes a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+#arcane-Missoes a:hover {
+  color: var(--text-lighter);
+}
+
+#arcane-Missoes b {
+  color: var(--text-accent);
+}
+
+#arcane-Missoes:after {
+  content: "「arcane」";
+  display: block;
+  margin-top: 5px;
+  color: #969696;
+  opacity: 0.75;
+  text-align: center;
+  font: bold 8.5px Consolas, monospace;
+  text-transform: uppercase;
+}
