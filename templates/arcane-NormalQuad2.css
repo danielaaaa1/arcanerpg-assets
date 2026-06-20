@@ -1,0 +1,455 @@
+/* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
+Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
+Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
+para conversarmos sobre valores e demais detalhes. Beijocas */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#arcaneNormal {
+ margin-top: 25px;
+ margin-bottom: 10px;
+ --bg-main: #080808;
+ --bg-darker: #080808;
+ --bg-transparent: #00000070;
+ --bg-green: #244028;
+ --bg-accent: #7B6E3D;
+ --lines: #313131;
+ --text-color: #d1d1d1;
+ --text-lighter: #fff;
+ --text-dark: #000;
+ --text-accent: #b99e59;
+ --text-green: #538353;
+ --width: 90%;
+}
+
+#arcaneNormal .container {
+ font: 13px / 150% Poppins, sans-serif;
+ color: var(--text-color);
+ text-align: justify;
+ background: #0A0A0A;
+ padding: 0px;
+ margin: 0 auto;
+ width: var(--width);
+ border: 1px solid var(--lines);
+ position: relative;
+}
+
+#arcaneNormal .top {
+ background: transparent;
+ position: relative;
+ z-index: 99;
+ text-align: justify;
+ padding: 10px;
+ padding-left: 20px;
+ padding-top: 20px;
+}
+
+#arcaneNormal .container::before {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ content: '';
+ display: block;
+ background-image: url(https://i.imgur.com/405x71T.png);
+ background-size: 100%;
+ height: 100%;
+ width: 300px;
+ background-repeat: no-repeat;
+ mix-blend-mode: soft-light;
+ z-index: 10;
+ background-position-y: -10px;
+}
+
+#arcaneNormal .top titulo {
+ display: flex;
+ font: 500 2rem/100% 'Modern Aesthetic';
+ text-transform: uppercase;
+ color: #7B6E3D;
+ letter-spacing: 1px;
+ position: relative;
+ align-items: center;
+ z-index: 99;
+}
+
+#arcaneNormal .top subtitulo::before {
+ content: "";
+ position: relative;
+ width: 30px;
+ margin-right: 10px;
+ height: 3px;
+ background-color: #7B6E3D;
+ display: block;
+ z-index: 99;
+}
+
+#arcaneNormal .top subtitulo {
+ display: flex;
+ font: 600 13px / 100% Montserrat;
+ opacity: 1;
+ letter-spacing: .3px;
+ position: relative;
+ z-index: 99;
+ align-items: center;
+ margin-right: 30px;
+}
+
+#arcaneNormal .bottom {
+ position: relative;
+ z-index: 99;
+ padding: 20px;
+ margin-top: -10px;
+}
+
+#arcaneNormal .indice {
+ padding: 20px;
+ background: var(--bg-darker);
+ z-index: 99;
+ position: relative;
+ border-top: 1px solid var(--lines);
+ transition: 500ms;
+}
+
+#arcaneNormal .indice nome {
+ font: 700 1.3rem/100% 'Montserrat';
+ text-transform: uppercase;
+ color: var(--text-green);
+ display: block;
+ position: relative;
+ transition: 500ms;
+}
+
+#arcaneNormal .indice indice a, #arcaneNormal indice a:link {
+ color: var(--text-color) !important;
+ text-decoration: none;
+ background-size: 2px;
+ transition: 500ms;
+}
+
+#arcaneNormal .indice indice a::before {
+ content: "✦";
+ margin-right: 5px;
+ position: relative;
+ color: var(--text-green);
+ transition: 500ms;
+}
+
+#arcaneNormal .indice a:hover::before {
+ color: var(--text-accent);
+ transition: 500ms;
+}
+
+#arcaneNormal .indice a:hover {
+ margin-left: 5px;
+ transition: 500ms;
+}
+
+#arcaneNormal .indice titulo1 {
+ font: 500 23px/100% 'Modern Aesthetic';
+ text-transform: uppercase;
+ letter-spacing: .5px;
+ display: block;
+ color: var(--text-accent);
+ opacity: .8;
+}
+
+#arcaneNormal .indice titulo2 {
+  font: 700 15px 'Montserrat';
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  opacity: .6;
+}
+
+#arcaneNormal .bottom titulo1 {
+ font: 500 23px/100% 'Modern Aesthetic';
+ text-transform: uppercase;
+ letter-spacing: .5px;
+ display: block;
+ color: var(--text-accent);
+ opacity: .8;
+}
+
+#arcaneNormal .bottom titulo2 {
+  font: 700 15px 'Montserrat';
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  opacity: .6;
+}
+
+#arcaneNormal .bottom b {
+ color: var(--text-accent);
+}
+
+#arcaneNormal .bottom b2 {
+ color: var(--text-green);
+ font-weight: 700;
+ position: relative;
+}
+
+#arcaneNormal .bottom b3 {
+  background: #244028;
+  padding: 0px 7px;
+  vertical-align: middle;
+  font-weight: 700;
+  display: inline-block;
+}
+
+#arcaneNormal .bottom b2:before {
+ content: "✦";
+ margin-right: 5px;
+}
+
+#arcaneNormal .box {
+ display: flex;
+ background: rgba(0,0,0,0.5);
+ outline: 1px solid var(--lines);
+ outline-offset: 3px;
+ align-items: center;
+ position: relative;
+ overflow: hidden;
+}
+
+#arcaneNormal .box icon {
+ display: flex;
+ position: relative;
+}
+#arcaneNormal .box icon i {
+ font-size: 30px;
+ position: relative;
+ color: var(--text-accent);
+ margin-right: 50px;
+ left: 25px;
+}
+
+#arcaneNormal .box info {
+ border-left: 1px solid var(--lines);
+ padding: 10px;
+}
+
+#arcaneNormal .box info b {
+ color: var(--text-green);
+ display: inline-block;
+}
+
+#arcaneNormal .highlight {
+  border-left: 1px solid #7B6E3D;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#arcaneNormal:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top: 6px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
+
+#arcaneNormal .areaPosicoes {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-darker);
+  z-index: 99;
+  position: relative;
+  border-top: 1px solid var(--lines);
+  text-align: left;
+}
+
+#arcaneNormal .posicaoQuad {
+  position: relative;
+  padding: 0;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(36, 64, 40, .18), rgba(0, 0, 0, .28));
+  border: 1px solid var(--lines);
+  overflow: hidden;
+}
+
+#arcaneNormal .posicaoQuad:last-child {
+  margin-bottom: 0;
+}
+
+#arcaneNormal .posicaoTopo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(0, 0, 0, .38);
+  border-bottom: 1px solid var(--lines);
+  position: relative;
+}
+
+#arcaneNormal .posicaoTopo::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--bg-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#arcaneNormal .posicaoIcone {
+  min-width: 38px;
+  height: 38px;
+  border: 1px solid rgba(123, 110, 61, .45);
+  background: rgba(123, 110, 61, .08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 15px/100% Montserrat;
+  color: var(--text-accent);
+}
+
+#arcaneNormal .posicaoTitulo {
+  flex: 1;
+}
+
+#arcaneNormal .posicaoTitulo titulo1 {
+  font: 800 18px/100% Montserrat, sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-accent);
+  opacity: 1;
+  margin: 0;
+  display: block;
+}
+
+#arcaneNormal .posicaoSub {
+  display: block;
+  margin-top: 5px;
+  font: 700 8px/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--text-green);
+  opacity: .85;
+}
+
+#arcaneNormal .posicaoConteudo {
+  padding: 18px;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+#arcaneNormal .posicaoBloco {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+  line-height: 165%;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+#arcaneNormal .posicaoBloco:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+#arcaneNormal .miniTitulo {
+  display: block;
+  margin-bottom: 7px;
+  font: 800 9px/100% Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-accent);
+}
+
+#arcaneNormal .miniTitulo::before {
+  content: "✦";
+  color: var(--text-green);
+  margin-right: 6px;
+}
+
+#arcaneNormal .resumoFuncao {
+  padding: 12px;
+  background: rgba(0, 0, 0, .28);
+  border-left: 2px solid var(--text-green);
+}
+
+#arcaneNormal .alertaQuad {
+  padding: 10px;
+  background: rgba(36, 64, 40, .25);
+  border-left: 2px solid var(--text-accent);
+}
+
+#arcaneNormal .notaQuad {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(123, 110, 61, .08);
+  border: 1px solid rgba(123, 110, 61, .18);
+  font-size: 10px;
+  line-height: 150%;
+  opacity: .9;
+  text-align: left;
+}
+
+#arcaneNormal .posicaoBloco > b,
+#arcaneNormal .posicaoBloco p b,
+#arcaneNormal .notaQuad b {
+  display: inline-block;
+  color: var(--text-accent);
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#arcaneNormal .listaQuad {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+  margin-top: 8px;
+}
+
+#arcaneNormal .listaQuad span {
+  display: block;
+  padding: 5px 8px;
+  background: rgba(0, 0, 0, .22);
+  border-left: 2px solid rgba(123, 110, 61, .45);
+  font: 500 11px/145% Poppins;
+  color: var(--text-color);
+  overflow-wrap: break-word;
+}
+
+#arcaneNormal .listaQuad span::before {
+  content: "—";
+  color: var(--text-green);
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+#arcaneNormal .dificuldades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-top: 8px;
+}
+
+#arcaneNormal .difCard {
+  padding: 9px;
+  background: rgba(0, 0, 0, .28);
+  border: 1px solid rgba(255, 255, 255, .05);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+#arcaneNormal .difCard b {
+  display: block;
+  color: var(--text-green);
+  font: 800 10px/100% Montserrat;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+#arcaneNormal .difCard span {
+  display: block;
+  font: 500 10px/135% Poppins;
+  color: var(--text-color);
+}
