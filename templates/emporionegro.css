@@ -1,0 +1,768 @@
+@import url('https://fonts.cdnfonts.com/css/modern-aesthetic');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+#loja-arcana-hp,
+.loja-recibo-arcano {
+  --bg-main: #080808;
+  --bg-darker: #080808;
+  --bg-transparent: #00000070;
+  --bg-green: #244028;
+  --bg-accent: #7B6E3D;
+  --lines: #313131;
+  --text-color: #d1d1d1;
+  --text-lighter: #fff;
+  --text-dark: #000;
+  --text-accent: #b99e59;
+  --text-green: #538353;
+  --soft-line: rgba(123, 110, 61, .34);
+  --panel: rgba(8, 8, 8, .74);
+  --panel-green: rgba(36, 64, 40, .26);
+}
+
+#loja-arcana-hp {
+  width: min(1040px, 100%);
+  margin: 28px auto;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+  word-spacing: normal;
+  container-type: inline-size;
+}
+
+#loja-arcana-hp,
+#loja-arcana-hp * {
+  box-sizing: border-box;
+  word-spacing: normal;
+}
+
+#loja-arcana-hp button,
+#loja-arcana-hp textarea {
+  appearance: none;
+  font-family: Poppins, sans-serif;
+}
+
+#loja-arcana-hp .loja-moldura {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(185, 158, 89, .18) 0 1px, transparent 2px),
+    radial-gradient(circle at 86% 24%, rgba(83, 131, 83, .18) 0 1px, transparent 2px),
+    linear-gradient(180deg, rgba(16, 16, 16, .96), rgba(8, 8, 8, .98)),
+    #101010;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(123, 110, 61, .12);
+}
+
+#loja-arcana-hp .loja-moldura::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid rgba(123, 110, 61, .24);
+}
+
+#loja-arcana-hp .loja-moldura > * {
+  position: relative;
+  z-index: 1;
+}
+
+#loja-arcana-hp .loja-topo {
+  min-height: 160px;
+  padding: 58px 28px 36px;
+  border-bottom: 1px solid var(--lines);
+  background:
+    linear-gradient(90deg, rgba(8, 8, 8, .96), rgba(16, 16, 16, .62), rgba(8, 8, 8, .96)),
+    radial-gradient(circle at 20% 22%, rgba(83, 131, 83, .32), transparent 32%),
+    linear-gradient(180deg, rgba(36, 64, 40, .34), rgba(16, 16, 16, .96)),
+    url(https://2img.net/i.imgur.com/PcCmCPc.png) center / cover;
+  background-blend-mode: normal, screen, multiply, luminosity;
+}
+
+#loja-arcana-hp .loja-topo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 58px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, #101010);
+}
+
+#loja-arcana-hp .loja-titulo-linha {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#loja-arcana-hp .loja-titulo-linha::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-width: 36px;
+  background: linear-gradient(90deg, rgba(185, 158, 89, .6), transparent);
+}
+
+#loja-arcana-hp .loja-selo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid rgba(123, 110, 61, .72);
+  background: rgba(8, 8, 8, .72);
+  color: var(--text-accent);
+  font-size: 22px;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(185, 158, 89, .42);
+}
+
+#loja-arcana-hp h2,
+.loja-recibo-arcano h3 {
+  margin: 0;
+  color: #7B6E3D;
+  font: 500 2rem / 100% 'Modern Aesthetic';
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#loja-arcana-hp .loja-descricao {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  margin: -22px 22px 0;
+  padding: 22px 22px 22px 68px;
+  border: 1px solid var(--soft-line);
+  background:
+    linear-gradient(90deg, var(--panel-green), transparent 48%),
+    rgba(8, 8, 8, .86);
+  box-shadow: inset 0 0 0 1px rgba(49, 49, 49, .8);
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+}
+
+#loja-arcana-hp .loja-descricao::before {
+  content: "✦";
+  position: absolute;
+  left: 22px;
+  top: 23px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(185, 158, 89, .32);
+  background: rgba(8, 8, 8, .72);
+  color: var(--text-accent);
+  font-size: 13px;
+}
+
+#loja-arcana-hp .loja-descricao p {
+  margin: 0 0 12px;
+  text-align: justify;
+}
+
+#loja-arcana-hp .loja-descricao p:last-child {
+  margin-bottom: 0;
+}
+
+#loja-arcana-hp strong,
+.loja-recibo-arcano strong {
+  color: var(--text-accent);
+  font-weight: 700;
+}
+
+#loja-arcana-hp .loja-observacoes {
+  padding-top: 12px;
+  border-top: 1px solid rgba(49, 49, 49, .84);
+  color: rgba(209, 209, 209, .62);
+  font-size: 10px;
+}
+
+#loja-arcana-hp .loja-corpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 318px;
+  gap: 20px;
+  padding: 22px;
+}
+
+#loja-arcana-hp .loja-corpo > section {
+  display: contents;
+}
+
+#loja-arcana-hp .loja-filtros {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0;
+  margin-bottom: 14px;
+  border: 1px solid var(--lines);
+  background: var(--panel);
+}
+
+#loja-arcana-hp .filtro-btn,
+#loja-arcana-hp .loja-botao,
+#loja-arcana-hp .adicionar-btn,
+.loja-recibo-aprovar {
+  position: relative;
+  min-height: 32px;
+  border: 1px solid var(--lines);
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(36, 64, 40, .18), rgba(8, 8, 8, .9));
+  color: var(--text-color) !important;
+  cursor: pointer;
+  font: 700 10px / 115% Poppins, sans-serif !important;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  transition: .22s ease;
+}
+
+#loja-arcana-hp .filtro-btn {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  padding: 9px 3px;
+  border-width: 0 1px 0 0;
+  overflow: hidden !important;
+  text-align: center;
+  white-space: nowrap !important;
+}
+
+#loja-arcana-hp .filtro-btn:last-child {
+  border-right: 0;
+}
+
+#loja-arcana-hp .filtro-btn::before {
+  content: "✦";
+  margin-right: 6px;
+  color: rgba(185, 158, 89, .62);
+  font-size: 8px;
+}
+
+#loja-arcana-hp .filtro-btn:hover,
+#loja-arcana-hp .filtro-btn.ativo,
+#loja-arcana-hp .loja-botao:hover,
+#loja-arcana-hp .adicionar-btn:hover,
+.loja-recibo-aprovar:hover {
+  border-color: rgba(123, 110, 61, .9);
+  background: linear-gradient(180deg, rgba(123, 110, 61, .32), rgba(36, 64, 40, .2));
+  color: var(--text-accent) !important;
+  box-shadow: inset 0 -2px 0 rgba(185, 158, 89, .55);
+}
+
+#loja-arcana-hp .loja-grade {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 292px), 1fr));
+  gap: 12px;
+}
+
+#loja-arcana-hp .item-card,
+#loja-arcana-hp .loja-carrinho,
+.loja-recibo-arcano {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+  background:
+    radial-gradient(circle at 92% 18%, rgba(123, 110, 61, .14), transparent 30%),
+    linear-gradient(180deg, var(--panel-green), rgba(8, 8, 8, .86)),
+    var(--panel);
+  box-shadow: inset 0 0 0 1px rgba(123, 110, 61, .09);
+}
+
+#loja-arcana-hp .item-card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 13px;
+  min-height: 166px;
+  padding: 15px;
+  transition: .22s ease;
+}
+
+#loja-arcana-hp .item-card::before,
+#loja-arcana-hp .loja-carrinho::before,
+.loja-recibo-arcano::after {
+  content: "✧";
+  position: absolute;
+  right: 13px;
+  bottom: 4px;
+  color: rgba(185, 158, 89, .08);
+  font: 58px / 1 Georgia, serif;
+  pointer-events: none;
+}
+
+#loja-arcana-hp .item-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+#loja-arcana-hp .item-card:hover {
+  border-color: rgba(123, 110, 61, .86);
+  box-shadow: inset 0 0 0 1px rgba(185, 158, 89, .12), 0 10px 28px rgba(0, 0, 0, .34);
+  transform: translateY(-2px);
+}
+
+#loja-arcana-hp .item-icone,
+#loja-arcana-hp .carrinho-contador,
+.loja-recibo-selo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(123, 110, 61, .64);
+  background: rgba(8, 8, 8, .64);
+  color: var(--text-accent);
+  text-shadow: 0 0 10px rgba(185, 158, 89, .34);
+}
+
+#loja-arcana-hp .item-icone {
+  width: 54px;
+  height: 54px;
+  font: 24px Georgia, serif;
+}
+
+#loja-arcana-hp .item-nome,
+#loja-arcana-hp .carrinho-nome {
+  margin: 0;
+  color: var(--text-accent);
+  font-weight: 800;
+  letter-spacing: .02em;
+  line-height: 135%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#loja-arcana-hp .item-nome {
+  font-size: 12px;
+}
+
+#loja-arcana-hp .item-desc {
+  margin: 8px 0 12px;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+}
+
+#loja-arcana-hp .item-rodape,
+#loja-arcana-hp .loja-total,
+.loja-recibo-corpo li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+#loja-arcana-hp .item-preco {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 8px;
+  border: 1px solid rgba(49, 49, 49, .86);
+  background: rgba(8, 8, 8, .52);
+  color: var(--text-green);
+  font: 700 11px / 1 Poppins, sans-serif;
+  white-space: nowrap;
+}
+
+#loja-arcana-hp .adicionar-btn {
+  min-height: 29px;
+  padding: 7px 10px !important;
+}
+
+#loja-arcana-hp .loja-carrinho {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  position: sticky;
+  top: 12px;
+  min-height: 332px;
+  padding: 16px;
+}
+
+#loja-arcana-hp .loja-carrinho::before {
+  content: "☾";
+  top: 6px;
+  bottom: auto;
+  font-size: 80px;
+}
+
+#loja-arcana-hp .carrinho-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--lines);
+  color: var(--bg-accent);
+  font: 500 1.6rem / 100% 'Modern Aesthetic';
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#loja-arcana-hp .carrinho-contador {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  font: 700 11px / 1 Poppins, sans-serif;
+}
+
+#loja-arcana-hp .carrinho-lista {
+  display: grid;
+  gap: 8px;
+  min-height: 104px;
+}
+
+#loja-arcana-hp .carrinho-vazio,
+#loja-arcana-hp .carrinho-item,
+.loja-recibo-corpo li,
+.loja-recibo-valores {
+  border: 1px solid rgba(49, 49, 49, .94);
+  background: rgba(8, 8, 8, .46);
+}
+
+#loja-arcana-hp .carrinho-vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 104px;
+  padding: 14px;
+  color: rgba(209, 209, 209, .62);
+  text-align: center;
+}
+
+#loja-arcana-hp .carrinho-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  padding: 10px;
+}
+
+#loja-arcana-hp .carrinho-preco,
+.loja-recibo-valores span {
+  color: rgba(209, 209, 209, .68);
+  font-size: 11px;
+}
+
+#loja-arcana-hp .qtd-controles {
+  display: inline-grid;
+  grid-template-columns: 28px 30px 28px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+  background: rgba(8, 8, 8, .5);
+}
+
+#loja-arcana-hp .qtd-controles button,
+#loja-arcana-hp .qtd-controles span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+#loja-arcana-hp .qtd-controles button {
+  width: 28px;
+  padding: 0 !important;
+  border: 0;
+  background: transparent;
+  color: var(--text-accent) !important;
+  cursor: pointer;
+  font-size: 14px !important;
+}
+
+#loja-arcana-hp .qtd-controles span {
+  border: solid rgba(49, 49, 49, .76);
+  border-width: 0 1px;
+  color: var(--text-color);
+  font-size: 11px;
+}
+
+#loja-arcana-hp .loja-total {
+  margin: 15px 0 12px;
+  padding-top: 13px;
+  border-top: 1px solid var(--lines);
+  color: var(--text-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#loja-arcana-hp .loja-total strong,
+.loja-recibo-valores strong,
+.loja-recibo-corpo li strong {
+  color: var(--text-green);
+  white-space: nowrap;
+}
+
+#loja-arcana-hp .loja-acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+#loja-arcana-hp .loja-botao {
+  width: 100%;
+  padding: 9px 10px !important;
+}
+
+#loja-arcana-hp .loja-botao.comprar,
+.loja-recibo-aprovar {
+  border-color: rgba(123, 110, 61, .62);
+  background: linear-gradient(180deg, rgba(123, 110, 61, .3), rgba(8, 8, 8, .86));
+  color: var(--text-accent) !important;
+}
+
+#loja-arcana-hp button:disabled,
+.loja-recibo-aprovar:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+#loja-arcana-hp .pedido-final {
+  display: none;
+  margin-top: 12px;
+}
+
+#loja-arcana-hp .pedido-final.ativo {
+  display: block;
+}
+
+#loja-arcana-hp .pedido-final textarea {
+  width: 100%;
+  min-height: 154px;
+  resize: vertical;
+  border: 1px solid var(--lines);
+  border-radius: 0;
+  outline: 0;
+  background: rgba(8, 8, 8, .82);
+  color: var(--text-color) !important;
+  padding: 11px !important;
+  font: 12px / 145% Poppins, sans-serif !important;
+}
+
+#loja-arcana-hp .pedido-final textarea:focus {
+  border-color: rgba(123, 110, 61, .78);
+}
+
+#loja-arcana-hp .pedido-aviso {
+  margin: 8px 0 0;
+  color: rgba(209, 209, 209, .62);
+  font-size: 11px;
+}
+
+.loja-recibo-arcano {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 18px auto;
+  padding: 18px;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+  word-spacing: normal;
+}
+
+.loja-recibo-arcano,
+.loja-recibo-arcano * {
+  box-sizing: border-box;
+  word-spacing: normal;
+}
+
+.loja-recibo-arcano::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  border: 1px solid rgba(123, 110, 61, .22);
+}
+
+.loja-recibo-topo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--lines);
+}
+
+.loja-recibo-selo {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  font-size: 15px;
+}
+
+.loja-recibo-topo p {
+  margin: 4px 0 0;
+  color: var(--text-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.loja-recibo-arcano.aprovado .loja-recibo-topo p,
+.loja-recibo-arcano.aprovado .loja-recibo-status {
+  color: var(--text-accent);
+}
+
+.loja-recibo-corpo {
+  position: relative;
+  z-index: 1;
+  padding-top: 13px;
+}
+
+.loja-recibo-corpo p {
+  margin: 0 0 9px;
+}
+
+.loja-recibo-corpo ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.loja-recibo-corpo li {
+  padding: 8px 10px;
+}
+
+.loja-recibo-valores {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 14px;
+  padding: 10px;
+}
+
+.loja-recibo-acoes {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.loja-recibo-aprovar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 8px 13px !important;
+}
+
+@media (max-width: 860px) {
+  #loja-arcana-hp .loja-corpo {
+    grid-template-columns: 1fr;
+  }
+
+  #loja-arcana-hp .loja-filtros,
+  #loja-arcana-hp .loja-grade,
+  #loja-arcana-hp .loja-carrinho {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #loja-arcana-hp .loja-carrinho {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  #loja-arcana-hp {
+    margin: 18px auto;
+    font-size: 12px;
+  }
+
+  #loja-arcana-hp .loja-topo {
+    min-height: 138px;
+    padding: 44px 16px 34px;
+  }
+
+  #loja-arcana-hp .loja-titulo-linha {
+    gap: 10px;
+  }
+
+  #loja-arcana-hp .loja-titulo-linha::after {
+    display: none;
+  }
+
+  #loja-arcana-hp .loja-selo {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    font-size: 20px;
+  }
+
+  #loja-arcana-hp .loja-descricao {
+    margin: -18px 14px 0;
+    padding: 17px;
+  }
+
+  #loja-arcana-hp .loja-descricao::before {
+    display: none;
+  }
+
+  #loja-arcana-hp .loja-corpo {
+    padding: 14px;
+  }
+
+  #loja-arcana-hp .loja-filtros {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #loja-arcana-hp .filtro-btn {
+    border-width: 0 1px 1px 0;
+  }
+
+  #loja-arcana-hp .filtro-btn:nth-child(2n) {
+    border-right: 0;
+  }
+
+  #loja-arcana-hp .filtro-btn:last-child {
+    grid-column: 1 / -1;
+    border-bottom: 0;
+  }
+
+  #loja-arcana-hp .loja-grade {
+    grid-template-columns: 1fr;
+  }
+
+  #loja-arcana-hp .item-card {
+    grid-template-columns: 46px minmax(0, 1fr);
+    min-height: auto;
+    padding: 13px;
+  }
+
+  #loja-arcana-hp .item-icone {
+    width: 46px;
+    height: 46px;
+    font-size: 21px;
+  }
+
+  #loja-arcana-hp .loja-acoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container (max-width: 720px) {
+  #loja-arcana-hp .loja-corpo {
+    grid-template-columns: 1fr;
+  }
+
+  #loja-arcana-hp .loja-filtros,
+  #loja-arcana-hp .loja-grade,
+  #loja-arcana-hp .loja-carrinho {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #loja-arcana-hp .loja-carrinho {
+    position: static;
+  }
+}
