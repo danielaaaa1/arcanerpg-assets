@@ -450,7 +450,7 @@
 }
 
 .arcane-roleta-solicitacao.aprovado .arcane-roleta-solicitacao__status {
-  color: #927630 !important;
+  color: var(--text-accent) !important;
 }
 
 .arcane-roleta-solicitacao__corpo {
