@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap");
+@import url("https://dl.dropboxusercontent.com/scl/fi/e60f07bouj3atl266f9h4/ModernAesthetic.css?rlkey=rku6fmvui6hmn88dr6j3bis32&dl=0");
+
+#arcane-memorias {
+margin-top: 25px !important;
+margin-bottom: 10px;
+--bg-main: #080808;
+--bg-darker: #080808;
+--bg-transparent: #00000070;
+--bg-green: #244028;
+--bg-accent: #7b6e3d;
+--lines: #313131;
+--text-color: #d1d1d1;
+--text-lighter: #fff;
+--text-dark: #000;
+--text-accent: #b99e59;
+--text-green: #538353;
+--width: 630px;
+
+position: relative;
+width: var(--width);
+color: var(--text-color);
+text-align: justify;
+font: 13px / 150% Poppins, sans-serif;
+margin: 0 auto;
+}
+
+#arcane-memorias * {
+box-sizing: border-box;
+}
+
+#arcane-memorias .container {
+position: relative;
+padding: 14px;
+background: #0c0c0c;
+border: 1px solid var(--lines);
+outline: 1px solid rgba(255, 255, 255, 0.04);
+outline-offset: -6px;
+}
+
+#arcane-memorias .cabecalho {
+margin-bottom: 10px;
+padding: 18px 18px 16px;
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent),
+var(--grupo);
+border: 1px solid rgba(185, 158, 89, 0.22);
+}
+
+#arcane-memorias .cabecalho span {
+display: block;
+margin-bottom: 4px;
+color: var(--text-accent);
+font: 700 10px / 100% "Roboto Mono", monospace;
+text-transform: uppercase;
+letter-spacing: 2px;
+opacity: 0.8;
+}
+
+#arcane-memorias .cabecalho h1 {
+margin: 0px;
+margin-bottom: -10px;
+color: #ababab;
+font: 500 1.8rem / 100% "Modern Aesthetic";
+text-transform: uppercase;
+letter-spacing: 1px;
+text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.65);
+}
+
+#arcane-memorias .grupo {
+margin: 15px 0 8px;
+padding: 8px 10px;
+background: rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(83, 131, 83, 0.28);
+color: var(--text-green);
+font: 700 10px / 140% "Roboto Mono", monospace;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+#arcane-memorias .memoria {
+position: relative;
+display: grid;
+grid-template-columns: 78px 1fr;
+gap: 14px;
+align-items: center;
+margin-top: 8px;
+padding: 15px 16px 15px 20px;
+background: linear-gradient(90deg, rgba(18, 37, 29, 0.16), transparent 48%),
+#0b0c0b;
+border: 1px solid rgba(185, 158, 89, 0.15);
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+inset 0 0 28px rgba(0, 0, 0, 0.28);
+overflow: hidden;
+}
+
+#arcane-memorias .memoria:before {
+content: "";
+position: absolute;
+left: 16px;
+top: 14px;
+bottom: 14px;
+width: 2px;
+background: linear-gradient(to bottom, var(--text-accent), transparent);
+opacity: 0.55;
+}
+
+#arcane-memorias .icone {
+position: relative;
+z-index: 2;
+justify-self: start;
+align-self: center;
+width: 60px;
+height: 60px;
+margin-left: 12px;
+padding: 6px;
+object-fit: contain;
+background: rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(185, 158, 89, 0.24);
+outline: 1px solid rgba(255, 255, 255, 0.035);
+outline-offset: -4px;
+}
+
+#arcane-memorias .conteudo {
+position: relative;
+z-index: 2;
+min-width: 0;
+}
+
+#arcane-memorias .nome {
+margin: 0 0 7px;
+padding-bottom: 8px;
+border-bottom: 1px solid rgba(185, 158, 89, 0.2);
+color: var(--text-accent);
+font: 700 17px / 125% Montserrat, sans-serif;
+text-transform: uppercase;
+letter-spacing: .8px;
+text-shadow: 1px 1px 0 #000;
+}
+
+#arcane-memorias .conquista {
+display: inline-block;
+max-width: 100%;
+margin-bottom: 9px;
+padding: 6px 8px;
+background: rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(83, 131, 83, 0.28);
+color: var(--text-green);
+font: 700 10px / 140% "Roboto Mono", monospace;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+#arcane-memorias .texto {
+margin: 0;
+color: var(--text-color);
+font: 13px / 150% Poppins, sans-serif;
+text-align: justify;
+}
+
+#arcane-memorias b {
+color: var(--text-accent);
+}
+
+#arcane-memorias a {
+color: var(--text-accent);
+text-decoration: none;
+}
+
+#arcane-memorias a:hover {
+color: var(--text-lighter);
+}
+
+#arcane-memorias:after {
+content: "「arcane」";
+display: block;
+margin-top: 5px;
+color: #969696;
+opacity: 0.75;
+text-align: center;
+font: bold 8.5px Consolas, monospace;
+text-transform: uppercase;
+}
