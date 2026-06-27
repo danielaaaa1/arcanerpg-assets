@@ -1,0 +1,714 @@
+/* esse codigo ta uma bagunça kk esteja avisadoh */
+
+@import url('https://fonts.cdnfonts.com/css/modern-aesthetic');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+#arcane-EmporioNegro,
+.recibo {
+ margin-top: 25px;
+ margin-bottom: 10px;
+ --bg-main: #080808;
+ --bg-darker: #080808;
+ --bg-transparent: #00000070;
+ --bg-green: #244028;
+ --bg-accent: #7B6E3D;
+ --lines: #313131;
+ --text-color: #d1d1d1;
+ --text-lighter: #fff;
+ --text-dark: #000;
+ --text-accent: #b99e59;
+ --text-green: #538353;
+ --width: 90%;
+}
+
+#arcane-EmporioNegro {
+  width: var(--width);
+  margin: 28px auto;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif;
+  text-align: justify;
+}
+
+#arcane-EmporioNegro,
+#arcane-EmporioNegro * {
+  box-sizing: border-box;
+}
+
+#arcane-EmporioNegro button,
+#arcane-EmporioNegro textarea {
+  appearance: none;
+  font-family: Poppins, sans-serif;
+}
+
+#arcane-EmporioNegro .moldura {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+}
+
+#arcane-EmporioNegro .moldura::before,
+.recibo::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  border: 1px solid var(--bg-accent);
+}
+
+#arcane-EmporioNegro .moldura > * {
+  position: relative;
+  z-index: 1;
+}
+
+#arcane-EmporioNegro .topo {
+  position: relative;
+  overflow: hidden;
+  min-height: 170px;
+  padding: 62px 28px 44px;
+  border-bottom: 1px solid var(--lines);
+  background: #101010;
+}
+
+#arcane-EmporioNegro .topo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url(https://2img.net/i.imgur.com/PcCmCPc.png) center / cover no-repeat;
+  filter: grayscale(.35) brightness(.58) contrast(1.05);
+  opacity: .78;
+}
+
+#arcane-EmporioNegro .topo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+ background:
+    linear-gradient(to right, rgba(8,8,8,.86), rgba(8,8,8,.18) 52%, rgba(8,8,8,.7)),
+    linear-gradient(to bottom, rgba(8,8,8,.08), rgba(8,8,8,.78));
+}
+
+#arcane-EmporioNegro .linha {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#arcane-EmporioNegro .linha::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-width: 36px;
+  background: rgba(185, 158, 89, .6);
+}
+
+#arcane-EmporioNegro .icone,
+#arcane-EmporioNegro .contador,
+.selo-recibo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(123, 110, 61, .64);
+  background: rgba(8, 8, 8, .64);
+  color: var(--text-green);
+}
+
+#arcane-EmporioNegro .titulo,
+.recibo .titulo {
+ margin: 0;
+ color: var(--bg-accent);
+ font: 500 2rem / 100% 'Modern Aesthetic';
+ letter-spacing: 1px;
+ text-align: left;
+ text-transform: uppercase;
+ position: relative;
+ z-index: 99;
+}
+
+#arcane-EmporioNegro .descricao {
+  position: relative;
+  z-index: 2;
+  margin: -42px 22px 0;
+  padding: 30px;
+  border: 1px solid var(--lines);
+  background: #080808;
+  color: var(--text-color);
+  font: 13px / 150% Poppins, sans-serif !important;
+}
+
+.descricao::after {
+  content: "";
+ position: absolute;
+ inset: 0;
+ background: var(--lines);
+ mask: radial-gradient(20px at 20px 20px, #0000 calc(98% - 1px), #000 calc(100% - 1px) 98%, #0000) -20px -20px, linear-gradient(90deg, #000 2px, #0000 0) -1px 50% / 100% calc(100% - 40px + 1px) repeat-x, linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+ margin: -8px;
+ z-index: 99;
+}
+
+#arcane-EmporioNegro .texto {
+  margin: 0 0 12px;
+  text-align: justify;
+ position: relative;
+}
+
+#arcane-EmporioNegro .texto:last-child {
+  margin-bottom: 0;
+}
+
+#arcane-EmporioNegro strong,
+.recibo strong {
+  color: var(--bg-accent);
+  font-weight: 700;
+}
+
+#arcane-EmporioNegro .observacoes {
+  padding-top: 12px;
+  border-top: 1px solid rgba(49, 49, 49, .84);
+  color: rgba(209, 209, 209, .62);
+  font-size: 10px;
+}
+
+#arcane-EmporioNegro .corpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 318px;
+  gap: 20px;
+  padding: 22px;
+}
+
+#arcane-EmporioNegro .filtros {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0;
+  margin-bottom: 14px;
+  border: 1px solid var(--lines);
+  background: var(--panel);
+}
+
+#arcane-EmporioNegro .filtro,
+#arcane-EmporioNegro .botao,
+#arcane-EmporioNegro .adicionar,
+.aprovar {
+  position: relative;
+  min-height: 32px;
+  border: 1px solid var(--lines);
+  border-radius: 0;
+  background: #080808;
+  color: var(--text-color) !important;
+  cursor: pointer;
+  font: 700 10px / 115% Poppins, sans-serif !important;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  transition: .22s ease;
+}
+
+#arcane-EmporioNegro .filtro {
+  display: block !important;
+  width: 100%;
+  padding: 9px 3px;
+  border-width: 0 1px 0 0;
+  overflow: hidden !important;
+  text-align: center;
+  white-space: nowrap !important;
+}
+
+#arcane-EmporioNegro .filtro:last-child {
+  border-right: 0;
+}
+
+#arcane-EmporioNegro .filtro:hover,
+#arcane-EmporioNegro .filtro.ativo,
+#arcane-EmporioNegro .botao:hover,
+#arcane-EmporioNegro .adicionar:hover,
+.aprovar:hover {
+  background: #151409;
+  color: var(--text-accent) !important;
+  box-shadow: inset 0 -2px 0 rgba(185, 158, 89, .55);
+}
+
+#arcane-EmporioNegro .grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+  gap: 12px;
+}
+
+#arcane-EmporioNegro .item,
+#arcane-EmporioNegro .carrinho,
+.recibo {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+  background: #101010;
+  box-shadow: inset 0 0 0 1px rgba(123, 110, 61, .09);
+}
+
+#arcane-EmporioNegro .item {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 13px;
+  min-height: 166px;
+  padding: 15px;
+  transition: .22s ease;
+}
+
+#arcane-EmporioNegro .item > * {
+  position: relative;
+  z-index: 1;
+}
+
+#arcane-EmporioNegro .item:hover {
+  border-color: rgba(123, 110, 61, .86);
+  box-shadow: inset 0 0 0 1px rgba(185, 158, 89, .12), 0 10px 28px rgba(0, 0, 0, .34);
+  transform: translateY(-2px);
+}
+
+#arcane-EmporioNegro .icone {
+  width: 54px;
+  height: 54px;
+  font: 24px Georgia, serif;
+}
+
+#arcane-EmporioNegro .nome {
+  margin: 0;
+  color: var(--bg-accent);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  line-height: 115%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#arcane-EmporioNegro .desc {
+  margin: 8px 0 12px;
+  color: var(--text-color);
+  font: 12px / 145% Poppins, sans-serif !important;
+  text-align: justify;
+}
+
+#arcane-EmporioNegro .rodape,
+#arcane-EmporioNegro .total,
+.recibo li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+#arcane-EmporioNegro .preco {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 8px;
+  border: 1px solid rgba(49, 49, 49, .86);
+  background: rgba(8, 8, 8, .52);
+  color: var(--text-green);
+  font: 700 11px / 1 Poppins, sans-serif;
+  white-space: nowrap;
+}
+
+#arcane-EmporioNegro .adicionar {
+  min-height: 29px;
+  padding: 7px 10px !important;
+}
+
+#arcane-EmporioNegro .carrinho {
+  align-self: start;
+  position: sticky;
+  top: 12px;
+  min-height: 332px;
+  padding: 16px;
+}
+
+#arcane-EmporioNegro .carrinho-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--lines);
+  color: var(--bg-accent);
+  font: 500 1.6rem / 100% 'Modern Aesthetic';
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#arcane-EmporioNegro .contador {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  font: 700 11px / 1 Poppins, sans-serif;
+}
+
+#arcane-EmporioNegro .lista {
+  display: grid;
+  gap: 8px;
+  min-height: 104px;
+}
+
+#arcane-EmporioNegro .vazio,
+#arcane-EmporioNegro .compra,
+.recibo li,
+.recibo .valores {
+  border: 1px solid rgba(49, 49, 49, .94);
+  background: rgba(8, 8, 8, .46);
+}
+
+#arcane-EmporioNegro .vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 104px;
+  padding: 14px;
+  color: rgba(209, 209, 209, .62);
+  text-align: center;
+}
+
+#arcane-EmporioNegro .compra {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  padding: 10px;
+}
+
+#arcane-EmporioNegro .valor,
+.recibo .valores span {
+  color: rgba(209, 209, 209, .68);
+  font-size: 11px;
+}
+
+#arcane-EmporioNegro .qtd {
+  display: inline-grid;
+  grid-template-columns: 28px 30px 28px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--lines);
+  background: rgba(8, 8, 8, .5);
+}
+
+#arcane-EmporioNegro .qtd button,
+#arcane-EmporioNegro .qtd span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+#arcane-EmporioNegro .qtd button {
+  width: 28px;
+  padding: 0 !important;
+  border: 0;
+  background: transparent;
+  color: var(--text-accent) !important;
+  cursor: pointer;
+  font-size: 14px !important;
+}
+
+#arcane-EmporioNegro .qtd span {
+  border: solid rgba(49, 49, 49, .76);
+  border-width: 0 1px;
+  color: var(--text-color);
+  font-size: 11px;
+}
+
+#arcane-EmporioNegro .total {
+  margin: 15px 0 12px;
+  padding-top: 13px;
+  border-top: 1px solid var(--lines);
+  color: var(--text-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#arcane-EmporioNegro .total strong,
+.recibo .valores strong,
+.recibo li strong {
+  color: var(--text-green);
+  white-space: nowrap;
+}
+
+#arcane-EmporioNegro .acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+#arcane-EmporioNegro .botao {
+  width: 100%;
+  padding: 9px 10px !important;
+}
+
+#arcane-EmporioNegro .botao.comprar,
+.aprovar {
+  border-color: rgba(123, 110, 61, .62);
+  background: #181509;
+  color: var(--text-accent) !important;
+}
+
+#arcane-EmporioNegro button:disabled,
+.aprovar:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+#arcane-EmporioNegro .pedido {
+  display: none;
+  margin-top: 12px;
+}
+
+#arcane-EmporioNegro .pedido.ativo {
+  display: block;
+}
+
+#arcane-EmporioNegro .pedido textarea {
+  width: 100%;
+  min-height: 154px;
+  resize: vertical;
+  border: 1px solid var(--lines);
+  border-radius: 0;
+  outline: 0;
+  background: rgba(8, 8, 8, .82);
+  color: var(--text-color) !important;
+  padding: 11px !important;
+  font: 12px / 145% Poppins, sans-serif !important;
+}
+
+#arcane-EmporioNegro .pedido textarea:focus {
+  border-color: rgba(123, 110, 61, .78);
+}
+
+#arcane-EmporioNegro .aviso {
+  margin: 8px 0 0;
+  color: rgba(209, 209, 209, .62);
+  font-size: 11px;
+}
+
+.recibo {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 18px auto;
+  padding: 18px;
+  color: var(--text-color);
+  font: 12px / 150% Poppins, sans-serif !important;
+  text-align: justify;
+}
+
+.recibo,
+.recibo * {
+  box-sizing: border-box;
+}
+
+.topo-recibo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--lines);
+}
+
+.selo-recibo {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  font-size: 15px;
+}
+
+.recibo .status {
+  margin-top: 4px;
+  color: var(--text-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.recibo.aprovado .status {
+  color: var(--text-accent);
+}
+
+.corpo-recibo {
+  position: relative;
+  z-index: 1;
+  padding-top: 13px;
+}
+
+.linha-recibo {
+  margin: 0 0 9px;
+}
+
+.corpo-recibo ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.corpo-recibo li {
+  padding: 8px 10px;
+}
+
+.valores {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 14px;
+  padding: 10px;
+}
+
+.acoes-recibo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.aprovar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 8px 13px !important;
+}
+
+#arcane-EmporioNegro .icone {
+  font: inherit;
+}
+
+#arcane-EmporioNegro .icone .game-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  line-height: 1;
+}
+
+#arcane-EmporioNegro .icone .game-icon:before {
+  font-size: 30px;
+  line-height: 1;
+  color: var(--text-green);
+  text-shadow: 0 0 10px rgba(83, 131, 83, .28);
+}
+
+#arcane-EmporioNegro .item:hover .icone .game-icon:before {
+  color: var(--text-accent);
+  text-shadow: 0 0 12px rgba(185, 158, 89, .32);
+}
+
+#arcane-EmporioNegro .grade {
+  align-items: stretch;
+}
+
+#arcane-EmporioNegro .item {
+  height: 100%;
+}
+
+#arcane-EmporioNegro .item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#arcane-EmporioNegro .rodape {
+  margin-top: auto;
+}
+
+#arcane-EmporioNegro .topo {
+  overflow: hidden;
+}
+
+#arcane-EmporioNegro .waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 82px;
+  margin: 0;
+  pointer-events: none;
+}
+
+#arcane-EmporioNegro .titulo {
+  z-index: 4;
+}
+
+#arcane-EmporioNegro .parallax > use {
+  animation: emporio-waves 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+#arcane-EmporioNegro .parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+#arcane-EmporioNegro .parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+#arcane-EmporioNegro .parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+#arcane-EmporioNegro .parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes emporio-waves {
+  0% {
+    transform: translate3d(90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-85px, 0, 0);
+  }
+}
+
+#arcane-EmporioNegro {
+  container-type: inline-size;
+  --width: 100%;
+}
+
+@container (max-width: 850px) {
+  #arcane-EmporioNegro .corpo {
+    grid-template-columns: 1fr;
+  }
+
+  #arcane-EmporioNegro .carrinho {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  #arcane-EmporioNegro .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container (max-width: 620px) {
+  #arcane-EmporioNegro .grade {
+    grid-template-columns: 1fr;
+  }
+
+  #arcane-EmporioNegro .filtros {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  #arcane-EmporioNegro .filtro {
+    font-size: 9px !important;
+    padding-inline: 2px;
+  }
+}
