@@ -54,13 +54,17 @@
     var texto = grimorioTextoCampo("ano-escolar") || grimorioTextoCampo("formacao");
     texto = grimorioNormalizarTexto(texto);
 
-    if (/concluid|desconhecid/.test(texto)) return 7;
+    /* Concluído libera tudo. */
+    if (/concluid/.test(texto)) return 7;
+
+    /* Desconhecido é o padrão de perfil novo, então não libera nada. */
+    if (/desconhecid/.test(texto)) return 0;
 
     var numero = texto.match(/[1-7]/);
     if (numero) return Math.max(0, Number(numero[0]) - 1);
 
-    /* Fallback para perfis antigos/sem Ano Escolar: não deixa o grimório sumir. */
-    return 7;
+    /* Fallback seguro: se o Ano Escolar falhar/não existir, não libera feitiços. */
+    return 0;
   };
 
   window.grimorioBanco = function (id) {
