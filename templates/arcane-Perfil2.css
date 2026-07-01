@@ -702,45 +702,35 @@
 
 .rgrimorio .grimorio-feitico {
     display: block !important;
-    margin: 0 0 22px 0 !important;
-    padding-bottom: 16px;
-}
-
-.rgrimorio .grimorio-feitico:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0;
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
 }
 
 .rgrimorio .grimorio-feitico-nome {
     display: block !important;
-    margin: 0 0 6px 0 !important;
-    line-height: 120%;
-}
-
-.rgrimorio .grimorio-feitico-desc {
-    display: block !important;
-    line-height: 170%;
-}
-
-.rgrimorio .grimorio-feitico-nome strong,
-.rgrimorio .grimorio-feitico-nome span {
-    display: inline-block !important;
-}
-
-.rgrimorio .grimorio-feitico-nome {
-    display: block !important;
-    margin-bottom: 6px !important;
-    font-weight: 900 !important;
+    margin: 0 0 2px 0 !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    line-height: 120% !important;
+    font-weight: 800 !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--group-color);
 }
+
 .rgrimorio .grimorio-feitico-desc {
     display: block !important;
-    margin-bottom: 20px !important;
-    line-height: 170%;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 155% !important;
 }
-.rgrimorio .grimorio-feitico {
-    display: block !important;
-    margin: 0 0 24px 0 !important;
+
+.rgrimorio .grimorio-feitico-desc strong {
+    font-size: 13px !important;
+    line-height: 100% !important;
+}
+
+.rgrimorio .rtxt {
+    padding: 15px !important;
+    line-height: 155% !important;
 }
