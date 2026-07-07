@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+#arcane-aulas {
+  --width: 720px;
+  --bg-main: #080808;
+  --bg-box: #050505;
+  --bg-accent: #617c8c;
+  --gold: #b99e59;
+  --gold-soft: #d7b65a;
+  --lines: #313131;
+  --text-color: #d1d1d1;
+  --text-lighter: #fff;
+  --text-accent: #617c8c;
+  position: relative;
+  width: min(var(--width), calc(100vw - 30px));
+  margin: 14px auto;
+}
+#arcane-aulas,
+#arcane-aulas *,
+#arcane-aulas *::before,
+#arcane-aulas *::after {
+  box-sizing: border-box;
+}
+#arcane-aulas br {
+  display: none !important;
+}
+conteudo,
+tema,
+mini,
+nome,
+texto,
+atividade,
+numero,
+dados,
+tipo,
+subtitulo,
+caixa,
+linha,
+registro,
+info,
+realce,
+italico,
+titulo,
+termo {
+  display: block;
+}
+#arcane-aulas .container {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018),
+      transparent 16%,
+      transparent 84%,
+      rgba(255, 255, 255, 0.018)
+    ),
+    var(--bg-main);
+  outline: 1px solid var(--lines);
+  outline-offset: -3px;
+  overflow: hidden;
+}
+#arcane-aulas .container::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+}
+#arcane-aulas .header {
+position: relative;
+    min-height: 165px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #2d2d2d;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .035), 0 0 0 3px rgba(97, 124, 140, .12);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+#arcane-aulas .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--soli-2) center/cover no-repeat;
+  filter: brightness(0.78) saturate(0.82);
+  transform: scale(1.02);
+}
+#arcane-aulas .header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.3)
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.42),
+      rgba(0, 0, 0, 0.12),
+      rgba(0, 0, 0, 0.22)
+    );
+}
+#arcane-aulas .hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0;
+  background: transparent;
+}
+#arcane-aulas titulo {
+  font: 500 2.35rem/90% "Modern Aesthetic";
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.85);
+  display: block;
+}
+#arcane-aulas termo {
+  margin-top: 7px;
+  font: 800 8px/100% Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: #d7e1e7;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+#arcane-aulas conteudo {
+  padding: 18px 30px 6px;
+  font: 13px/150% Poppins, sans-serif;
+  color: var(--text-color);
+  text-align: justify;
+}
+#arcane-aulas texto {
+  margin: 0 0 12px;
+}
+#arcane-aulas texto:last-child {
+  margin-bottom: 0;
+}
+#arcane-aulas realce {
+  display: inline;
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+#arcane-aulas italico {
+  display: inline;
+  color: var(--gold);
+  font-style: italic;
+}
+#arcane-aulas tema {
+  margin: 0 0 16px;
+  padding: 12px 15px;
+  background: linear-gradient(90deg, rgba(97, 124, 140, 0.18), transparent 70%),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid #1b1b1b;
+}
+#arcane-aulas tema mini {
+  margin-bottom: 5px;
+  font: 800 8px/100% Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: var(--text-accent);
+}
+#arcane-aulas tema nome {
+  font: 800 21px/110% Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: var(--text-lighter);
+}
+#arcane-aulas atividade {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 11px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #1e1e1e;
+}
+#arcane-aulas numero {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(97, 124, 140, 0.12);
+  outline: 1px solid #2c2c2c;
+  font: 900 15px/100% Montserrat, sans-serif;
+  color: var(--gold);
+}
+#arcane-aulas dados nome {
+  font: 800 16px/100% Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: var(--text-lighter);
+}
+#arcane-aulas tipo {
+  margin-top: 4px;
+  font: 800 8px/100% Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-accent);
+}
+#arcane-aulas subtitulo {
+  display: inline-block;
+  margin: 6px 0 8px;
+  padding: 0 0 4px;
+  border-bottom: 2px solid var(--text-accent);
+  font: 800 10px/100% Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-accent);
+}
+#arcane-aulas caixa {
+  margin: 7px 0 15px;
+  padding: 14px 16px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 75%),
+    var(--bg-box);
+  outline: 1px solid #252525;
+  font: 13px/150% Poppins, sans-serif;
+  color: var(--text-color);
+  text-align: left;
+}
+#arcane-aulas caixa[tipo="accent"] {
+  border-right: 4px solid var(--soli);
+}
+#arcane-aulas caixa[tipo="soft"] {
+  border-right: 4px solid var(--gold);
+}
+#arcane-aulas linha {
+  margin: 0 0 4px;
+}
+#arcane-aulas registro {
+  margin: 10px 0 16px;
+  padding: 9px 14px;
+  background: linear-gradient(90deg, rgba(97, 124, 140, 0.08), transparent 75%),
+    rgba(255, 255, 255, 0.015);
+  border: 1px solid #242424;
+  border-left: 4px solid var(--bg-accent);
+  text-align: left;
+}
+#arcane-aulas registro:last-child {
+  margin-bottom: 0;
+}
+#arcane-aulas info {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 6px 0 6px 24px;
+  font: 13px/150% Poppins, sans-serif;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+#arcane-aulas info:last-child {
+  border-bottom: 0;
+}
+#arcane-aulas info::before {
+  content: "\2726";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  text-align: center;
+  color: var(--gold-soft);
+  font: 900 13px/1 Montserrat, sans-serif;
+}
+#arcane-aulas info b {
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+#arcane-aulas a[href="https://is.gd/arcanerpg"]
+{
+  height: 12px;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#arcane-aulas::after {
+  content: "「arcane」";
+  display: block;
+  margin-top: 6px;
+  font: bold 8.5px/8px Consolas, monospace;
+  color: #969696;
+  text-align: center;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+@media (max-width: 620px) {
+  #arcane-aulas {
+    width: calc(100vw - 18px);
+  }
+  #arcane-aulas .hero {
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  #arcane-aulas conteudo {
+    padding: 18px 22px 6px;
+    text-align: left;
+  }
+  #arcane-aulas tema nome {
+    font-size: 18px;
+  }
+  #arcane-aulas dados nome {
+    font-size: 15px;
+  }
+  #arcane-aulas registro {
+    padding: 9px 12px;
+  }
+  #arcane-aulas info {
+    padding-left: 22px;
+  }
+}
