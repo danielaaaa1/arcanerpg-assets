@@ -1,0 +1,411 @@
+/* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
+Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
+Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
+para conversarmos sobre valores e demais detalhes. Beijocas */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#arcane-Habilidades {
+  --accent: #7b6e3d;
+  --accent-rgb: 123, 110, 61;
+  --secondary: #538353;
+  --background: #090909;
+  --background-soft: #0d0d0d;
+  --line: #2d2d2d;
+  --text: #d1d1d1;
+  --text-color: #d1d1d1;
+  --text-light: #f4f4f4;
+  --muted: #7e7e7e;
+  width: min(720px, 92%);
+  margin: 35px auto;
+  position: relative;
+  color: var(--text);
+  font: 13px/1.68 Poppins, sans-serif;
+  text-align: justify;
+}
+#arcane-Habilidades * {
+  box-sizing: border-box;
+}
+#arcane-Habilidades.habilidade {
+  --accent: #7b6e3d;
+  --accent-rgb: 123, 110, 61;
+  --secondary: #538353;
+}
+#arcane-Habilidades.dom {
+  --accent: #755d8f;
+  --accent-rgb: 117, 93, 143;
+  --secondary: #9b82b4;
+}
+#arcane-Habilidades.descendencia {
+  --accent: #8b5f43;
+  --accent-rgb: 139, 95, 67;
+  --secondary: #b8825e;
+}
+#arcane-Habilidades.maldicao {
+  --accent: #7d3434;
+  --accent-rgb: 125, 52, 52;
+  --secondary: #a65252;
+}
+#arcane-Habilidades .cartao {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--background);
+  box-shadow: 0 18px 45px #00000078;
+}
+#arcane-Habilidades .cabecalho {
+  min-height: 122px;
+  padding: 34px 112px 30px 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+      105deg,
+      rgba(var(--accent-rgb), 0.13),
+      transparent 47%
+    ),
+    #0a0a0a;
+  border-bottom: 1px solid var(--line);
+}
+#arcane-Habilidades .cabecalho::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent 62%);
+}
+#arcane-Habilidades .cabecalho::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: -58px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(var(--accent-rgb), 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+#arcane-Habilidades .titulo {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+#arcane-Habilidades .titulo h1 {
+  margin: 0;
+  color: var(--accent);
+  font: 500 2.55rem/1 "Modern Aesthetic", serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+#arcane-Habilidades .simbolo {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 29px;
+  transform: translateY(-50%) rotate(-5deg);
+  color: var(--accent);
+  font-size: 72px;
+  line-height: 1;
+  font-style: normal;
+  opacity: 0.3;
+}
+#arcane-Habilidades .simbolo::before {
+  font-family: game-icons;
+  font-style: normal;
+  font-weight: 400;
+}
+#arcane-Habilidades .icone-vampiro::before {
+  content: "\E520";
+}
+#arcane-Habilidades .icone-avaracao::before {
+  content: "\E9AE";
+}
+#arcane-Habilidades .icone-legilimencia::before {
+  content: "\ED15";
+}
+#arcane-Habilidades .icone-oclumencia::before {
+  content: "\E028";
+}
+#arcane-Habilidades .icone-animagia::before {
+  content: "\E38E";
+}
+#arcane-Habilidades .icone-clarividencia::before {
+  content: "\ED48";
+}
+#arcane-Habilidades .icone-ofidioglossia::before {
+  content: "\E7B2";
+}
+#arcane-Habilidades .icone-metamorfomagia::before {
+  content: "\E7AE";
+}
+#arcane-Habilidades .icone-sensitivismo::before {
+  content: "\E523";
+}
+#arcane-Habilidades .icone-licantropia::before {
+  content: "\E40B";
+}
+
+#arcane-Habilidades .icone-veela::before {
+  content: "\EAF2";
+}
+#arcane-Habilidades .conteudo {
+  padding: 31px 35px 37px;
+  font: 13px/150% Poppins, sans-serif;
+  color: var(--text-color);
+  text-align: justify;
+}
+#arcane-Habilidades .conteudo > h2 {
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--accent);
+  font: 500 23px/1 "Modern Aesthetic", serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+#arcane-Habilidades .conteudo > h2::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+#arcane-Habilidades .conteudo > h2:first-of-type {
+  margin-top: 0;
+}
+#arcane-Habilidades .conteudo b,
+#arcane-Habilidades .conteudo strong {
+  color: var(--text-light);
+}
+#arcane-Habilidades .atributos {
+  margin: 25px -35px 10px;
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+#arcane-Habilidades .atributos-titulo {
+  min-height: 67px;
+  padding: 16px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(var(--accent-rgb), 0.055);
+  color: var(--accent);
+  font: 700 8px/1 Montserrat, sans-serif;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+#arcane-Habilidades .atributos-titulo::before {
+  content: "\2726";
+  display: inline-block;
+  color: var(--secondary);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+}
+#arcane-Habilidades .atributos-lista {
+  display: flex;
+  flex-wrap: wrap;
+}
+#arcane-Habilidades .atributo {
+  min-width: 0;
+  flex: 1 1 210px;
+  padding: 13px 17px 12px;
+  border-left: 1px solid var(--line);
+  border-bottom: 1px solid var(--line)
+}
+#arcane-Habilidades .atributo:last-child {
+  border-bottom: 0px solid var(--line)
+}
+#arcane-Habilidades .atributo strong {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 3px;
+  color: var(--accent);
+  font: 800 10px/1 Montserrat, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+#arcane-Habilidades .atributo strong em {
+  color: var(--text-light);
+  font: 700 15px/1 Montserrat, sans-serif;
+  letter-spacing: 0;
+  font-style: normal;
+}
+#arcane-Habilidades .atributo span {
+  display: block;
+  color: var(--muted);
+  font: 400 10px/1.45 Poppins, sans-serif;
+}
+#arcane-Habilidades .atributo.negativo strong,
+#arcane-Habilidades .atributo.negativo strong em {
+  color: #a95b5b;
+}
+#arcane-Habilidades .atributo.condicional strong {
+  color: var(--secondary);
+}
+#arcane-Habilidades .atributos-nota {
+  grid-column: 1/-1;
+  margin: 0 !important;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  color: #8b8b8b;
+  font-size: 10px;
+}
+#arcane-Habilidades .atributos-nota b {
+  color: var(--secondary);
+  font-weight: 600;
+}
+#arcane-Habilidades .conteudo ol,
+#arcane-Habilidades .conteudo ul {
+  margin: 3px 0 0;
+  padding: 0;
+  list-style: none;
+}
+#arcane-Habilidades .conteudo li {
+  position: relative;
+  margin: 0 0 13px;
+  padding-left: 22px;
+}
+#arcane-Habilidades .conteudo li:last-child {
+  margin-bottom: 0;
+}
+#arcane-Habilidades .conteudo li::before {
+  content: "\2726";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+#arcane-Habilidades .destaque {
+  margin: 18px 0;
+  padding: 13px 15px;
+  border-left: 2px solid var(--secondary);
+  background: #0c0c0c;
+  color: #aaa;
+  text-align: left;
+}
+#arcane-Habilidades .destaque b {
+  color: var(--secondary);
+}
+#arcane-Habilidades .manifestacoes-lista {
+  margin: 20px 0 1px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  text-align: left;
+}
+#arcane-Habilidades .manifestacao {
+  position: relative;
+  min-width: 0;
+  padding: 17px 17px 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(
+      135deg,
+      rgba(var(--accent-rgb), 0.075),
+      transparent 58%
+    ),
+    var(--background-soft);
+}
+#arcane-Habilidades .manifestacao:last-child:nth-child(odd) {
+  grid-column: 1/-1;
+}
+#arcane-Habilidades .manifestacao::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--secondary);
+  opacity: 0.75;
+}
+#arcane-Habilidades .manifestacao strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font: 800 10px/1.25 Montserrat, sans-serif;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+#arcane-Habilidades .manifestacao strong::before {
+  content: "\2726";
+  display: inline-block;
+  flex: 0 0 auto;
+  color: var(--secondary);
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+#arcane-Habilidades .manifestacao-texto {
+  margin: 0;
+  padding: 0;
+  color: #aaa;
+  font: 400 11px/1.6 Poppins, sans-serif;
+  text-align: justify;
+}
+#arcane-Habilidades::after {
+  content: "「arcane」";
+  margin-top: 6px;
+  display: block;
+  color: #969696;
+  font: bold 8.5px Consolas, monospace;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+@media (max-width: 610px) {
+  #arcane-Habilidades .cabecalho {
+    min-height: 104px;
+    padding: 28px 78px 25px 23px;
+  }
+  #arcane-Habilidades .titulo h1 {
+    font-size: 1.82rem;
+  }
+  #arcane-Habilidades .simbolo {
+    right: 20px;
+    font-size: 51px;
+  }
+  #arcane-Habilidades .conteudo {
+    padding: 25px 22px 30px;
+  }
+  #arcane-Habilidades .conteudo > h2 {
+    margin-top: 27px;
+    margin-bottom: 14px;
+  }
+  #arcane-Habilidades .atributos {
+    grid-template-columns: 1fr;
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+  #arcane-Habilidades .atributos-titulo {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 11px 14px;
+  }
+  #arcane-Habilidades .atributo {
+    flex-basis: 100%;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  #arcane-Habilidades .manifestacoes-lista {
+    grid-template-columns: 1fr;
+  }
+}
