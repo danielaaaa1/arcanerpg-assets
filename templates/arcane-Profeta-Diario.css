@@ -5,7 +5,7 @@
 @import url('https://fonts.cdnfonts.com/css/asphaltic-grain-condensed-perso');
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
-@font-face {font-family: 'obrige'; src:url(https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets/fonts/la-obrige.otf);}
+@import url('https://fonts.cdnfonts.com/css/la-obrige');
 
 #arcane-pd {
   position: relative;
@@ -15,7 +15,7 @@
   --bg-dark: #2D2714;
   --bg-esp: #181A1C;
   --s-font: 'Ahganirya', sans-serif;
-  --m-font: 'obrige';
+  --m-font: 'La Obrige';
   --sub-font: 'BioRhyme', sans-serif;
   --not-font: 'ASPHALTIC GRAIN CONDENSED PERSO';
   --txt-font: 'Sedan', serif;
