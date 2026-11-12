@@ -1,0 +1,706 @@
+/* =========================================================
+   QUEM ESTÁ ONLINE
+   Oculta “Utilizadores registados:” e mantém os nomes.
+   ========================================================= */
+
+.rcurrently-online > .rflex:not(.rrtitle) > div {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.rcurrently-online > .rflex:not(.rrtitle) > div > br {
+  display: none !important;
+}
+
+.rcurrently-online > .rflex:not(.rrtitle) > div > a {
+  display: inline-block;
+  font-size: 16px !important;
+  line-height: 19.5px !important;
+}
+
+.rcurrently-online > .rflex:not(.rrtitle) > div > a:not(:last-of-type) {
+  margin-right: 6px;
+}
+
+.rcurrently-online > .rflex:not(.rrtitle) > div > a:not(:last-of-type)::after {
+  content: ",";
+}
+
+
+/* =========================================================
+   TÓPICOS
+   Remove participantes, avatares circulares e sino push.
+   ========================================================= */
+
+.poster-list.posts-users-list,
+#push-bell {
+  display: none !important;
+}
+
+
+/* =========================================================
+   BARRA DE AÇÕES DO TÓPICO
+   Primeira linha: ações e paginação.
+   Segunda linha: caminho completo do fórum.
+   ========================================================= */
+
+.topic-actions:has(> .buttons img.i_reply) {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "actions . pager"
+    "path path path";
+  align-items: center !important;
+  gap: 12px 16px !important;
+
+  box-sizing: border-box;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  padding: 14px 20px !important;
+  background: rgba(8, 8, 8, 0.82);
+}
+
+
+/* Botões Novo Tópico e Responder */
+
+.topic-actions:has(> .buttons img.i_reply) > .buttons {
+  grid-area: actions;
+  display: flex !important;
+  align-items: center;
+  flex: 0 0 auto;
+  width: auto !important;
+  margin: 0 !important;
+  font-size: 0 !important;
+}
+
+.topic-actions:has(> .buttons img.i_reply) > .buttons a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.topic-actions:has(> .buttons img.i_reply) > .buttons a + a {
+  margin-left: 8px !important;
+}
+
+
+/* Caminho do fórum */
+
+.topic-actions:has(> .buttons img.i_reply) > .pathname-box {
+  grid-area: path;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-top: 12px;
+  border-top: 1px solid rgba(83, 131, 83, 0.22);
+}
+
+.topic-actions:has(> .buttons img.i_reply) > .pathname-box p {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 !important;
+  font-size: 0 !important;
+  column-gap: 4px;
+  row-gap: 8px;
+}
+
+.topic-actions:has(> .buttons img.i_reply) > .pathname-box a.nav {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+
+/* Paginação, compartilhamento e menu Mais */
+
+.topic-actions:has(> .buttons img.i_reply) > .pagination {
+  grid-area: pager;
+  justify-self: end;
+  width: auto !important;
+  margin: 0 !important;
+  line-height: 1.5;
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+/* Elementos vazios que ocupavam espaço na barra */
+
+.topic-actions:has(> .buttons img.i_reply) > p.right,
+.topic-actions:has(> .buttons img.i_reply) > .clear {
+  display: none !important;
+}
+
+
+/* =========================================================
+   BARRA INTERNA DOS FÓRUNS
+   Primeira linha: Novo Tópico e busca.
+   Segunda linha: caminho completo do fórum.
+   ========================================================= */
+
+.topic-actions:has(> .search-box) {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "new-topic . search"
+    "forum-path forum-path forum-path";
+  align-items: center !important;
+  gap: 12px 16px !important;
+
+  box-sizing: border-box;
+  min-height: 0 !important;
+  padding: 14px 20px !important;
+  background: rgba(8, 8, 8, 0.82);
+}
+
+
+/* Botão Novo Tópico */
+
+.topic-actions:has(> .search-box) > .buttons {
+  grid-area: new-topic;
+  display: flex !important;
+  align-items: center;
+  width: auto !important;
+  margin: 0 !important;
+  font-size: 0 !important;
+}
+
+.topic-actions:has(> .search-box) > .buttons .post-icon {
+  margin: 0 !important;
+}
+
+.topic-actions:has(> .search-box) > .buttons a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+
+/* Busca do fórum */
+
+.topic-actions:has(> .search-box) > .search-box {
+  grid-area: search;
+  justify-self: end;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.topic-actions:has(> .search-box) > .search-box fieldset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+}
+
+.topic-actions:has(> .search-box) #forum-search .inputbox.search {
+  box-sizing: border-box;
+  width: 180px !important;
+  height: 34px;
+  margin: 0 !important;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.topic-actions:has(> .search-box) #forum-search .button2 {
+  box-sizing: border-box;
+  height: 34px;
+  margin: 0 !important;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+
+/* Caminho do fórum */
+
+.topic-actions:has(> .search-box) > p.path {
+  grid-area: forum-path;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-top: 12px;
+  border-top: 1px solid rgba(83, 131, 83, 0.22);
+  font-size: 0 !important;
+  column-gap: 4px;
+  row-gap: 8px;
+}
+
+.topic-actions:has(> .search-box) > p.path a.nav {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+
+/* Remove a faixa superior "Marcar todos os tópicos como lidos / Mais" */
+
+#main-content > .pagination:has(a[href*="mark=topics"]) {
+  display: none !important;
+}
+
+#main-content > .forabg:has(+ .pagination a[href*="mark=topics"]) {
+  margin-bottom: 12px !important;
+}
+
+#main-content > .pagination:has(a[href*="mark=topics"]) + .topic-actions:has(> .search-box) {
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS DE ORDENAÇÃO E NAVEGAÇÃO
+   Alinha rótulos, campos e botões nas duas linhas.
+   ========================================================= */
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 720px);
+  justify-content: end;
+  row-gap: 8px;
+  box-sizing: border-box;
+  padding: 14px 18px !important;
+  background: rgba(8, 8, 8, 0.82);
+}
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) #sort-box,
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) #sort-box form,
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) > form[name="jumpbox"] {
+  display: block !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) fieldset {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-size: 0;
+}
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) label {
+  box-sizing: border-box;
+  width: auto !important;
+  margin: 0 !important;
+  min-width: 0;
+  flex: 0 0 100px;
+  font-size: 14px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) select {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 34px;
+  margin: 0 !important;
+  min-width: 0;
+  flex: 1 1 auto;
+  font-size: 13px;
+}
+
+#main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) .button2 {
+  box-sizing: border-box;
+  width: 92px !important;
+  height: 34px;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  flex: 0 0 92px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ÍCONES DA LISTAGEM DE TÓPICOS
+   Reposiciona a pena, remove o ícone quebrado de participação
+   e mantém o atalho do último post junto ao nome.
+   ========================================================= */
+
+/* Remove o marcador de participação em forma de pena */
+.forumbg .dterm::before {
+  content: none !important;
+  display: none !important;
+}
+
+.forumbg .dterm > .topic-title-container {
+  display: inline-flex !important;
+  align-items: center;
+  position: relative;
+  top: -2px;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: calc(100% - 4px) !important;
+  padding-left: 3px;
+}
+
+.forumbg .dterm > .topic-title-container > .topic-title {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.forumbg .dterm .topictitle {
+  line-height: 1.2 !important;
+}
+
+/* Mantém a autoria um pouco afastada do título */
+.forumbg .dterm > .span-tab {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+
+/* Organiza a etiqueta dos anúncios globais sem separar as palavras */
+.forumbg.announcement .dterm > strong:not(.pagination) {
+  display: block !important;
+  position: absolute !important;
+  top: 21px;
+  left: 43px;
+  width: auto !important;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  color: rgba(209, 209, 209, 0.72);
+  text-align: left !important;
+  white-space: nowrap;
+}
+
+/* Remove o ícone quebrado "Você postou neste tópico" */
+.forumbg .dterm > img[alt="Você postou neste tópico"] {
+  display: none !important;
+}
+
+/* Remove o antigo icon_pages.gif, preservando os números das páginas */
+.forumbg .dterm > strong.pagination {
+  position: relative;
+  left: 3px;
+  padding-left: 0 !important;
+  background-image: none !important;
+}
+
+/* Nome, atalho do último post e data */
+.forumbg .lastpost-user > span {
+  display: block !important;
+  box-sizing: border-box;
+  width: 140px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 !important;
+  text-align: center;
+}
+
+.forumbg .lastpost-user > span > strong,
+.forumbg .lastpost-user > span > strong > a,
+.forumbg .lastpost-user > span > strong > a > span,
+.forumbg .lastpost-user > span > strong > a > span > strong {
+  display: inline !important;
+  max-width: none !important;
+  font-size: 13px !important;
+  text-align: inherit !important;
+  white-space: normal !important;
+}
+
+.forumbg .lastpost-user > span > br {
+  display: inline !important;
+  width: auto !important;
+  min-width: 0;
+  height: auto !important;
+  font-size: inherit;
+  line-height: inherit !important;
+}
+
+.forumbg .lastpost-user a:has(> img.sprite-icon_topic_latest) {
+  display: inline-block !important;
+  box-sizing: border-box;
+  width: 11px;
+  height: 9px;
+  margin: 0 0 0 1.5px !important;
+  vertical-align: baseline;
+  color: inherit !important;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0;
+  text-decoration: none !important;
+  overflow: visible;
+}
+
+.forumbg .lastpost-user a:has(> img.sprite-icon_topic_latest)::before {
+  content: none !important;
+}
+
+.forumbg .lastpost-user a:has(> img.sprite-icon_topic_latest):hover {
+  background: none !important;
+}
+
+.forumbg .lastpost-user img.sprite-icon_topic_latest {
+  display: inline-block !important;
+  width: 11px !important;
+  height: 9px !important;
+  filter: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.forumbg .lastpost-user a:has(> img.sprite-icon_topic_latest):hover img {
+  opacity: 0.72;
+}
+
+/* =========================================================
+   FORMULÁRIO DE POSTAGEM
+   Exibe as tags somente ao criar tópicos no Libertatem e
+   alinha a área de smileys à altura do editor de mensagem.
+   ========================================================= */
+
+/* Por padrão, não mostra o seletor de tags no formulário */
+form[name="post"] .fa-icon-selector {
+  display: none !important;
+}
+
+/* Única exceção: criação de tópico no fórum Libertatem (f=63) */
+form[name="post"]:has(input[name="mode"][value="newtopic"]):has(input[name="f"][value="63"]) .fa-icon-selector {
+  display: block !important;
+}
+
+/* Coluna lateral de smileys */
+form[name="post"] #smiley-box {
+  width: 19% !important;
+  margin-top: 25px !important;
+  color: #d1d1d1;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+form[name="post"] #smileyContainer {
+  position: relative;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 500px !important;
+  overflow: hidden !important;
+  background: #0e1611;
+  border: 1px solid rgba(83, 131, 83, 0.45);
+  box-shadow:
+    inset 0 0 18px rgba(0, 0, 0, 0.32),
+    0 0 12px rgba(24, 69, 40, 0.10);
+}
+
+form[name="post"] #smileyContainer iframe {
+  display: block !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: calc(100% + 17px) !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: #0e1611;
+}
+
+/* Dá respiro às informações abaixo dos smileys */
+form[name="post"] #smileyContainer + br {
+  display: block;
+  content: "";
+  margin-top: 14px;
+}
+
+form[name="post"] #smiley-box > a {
+  color: #a18e4a;
+}
+
+/* Título da mensagem sem o seletor de cor */
+form[name="post"] select[name="topic_color"] {
+  display: none !important;
+}
+
+form[name="post"] dl:has(input[name="subject"]) > dt {
+  display: flex !important;
+  align-items: center;
+  height: 34px;
+}
+
+form[name="post"] dl:has(input[name="subject"]) > dt label {
+  padding-right: 0 !important;
+}
+
+form[name="post"] dl:has(input[name="subject"]) > dd {
+  box-sizing: border-box;
+  width: 66% !important;
+}
+
+form[name="post"] input[name="subject"] {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Atalhos exclusivos da administração no rodapé */
+p.copyright strong:has(> .review-audits) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+p.copyright strong:has(> .review-audits) > br {
+  display: none;
+}
+
+p.copyright strong:has(> .review-audits) > a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 35px;
+  margin: 10px 0 0 !important;
+}
+
+p.copyright .review-audits {
+  display: block;
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: 5px;
+  background: var(--bg-green);
+  color: var(--text-color);
+  font-size: 17px;
+}
+
+p.copyright .review-audits::before {
+  content: "\f46c";
+  padding-right: 10px;
+  font-family: "Font Awesome 6 Free";
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Botão de cookies: posição fixa, sem animações de movimento */
+.sd-cmp-nkWFW {
+  --main-color: #315d3e !important;
+}
+
+.sd-cmp-nkWFW:hover {
+  --main-color: #477a55 !important;
+}
+
+.sd-cmp-nkWFW,
+.sd-cmp-nkWFW .sd-cmp-EV52o,
+.sd-cmp-nkWFW .sd-cmp-GICIV,
+.sd-cmp-nkWFW .sd-cmp-GICIV:hover,
+.sd-cmp-nkWFW .sd-cmp-GICIV > svg,
+.sd-cmp-nkWFW .sd-cmp-GICIV > svg:hover {
+  animation: none !important;
+  transform: none !important;
+}
+
+.sd-cmp-nkWFW .sd-cmp-GICIV {
+  filter: drop-shadow(0 5px 10px rgba(19, 58, 34, 0.25));
+  transition: filter 0.2s ease !important;
+}
+
+.sd-cmp-nkWFW:hover .sd-cmp-GICIV {
+  filter: drop-shadow(0 5px 11px rgba(40, 104, 62, 0.30));
+}
+
+.sd-cmp-nkWFW .sd-cmp-GICIV > svg > path:first-of-type {
+  fill: #315d3e !important;
+  transition: fill 0.2s ease !important;
+}
+
+.sd-cmp-nkWFW:hover .sd-cmp-GICIV > svg > path:first-of-type {
+  fill: #477a55 !important;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .topic-actions:has(> .buttons img.i_reply) {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "actions pager"
+      "path path";
+  }
+
+  .topic-actions:has(> .search-box) {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "new-topic search"
+      "forum-path forum-path";
+  }
+}
+
+@media (max-width: 600px) {
+  #main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) {
+    grid-template-columns: 1fr;
+    padding: 12px !important;
+  }
+
+  #main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) fieldset {
+    flex-wrap: wrap;
+  }
+
+  #main-content > .action-box:has(#sort-box):has(form[name="jumpbox"]) label {
+    flex-basis: 100%;
+    text-align: left;
+  }
+
+  .topic-actions:has(> .buttons img.i_reply) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "actions"
+      "path"
+      "pager";
+  }
+
+  .topic-actions:has(> .buttons img.i_reply) > .pagination {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .topic-actions:has(> .search-box) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "new-topic"
+      "search"
+      "forum-path";
+  }
+
+  .topic-actions:has(> .search-box) > .search-box {
+    justify-self: stretch;
+    width: 100% !important;
+  }
+
+  .topic-actions:has(> .search-box) > .search-box form,
+  .topic-actions:has(> .search-box) > .search-box fieldset {
+    width: 100%;
+  }
+
+  .topic-actions:has(> .search-box) #forum-search .inputbox.search {
+    flex: 1 1 auto;
+    width: auto !important;
+  }
+}
+

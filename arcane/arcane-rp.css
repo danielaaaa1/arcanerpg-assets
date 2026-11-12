@@ -1,0 +1,114 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aqira');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {font-family: "honeybee";src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot");src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot?#iefix") format("embedded-opentype"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.woff") format("woff"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.ttf") format("truetype"),url("//solrainha.github.io/honeybee/honeybee.svg#honeybee") format("svg");font-weight: normal;font-style: normal;}
+[data-icon]:before {font-family: "honeybee" !important;content: attr(data-icon);font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"]:before,[class*=" th-"]:before {font-family: "honeybee" !important;font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"],[class*=" th-"]{display:inline-grid;}
+
+.th-calendar-1-o:before{content:"\e983";}
+.th-moon-o:before{content:"\ebef";}
+
+#arcane-rp {
+  position: relative;
+  margin-top: 10px;
+  --width: 420px;
+  --bg-dark: #080808;
+  --bg-light: #424242;
+  --bg-light-2: #4F4F4F;
+  --bg-light-3: #949494;
+  --acc-ac: #5C5D76; /* roxo */
+  --acc-ac-2: #12251D; /* verde */
+  --acc-ac-3: #7B6E3D; /* dourado */
+  --acc-ac-4: #B99E59; /* dourado mais claro */
+  --acc-ac-5: #538353; /* verde mais claro */
+  --acc-ac-6: #ABABAB; /* claro */
+  --t-font: "Aqira";
+  --m-font: "Lunasima", sans-serif;
+  --a-font: "Roboto Mono";
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  outline: 1px solid var(--bg-light);
+  outline-offset: -3px;
+  position: relative;
+  padding: 10px;
+  background: var(--bg-dark);
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .header {
+  background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
+  height: 120px;
+  transition: 1000ms;
+  filter: sepia(0.75);
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .header:hover { 
+  transition: 1000ms;
+  filter: sepia(0);
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .header .name { 
+  color: var(--acc-ac-6);
+  text-transform: uppercase;
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .header .name bg { 
+  background: rgba(8, 8, 8, 0.6);
+  font: 500 28px var(--t-font);
+  padding: 4px;
+  border: 1px solid var(--acc-ac-2);
+  top: 45px;
+  position: relative;
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .desc { 
+  font: 500 11px var(--m-font);
+  color: var(--acc-ac-6);
+  background: #181818;
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .desc i { 
+  color: var(--acc-ac-3);
+  padding: 3px;
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] ~.container .txt {
+  font: 500 12px var(--m-font);
+  color: var(--acc-ac-6);
+  text-align: justify;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #242424;
+}
+
+#arcane-rp a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#arcane-rp:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:2px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}

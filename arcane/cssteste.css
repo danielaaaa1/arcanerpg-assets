@@ -1,0 +1,1047 @@
+#main-profile .rgrimorio{display:flex!important;align-items:stretch;gap:10px;height:500px;padding:10px;box-sizing:border-box;overflow:hidden;white-space:normal}#main-profile .rgrimorio>.rtitle-container{flex:0 0 80px;width:80px;height:480px;margin:0}#main-profile .rgrimorio>.profile-feiticos{display:grid!important;flex:1 1 auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:410px!important;align-content:start;align-items:stretch;gap:8px;min-width:0;width:auto!important;height:480px;padding:0 4px 0 0;box-sizing:border-box;overflow-x:hidden;overflow-y:auto}#main-profile .rgrimorio-drawer{position:relative;display:flex!important;flex-direction:column;width:100%!important;height:410px!important;min-height:0;margin:0!important;padding:0!important;box-sizing:border-box;overflow:hidden;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.012);transition:background .22s ease}#main-profile .rgrimorio-drawer:last-of-type:nth-of-type(odd){grid-column:1/-1}#main-profile .rgrimorio-drawer:has(.field_editable:not(.invisible)),#main-profile .rgrimorio-drawer:hover{background:rgba(255,255,255,.025)}#main-profile .rgrimorio-drawer-header{position:relative;display:flex;align-items:center;gap:12px;flex:0 0 62px;width:100%;height:62px;padding:12px 56px 12px 16px;box-sizing:border-box;border:0;background:0 0;color:#ddd;text-align:left}#main-profile .rgrimorio-drawer-heading{display:block;min-width:0}#main-profile .rgrimorio-drawer-heading strong{display:block;margin:0;color:var(--group-color);font:italic 900 17px/1.12 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.65px;overflow-wrap:anywhere}#main-profile .rgrimorio-drawer-panel{display:block;flex:1 1 auto;min-height:0;max-height:none;box-sizing:border-box;overflow-x:hidden;overflow-y:auto;border-top:1px solid rgba(255,255,255,.1)}#main-profile .rgrimorio-drawer:has(.field_editable:not(.invisible))>.rgrimorio-drawer-panel{display:none!important}#main-profile .rgrimorio>.profile-feiticos{scrollbar-width:auto;scrollbar-color:auto}#main-profile .rgrimorio-drawer-panel{scrollbar-width:none}#main-profile .rgrimorio .grimorio-editor-original textarea{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}#main-profile .rgrimorio-drawer-panel::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}@supports (-moz-appearance:none){#main-profile .rgrimorio>.profile-feiticos{scrollbar-width:thin;scrollbar-color:#353535 transparent}}#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar{width:4px!important;height:4px!important}#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar-button,#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar-button:single-button{display:none!important;width:0!important;height:0!important}#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar-track{background:0 0!important}#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar-thumb{border:0!important;border-radius:0!important;background:rgba(255,255,255,.18)!important}#main-profile .rgrimorio>.profile-feiticos::-webkit-scrollbar-thumb:hover{background:var(--group-color)!important}#main-profile .rgrimorio-scrollbar{position:absolute;top:63px;right:0;bottom:1px;z-index:150;width:12px;box-sizing:border-box;cursor:default;touch-action:none;user-select:none}#main-profile .rgrimorio-drawer:has(.field_editable:not(.invisible))>.rgrimorio-scrollbar,#main-profile .rgrimorio-scrollbar[hidden]{display:none!important}#main-profile .rgrimorio-scrollbar-thumb{position:absolute;top:0;right:4px;width:4px;min-height:28px;box-sizing:border-box;border:0;border-radius:0;background:rgba(255,255,255,.18);cursor:default;transition:background .16s ease}#main-profile .rgrimorio-scrollbar.is-dragging .rgrimorio-scrollbar-thumb,#main-profile .rgrimorio-scrollbar:hover .rgrimorio-scrollbar-thumb{background:var(--group-color)}#main-profile .rgrimorio-scrollbar.is-dragging .rgrimorio-scrollbar-thumb{cursor:default}#main-profile .rgrimorio-drawer-inner{min-height:0;overflow:visible}#main-profile .rgrimorio-drawer .rtxt{position:relative;width:auto!important;height:auto!important;max-height:none!important;margin:0!important;padding:16px 16px 16px 13px;box-sizing:border-box;overflow:visible!important;background:0 0!important;font-size:11.5px;line-height:1.7}#main-profile .rgrimorio .profile-feiticos .rgrimorio-drawer .rtxt>.grimorio-feitico{margin:0!important;padding:16px 0 26px!important;border-bottom:1px solid var(--lines)}#main-profile .rgrimorio .profile-feiticos .rgrimorio-drawer .rtxt>.grimorio-feitico:first-child{padding-top:0!important}#main-profile .rgrimorio .profile-feiticos .rgrimorio-drawer .rtxt>.grimorio-feitico:last-child{padding-bottom:0!important;border-bottom:0}#main-profile .rgrimorio-drawer .grimorio-feitico-nome{display:block;margin:0 0 6px;color:var(--group-color);font:900 14px/1.2 var(--font-main);text-transform:uppercase;letter-spacing:.45px}#main-profile .rgrimorio-drawer .grimorio-feitico-desc{color:#d8d8d8;font-size:11px;line-height:1.72}#main-profile .rgrimorio-drawer .grimorio-feitico-desc strong{color:var(--group-color);font-size:9px;letter-spacing:.55px;text-transform:uppercase}#main-profile .rgrimorio-drawer>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:18px!important;right:15px!important;bottom:auto!important;left:auto!important;z-index:120!important;width:24px!important;height:24px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);cursor:pointer;visibility:hidden!important;opacity:0!important;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}#main-profile .rgrimorio-drawer:focus-within>.ajax-profil_edit,#main-profile .rgrimorio-drawer:has(.ajax-profil_hover)>.ajax-profil_edit,#main-profile .rgrimorio-drawer:hover>.ajax-profil_edit{visibility:visible!important;opacity:1!important}#main-profile .rgrimorio-drawer:has(.field_editable:not(.invisible))>.ajax-profil_edit{visibility:hidden!important;opacity:0!important;pointer-events:none!important}#main-profile .rgrimorio-drawer>.ajax-profil_edit:hover{border-color:var(--group-color);background:var(--bg-main)}#main-profile .rgrimorio-drawer>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}#main-profile .rgrimorio .grimorio-editor-original{display:flow-root;position:relative!important;top:auto!important;right:auto!important;z-index:90;width:100%!important;min-width:0;min-height:0}#main-profile .rgrimorio-drawer:has(.field_editable:not(.invisible))>.grimorio-editor-original{display:flex;flex:1 1 auto;min-height:0}#main-profile .rgrimorio .grimorio-editor-original .field_uneditable{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}#main-profile .rgrimorio .grimorio-editor-original .field_editable.invisible{display:none!important}#main-profile .rgrimorio .grimorio-editor-original .field_editable:not(.invisible){display:flex!important;flex-direction:column;flex:1 1 auto;min-height:0;position:relative!important;top:auto!important;right:auto!important;width:auto!important;max-width:none!important;max-height:none!important;margin:0;padding:14px;box-sizing:border-box;overflow:visible;border:1px solid var(--lines);background:rgba(0,0,0,.36);box-shadow:none;z-index:90}#main-profile .rgrimorio .grimorio-editor-original .field_editable:not(.invisible)::before{content:"Edição do campo · formatação em BBCode";display:block;margin:0 0 10px;color:var(--group-color);font:800 8px/1.2 var(--font-main);text-transform:uppercase;letter-spacing:.8px}#main-profile .rgrimorio .grimorio-editor-original input,#main-profile .rgrimorio .grimorio-editor-original textarea{width:100%!important;max-width:100%!important;box-sizing:border-box!important}#main-profile .rgrimorio .grimorio-editor-original textarea{flex:1 1 auto;height:auto!important;min-height:0!important;padding:12px;resize:none;border:1px solid var(--lines);background:#070707;color:#e8e8e8;font:11px/1.62 Consolas,monospace;caret-color:var(--group-color);outline:0}#main-profile .rgrimorio .grimorio-editor-original textarea:focus{border-color:var(--group-color)}#main-profile .rgrimorio .grimorio-editor-original .ajax-profil_valid{position:static!important;display:flex!important;align-items:center;justify-content:center;align-self:flex-end;width:32px;height:30px;margin:10px 0 0;box-sizing:border-box;border:1px solid var(--lines);background:var(--bg-main);color:var(--group-color);font-size:14px;cursor:pointer}#main-profile .rgrimorio .grimorio-editor-original .ajax-profil_valid:hover{border-color:var(--group-color)}#main-profile .rgrimorio .grimorio-avancado-vazio{padding:22px!important;font-style:italic;text-align:center;opacity:.65}#main-profile .rgrimorio-empty{width:100%!important;height:auto!important;padding:24px!important;box-sizing:border-box;border:1px dashed var(--lines);text-align:center}#main-profile .rgrimorio-empty i,#main-profile .rgrimorio-empty span,#main-profile .rgrimorio-empty strong{display:block}#main-profile .rgrimorio-empty i{margin-bottom:10px;color:var(--group-color);font-size:25px}#main-profile .rgrimorio-empty strong{color:var(--group-color);font:italic 900 18px/1 var(--font-sec-sans);text-transform:uppercase}#main-profile .rgrimorio-empty span{margin-top:7px;font-size:10px;opacity:.6}#main-profile .rtabs label{flex:1 1 0;width:auto}#main-profile .rtab{vertical-align:top}#main-profile:has(#profile-tab-5:checked) .rtab-content{transform:translateX(-400%)}#main-profile:has(#profile-tab-6:checked) .rtab-content{transform:translateX(-500%)}#main-profile .rtabs-container{overflow:hidden}#main-profile .rtab-content{display:flex;align-items:flex-start;gap:0;white-space:normal}#main-profile .rtab-content>.rtab{flex:0 0 100%;width:100%;max-width:100%}#main-profile .rprofile-fields .ricons>.rdecorativa{position:relative;flex:0 0 100px;width:100px;height:100px;min-width:100px}#main-profile .rprofile-header .rdecorativa-cabecalho{position:relative;width:120px;height:120px;min-width:120px}#main-profile .rdecorativa-conteudo,#main-profile .rdecorativa-conteudo>.field_uneditable{width:100%;height:100%;box-sizing:border-box}#main-profile .rdecorativa-conteudo>.field_uneditable img{width:100%;height:100%;display:block;object-fit:cover}#main-profile .rdecorativa-placeholder{display:none;position:absolute;inset:0;z-index:1;flex-direction:column;align-items:center;justify-content:center;gap:7px;overflow:hidden;border:1px solid var(--lines);box-sizing:border-box;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),url("https://i.pinimg.com/736x/5e/d6/37/5ed637757cc8c30e3bce2da251a32d35.jpg") center/cover no-repeat,var(--bg-main);color:var(--group-color);text-align:center;pointer-events:none;filter:grayscale(1) brightness(.72);transition:border-color .2s ease,filter .2s ease,opacity .2s ease}#main-profile .rdecorativa:not(:has(.field_uneditable img)) .rdecorativa-placeholder{display:flex}#main-profile .rdecorativa:not(:has(.field_uneditable img)) .rdecorativa-conteudo>.field_uneditable:not(.invisible){position:absolute;inset:0;opacity:0;pointer-events:none}#main-profile .rdecorativa:has(.field_editable:not(.invisible)) .rdecorativa-placeholder{display:none}#main-profile .rdecorativa:has(.ajax-profil_hover) .rdecorativa-placeholder{border-color:var(--group-color);filter:grayscale(1) brightness(.52);opacity:.46}#main-profile .ricons .rdecorativa>.ajax-profil_edit,#main-profile .rprofile-header .rdecorativa>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:7px!important;right:7px!important;bottom:auto!important;left:auto!important;z-index:200!important;width:24px!important;height:24px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);visibility:hidden!important;opacity:0!important;pointer-events:none!important;text-align:center;cursor:pointer;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}#main-profile .rdecorativa:focus-within>.ajax-profil_edit,#main-profile .rdecorativa:has(.field_editable:not(.invisible))>.ajax-profil_edit,#main-profile .rdecorativa:hover>.ajax-profil_edit{visibility:visible!important;opacity:1!important;pointer-events:auto!important}#main-profile .rdecorativa>.ajax-profil_edit:hover{border-color:var(--group-color);background:var(--bg-main)}#main-profile .ricons .rdecorativa>.ajax-profil_edit::before,#main-profile .rprofile-header .rdecorativa>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}#main-profile .rdecorativa .field_editable:not(.invisible){position:absolute;top:50%;right:calc(100% + 12px);z-index:500;width:300px;max-width:calc(100vw - 60px);padding:12px;box-sizing:border-box;transform:translateY(-50%);border:1px solid var(--lines);background:var(--bg-main);box-shadow:0 10px 25px rgba(0,0,0,.5)}#main-profile .rprofile-header .rdecorativa-cabecalho .field_editable:not(.invisible){right:auto;left:calc(100% + 12px)}#main-profile .rdecorativa .field_editable input{width:100%!important;max-width:100%!important;box-sizing:border-box!important}#main-profile .rprofile-fields .profile-field>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;top:7px!important;right:7px!important;bottom:auto!important;left:auto!important;z-index:120!important;width:24px!important;height:24px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);text-align:center;cursor:pointer;visibility:hidden!important;opacity:0!important;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}#main-profile .rprofile-fields .profile-field:focus-within>.ajax-profil_edit,#main-profile .rprofile-fields .profile-field:has(.ajax-profil_hover)>.ajax-profil_edit,#main-profile .rprofile-fields .profile-field:hover>.ajax-profil_edit{visibility:visible!important;opacity:1!important}#main-profile .rprofile-fields .profile-field>.ajax-profil_edit:hover{border-color:var(--group-color);background:var(--bg-main)}#main-profile .rprofile-fields .profile-field>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}#main-profile .rficha-pessoal{position:relative;width:100%;min-width:0;min-height:100%}#main-profile .rficha-radio{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}#main-profile .rficha-subtabs{display:grid;grid-template-columns:repeat(var(--rficha-count,1),minmax(0,1fr));width:100%;margin:0 0 18px;border:1px solid var(--lines);box-sizing:border-box;background:rgba(255,255,255,.012)}#main-profile .rficha-subtabs label{position:relative;height:58px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border-right:1px solid var(--lines);color:#d7d7d7;font-size:18px;cursor:pointer;transition:color .2s ease,background .2s ease}#main-profile .rficha-subtabs label:last-child{border-right:0}#main-profile .rficha-subtabs label:hover{color:var(--group-color);background:rgba(255,255,255,.035)}#main-profile .rficha-subtabs label::after{content:"";position:absolute;left:50%;bottom:-1px;width:0;height:2px;transform:translateX(-50%);background:var(--group-color);transition:width .2s ease}#main-profile .rficha-pessoal:has(#rficha-tab-curiosidades:checked) label[for=rficha-tab-curiosidades],#main-profile .rficha-pessoal:has(#rficha-tab-ferimentos:checked) label[for=rficha-tab-ferimentos],#main-profile .rficha-pessoal:has(#rficha-tab-formacao:checked) label[for=rficha-tab-formacao],#main-profile .rficha-pessoal:has(#rficha-tab-historia:checked) label[for=rficha-tab-historia],#main-profile .rficha-pessoal:has(#rficha-tab-personalidade:checked) label[for=rficha-tab-personalidade],#main-profile .rficha-pessoal:has(#rficha-tab-tracker:checked) label[for=rficha-tab-tracker]{color:var(--group-color);background:rgba(255,255,255,.05)}#main-profile .rficha-pessoal:has(#rficha-tab-curiosidades:checked) label[for=rficha-tab-curiosidades]::after,#main-profile .rficha-pessoal:has(#rficha-tab-ferimentos:checked) label[for=rficha-tab-ferimentos]::after,#main-profile .rficha-pessoal:has(#rficha-tab-formacao:checked) label[for=rficha-tab-formacao]::after,#main-profile .rficha-pessoal:has(#rficha-tab-historia:checked) label[for=rficha-tab-historia]::after,#main-profile .rficha-pessoal:has(#rficha-tab-personalidade:checked) label[for=rficha-tab-personalidade]::after,#main-profile .rficha-pessoal:has(#rficha-tab-tracker:checked) label[for=rficha-tab-tracker]::after{width:100%}#main-profile .rficha-pane,#main-profile .rficha-subcontent{width:100%;min-width:0;box-sizing:border-box;white-space:normal}#main-profile .rficha-pane{display:none}#main-profile .rficha-pessoal:has(#rficha-tab-curiosidades:checked) .rficha-pane[data-rficha=curiosidades],#main-profile .rficha-pessoal:has(#rficha-tab-ferimentos:checked) .rficha-pane[data-rficha=ferimentos],#main-profile .rficha-pessoal:has(#rficha-tab-formacao:checked) .rficha-pane[data-rficha=formacao],#main-profile .rficha-pessoal:has(#rficha-tab-historia:checked) .rficha-pane[data-rficha=historia],#main-profile .rficha-pessoal:has(#rficha-tab-personalidade:checked) .rficha-pane[data-rficha=personalidade],#main-profile .rficha-pessoal:has(#rficha-tab-tracker:checked) .rficha-pane[data-rficha=tracker]{display:block}#main-profile .rficha-vazia{padding:28px;border:1px dashed var(--lines);font-size:11px;font-style:italic;text-align:center;opacity:.68}#main-profile .rtracker{height:500px;padding:20px;box-sizing:border-box;overflow:auto;white-space:normal}#main-profile .rtracker-placeholder{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:30px;box-sizing:border-box;border:1px dashed var(--lines);text-align:center;background:rgba(255,255,255,.012)}#main-profile .rtracker-placeholder i{color:var(--group-color);font-size:30px;opacity:.85}#main-profile .rtracker-placeholder h2{margin:0;color:var(--group-color);font:italic 900 25px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.8px}#main-profile .rtracker-placeholder p{max-width:430px;margin:0;font-size:10px;line-height:160%;text-transform:uppercase;letter-spacing:.7px;opacity:.58}#main-profile .profile-tracker{position:relative;display:flex;flex-direction:column;height:406px;min-height:0;box-sizing:border-box;overflow:hidden}#main-profile .rtracker-ficha-intro{display:flex;align-items:center;gap:12px;flex:0 0 auto;margin:0 0 14px;padding:0 42px 13px 0;border-bottom:1px solid var(--lines)}#main-profile .rtracker-ficha-intro>i{color:var(--group-color);font-size:22px;opacity:.86}#main-profile .rtracker-ficha-intro strong{display:block;color:var(--group-color);font:italic 900 18px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.8px}#main-profile .rtracker-ficha-intro span{display:block;margin-top:5px;font-size:9px;line-height:145%;text-transform:uppercase;letter-spacing:.65px;opacity:.55}#main-profile .rtracker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:max-content;align-content:start;gap:10px;flex:1 1 auto;min-height:0;padding:0 4px 0 0;box-sizing:border-box;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}#main-profile .rtracker-card{position:relative;display:flex;flex-direction:column;min-width:0;min-height:280px;padding:0 18px 16px;box-sizing:border-box;overflow:hidden;border:1px solid var(--lines);background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.008));transition:border-color .22s ease,background .22s ease}#main-profile .rtracker-card:hover{border-color:rgba(255,255,255,.16);background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.012))}#main-profile .rtracker-card.is-wide-last{grid-column:1/-1}#main-profile .rtracker-card::before{content:"";position:absolute;top:0;left:0;z-index:7;width:100%;height:2px;background:linear-gradient(90deg,#756c42 0,rgba(117,108,66,.72) 34%,rgba(117,108,66,.18) 72%,transparent 100%);opacity:.95;pointer-events:none}#main-profile .rtracker-imagem{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 150px;height:150px;margin:0 -18px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.025);box-shadow:inset 0 -28px 32px rgba(0,0,0,.22)}#main-profile .rtracker-imagem img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.03);transition:transform .35s ease,filter .35s ease}#main-profile .rtracker-card:hover .rtracker-imagem img{transform:scale(1.018);filter:saturate(.98) contrast(1.05)}#main-profile .rtracker-imagem.is-empty{color:var(--group-color);font-size:27px;opacity:.42}#main-profile .rtracker-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:0 0 11px}#main-profile .rtracker-card h3{display:block;min-width:0;margin:18px 0 8px!important;padding:0!important;color:var(--group-color);font:900 13.5px/1.22 var(--font-main);text-align:left!important;text-transform:uppercase;letter-spacing:.55px;overflow-wrap:anywhere}#main-profile .rtracker-desc{margin:0;padding:0;color:#d4d4d4;font-size:10px;line-height:165%;text-align:left}#main-profile .rtracker-personagens{display:flex;align-items:flex-start;gap:8px;margin-top:auto;padding-top:11px;border-top:1px solid rgba(255,255,255,.09);color:#9f9f9f;font-size:8.5px;line-height:150%;text-align:left;text-transform:uppercase;letter-spacing:.55px}#main-profile .rtracker-personagens i{flex:0 0 auto;margin-top:1px;color:var(--group-color);font-size:10px;opacity:.9}#main-profile .rtracker-status-wrap{display:flex;position:absolute;top:14px;left:-1px;z-index:8;justify-content:flex-start;margin:0}#main-profile .rtracker-status{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0;height:24px;padding:0 12px;box-sizing:border-box;border:1px solid rgba(255,255,255,.13);border-left:0;border-radius:0;background:#756c42;box-shadow:4px 5px 14px rgba(0,0,0,.34);color:#f0ede2;font:800 7.5px/1 var(--font-main);text-transform:uppercase;letter-spacing:.82px;cursor:pointer;transition:filter .18s ease,box-shadow .18s ease,background .18s ease}#main-profile .rtracker-status i{display:none!important}#main-profile .rtracker-status:disabled{opacity:1;cursor:default}#main-profile .rtracker-status.is-em-andamento{background:#756c42;color:#f0ede2}#main-profile .rtracker-status.is-finalizado{background:#5e5e5e;color:#e1e1e1}#main-profile .rtracker-status:not(:disabled):focus-visible,#main-profile .rtracker-status:not(:disabled):hover{filter:brightness(1.12);box-shadow:4px 6px 16px rgba(0,0,0,.42);outline:0}#main-profile .rtracker-empty{margin:25px 0 0;padding:25px;border:1px dashed var(--lines);text-align:center;font-style:italic;opacity:.65}#main-profile .rtracker-setup{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex:1 1 auto;min-height:0;padding:24px;box-sizing:border-box;border:1px dashed var(--lines);text-align:center;background:rgba(255,255,255,.01)}#main-profile .rtracker-setup i{color:var(--group-color);font-size:23px}#main-profile .rtracker-setup strong{color:var(--group-color);font:italic 900 16px/1 var(--font-sec-sans);text-transform:uppercase}#main-profile .rtracker-setup span{max-width:520px;font-size:9px;line-height:155%;opacity:.62}#main-profile .rtracker-setup code{display:block;margin-top:3px;color:#ccc;font:9px/150% Consolas,monospace;text-transform:none}#main-profile .tracker-editor-original{display:flow-root;position:relative;min-height:0}#main-profile .tracker-editor-original .field_uneditable{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}#main-profile .tracker-editor-original .field_editable.invisible{display:none!important}#main-profile .profile-tracker:has(.field_editable:not(.invisible))>.rtracker-empty,#main-profile .profile-tracker:has(.field_editable:not(.invisible))>.rtracker-grid{display:none!important}#main-profile .profile-tracker:has(.field_editable:not(.invisible))>.tracker-editor-original{display:flex;flex:1 1 auto;min-height:0}#main-profile .tracker-editor-original .field_editable:not(.invisible){position:relative!important;top:auto!important;right:auto!important;display:flex!important;flex:1 1 auto;flex-direction:column;width:100%!important;max-width:none!important;min-height:0;padding:13px;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.34);box-shadow:none}#main-profile .tracker-editor-original .field_editable:not(.invisible)::before{content:none;display:none}#main-profile .tracker-editor-original textarea{flex:1 1 auto;width:100%!important;min-height:0!important;padding:12px;box-sizing:border-box;resize:none;border:1px solid var(--lines);background:#070707;color:#e8e8e8;font:10px/1.65 Consolas,monospace;outline:0}#main-profile .tracker-editor-original textarea:focus{border-color:var(--group-color)}#main-profile .tracker-editor-original .ajax-profil_valid{position:static!important;display:flex!important;align-items:center;justify-content:center;align-self:flex-end;width:32px;height:30px;margin:10px 0 0;border:1px solid var(--lines);background:var(--bg-main);color:var(--group-color);cursor:pointer}#main-profile .profile-tracker>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:0!important;right:0!important;bottom:auto!important;left:auto!important;z-index:120!important;width:28px!important;height:28px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);visibility:hidden!important;opacity:0!important;cursor:pointer;transition:opacity .18s ease,visibility .18s ease}#main-profile .profile-tracker:focus-within>.ajax-profil_edit,#main-profile .profile-tracker:hover>.ajax-profil_edit{visibility:visible!important;opacity:1!important}#main-profile .profile-tracker:has(.field_editable:not(.invisible))>.ajax-profil_edit{visibility:hidden!important;opacity:0!important;pointer-events:none!important}#main-profile .profile-tracker>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}@media (max-width:700px){#main-profile .rtracker-grid{grid-template-columns:1fr}#main-profile .rtracker-card.is-wide-last{grid-column:auto}}#main-profile .rrelacionamentos{padding:20px;box-sizing:border-box}#main-profile .profile-relacionamentos{min-height:100%;position:relative}#main-profile .rrel-intro{display:flex;align-items:center;gap:12px;margin:0 0 16px;padding:0 40px 14px 0;border-bottom:1px solid var(--lines)}#main-profile .rrel-intro i{color:var(--group-color);font-size:22px;opacity:.85}#main-profile .rrel-intro strong{display:block;font:italic 900 18px/100% var(--font-sec-sans);text-transform:uppercase;letter-spacing:1px;color:var(--group-color)}#main-profile .rrel-intro span{display:block;margin-top:4px;font-size:11px;line-height:140%;text-transform:uppercase;letter-spacing:.7px;opacity:.65}#main-profile .rrel-titleline{display:flex;align-items:center;gap:8px}#main-profile .rrel-subdesc{display:block;margin-top:4px;font-size:11px;line-height:140%;text-transform:uppercase;letter-spacing:.7px;opacity:.65}#main-profile .rrel-help{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;position:relative;z-index:3000;padding:0;border:1px solid var(--lines);border-radius:50%;background:var(--bg-main);color:var(--group-color);font:800 11px/100% var(--font-main);cursor:pointer}#main-profile .rrel-intro .rrel-help-tip{display:block!important;visibility:hidden;opacity:0!important;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:340px;max-width:70vw;margin:0;padding:12px;border:1px solid var(--lines);background:var(--bg-main);color:#ebebeb;text-align:left;font:11px/160% var(--font-main);text-transform:none;letter-spacing:0;z-index:3001;pointer-events:none;box-shadow:0 8px 18px rgba(0,0,0,.45);transition:opacity .2s ease,visibility .2s ease}#main-profile .rrel-intro .rrel-help-tip::before{content:"";position:absolute;left:50%;bottom:100%;transform:translateX(-50%);border:6px solid transparent;border-bottom-color:var(--lines)}#main-profile .rrel-intro .rrel-help-tip b{color:var(--group-color);font-weight:800}#main-profile .rrel-help.is-open .rrel-help-tip{visibility:visible;opacity:1!important;pointer-events:auto}#main-profile .profile-relacionamentos:has(.rrel-help.is-open) .relacionamentos-editor-original .ajax-profil_edit{visibility:hidden!important;opacity:0!important;pointer-events:none!important}#main-profile .rrel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}#main-profile .rrel-card{display:flex;align-items:center;min-height:72px;gap:12px;padding:10px;border:1px solid var(--lines);background:rgba(255,255,255,.015);box-sizing:border-box}#main-profile .rrel-img{width:52px;height:52px;flex:0 0 52px;overflow:hidden;border:1px solid var(--lines);background:#0c0c0c}#main-profile .rrel-img img{width:100%;height:100%;display:block;object-fit:cover}#main-profile .rrel-info{min-width:0}#main-profile .rrel-name{margin:0;font:800 14px/115% var(--font-main);text-transform:uppercase;letter-spacing:.4px;color:var(--group-color)}#main-profile .rrel-type{display:block;margin-top:5px;font-size:10px;line-height:130%;text-transform:uppercase;letter-spacing:.8px;opacity:.7}#main-profile .rrel-empty{margin:25px 0 0;padding:25px;border:1px dashed var(--lines);text-align:center;font-style:italic;opacity:.65}#main-profile .rrelacionamentos .relacionamentos-editor-original{position:absolute;top:0;right:0;z-index:80;width:auto;min-width:30px;min-height:30px}#main-profile .rrelacionamentos .relacionamentos-editor-original .field_uneditable{display:block!important;width:30px;height:30px;overflow:hidden;opacity:0;pointer-events:none}#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable.invisible{display:none!important}#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable:not(.invisible){display:block!important;position:absolute;top:88px;right:0;width:520px;max-width:calc(100vw - 40px);max-height:420px;overflow:auto;padding:14px;background:var(--bg-main);border:1px solid var(--lines);z-index:999;box-shadow:0 10px 25px rgba(0,0,0,.5)}#main-profile .rrelacionamentos .relacionamentos-editor-original input,#main-profile .rrelacionamentos .relacionamentos-editor-original textarea{width:100%!important}#main-profile .rrelacionamentos .relacionamentos-editor-original textarea{min-height:280px!important;line-height:150%;resize:vertical}#main-profile .rrelacionamentos .relacionamentos-editor-original .ajax-profil_edit{top:0!important;right:0!important}#main-profile .rsingularidades{width:100%;max-width:100%;min-width:0;height:500px;min-height:0;padding:20px;box-sizing:border-box;overflow-x:hidden;overflow-y:auto;vertical-align:top}#main-profile .rsing-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding:0 0 15px;border-bottom:1px solid var(--lines)}#main-profile .rsing-header-text{min-width:0}#main-profile .rsing-add{display:none;align-items:center;justify-content:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid var(--lines);background:rgba(255,255,255,.025);color:var(--group-color);font:700 20px/1 var(--font-main);cursor:pointer}#main-profile .rsing-add.is-visible{display:flex}#main-profile .rsing-add.is-open,#main-profile .rsing-add:hover{border-color:var(--group-color);background:rgba(255,255,255,.055)}#main-profile .rsing-remove{position:absolute;top:12px;right:12px;z-index:170;display:flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border:1px solid var(--lines);background:var(--bg-main);color:var(--group-color);font:700 20px/1 var(--font-main);cursor:pointer}#main-profile .rsing-remove:hover{border-color:var(--group-color);background:rgba(255,255,255,.055)}#main-profile .rsing-card .singularidade-editor-original .ajax-profil_edit{display:none!important}#main-profile .rsing-card.is-removing .singularidade-editor-original .field_editable{display:none!important}#main-profile .rsing-header h2{margin:0;color:var(--group-color);font:italic 900 24px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.6px}#main-profile .rsing-header p{margin:7px 0 0;font-size:10px;line-height:150%;opacity:.58}#main-profile .rsing-grid{width:100%;max-width:100%;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch;gap:12px;box-sizing:border-box}#main-profile .rsing-grid.is-single{grid-template-columns:minmax(0,1fr)}#main-profile .rsing-card.is-wide-last{grid-column:1/-1}#main-profile .rsing-editor-panel{display:none;width:100%;max-width:320px;margin:0 0 14px;padding:12px;box-sizing:border-box;border:1px solid var(--lines);background:var(--bg-main)}#main-profile .rsing-editor-panel.is-open{display:block}#main-profile .rsing-editor-panel .singularidade-editor-original{display:none;position:relative!important;top:auto!important;right:auto!important;width:100%!important;min-height:34px}#main-profile .rsing-editor-panel .singularidade-editor-original.is-active{display:block}#main-profile .rsing-editor-panel .singularidade-editor-original .ajax-profil_edit,#main-profile .rsing-editor-panel .singularidade-editor-original .field_uneditable{display:none!important}#main-profile .rsing-editor-panel .singularidade-editor-original .field_editable:not(.invisible){position:relative!important;top:auto!important;right:auto!important;width:100%!important;max-width:none;box-shadow:none}#main-profile .rsing-choice-wrap{display:none;align-items:center;gap:8px}#main-profile .rsing-editor-panel.is-open .rsing-choice-wrap{display:flex}#main-profile .rsing-choice-wrap select{flex:1;min-width:0;width:100%;box-sizing:border-box}#main-profile .rsing-choice-confirm{flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid var(--lines);background:rgba(255,255,255,.025);color:var(--group-color);cursor:pointer}#main-profile .singularidades-editor-unico{display:none!important}#main-profile .rsing-card{position:relative;width:100%;max-width:100%;min-width:0;min-height:185px;padding:22px 54px 20px 22px;box-sizing:border-box;border:1px solid var(--lines);background:rgba(255,255,255,.012);overflow:visible}#main-profile .rsing-card:before{content:"";position:absolute;top:-1px;left:-1px;width:64px;height:2px;background:var(--group-color)}#main-profile .rsing-display{min-width:0}#main-profile .rsing-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin:0 0 10px}#main-profile .rsing-top-left{min-width:0;flex:1}#main-profile .rsing-icon{flex:0 0 auto;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--group-color);font-size:31px;line-height:1;opacity:.82}#main-profile .rsing-icon:before{font-family:game-icons;font-style:normal;font-weight:400}#main-profile .rsing-icon::before{font-family:game-icons;font-style:normal;font-weight:400}#main-profile .rsing-icon.icone-vampiro::before{content:"\E520"}#main-profile .rsing-icon.icone-avaracao::before{content:"\E9AE"}#main-profile .rsing-icon.icone-legilimencia::before{content:"\ED15"}#main-profile .rsing-icon.icone-oclumencia::before{content:"\E028"}#main-profile .rsing-icon.icone-animagia::before{content:"\E38E"}#main-profile .rsing-icon.icone-clarividencia::before{content:"\ED48"}#main-profile .rsing-icon.icone-ofidioglossia::before{content:"\E7B2"}#main-profile .rsing-icon.icone-metamorfomagia::before{content:"\E7AE"}#main-profile .rsing-icon.icone-sensitivismo::before{content:"\E523"}#main-profile .rsing-icon.icone-licantropia::before{content:"\E40B"}#main-profile .rsing-icon.icone-veela::before{content:"\EAF2"}#main-profile .rsing-meta{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5}#main-profile .rsing-meta:before{content:"";width:20px;height:1px;background:var(--group-color)}#main-profile .rsing-card h3{margin:0 0 10px;padding:0;border:0;color:var(--group-color);font:italic 900 22px/1.08 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.4px;overflow-wrap:anywhere}#main-profile .rsing-card p{max-width:680px;margin:0;font-size:10.5px;line-height:170%;opacity:.8}#main-profile .rsing-origin-note{margin-top:15px;padding-top:11px;border-top:1px solid var(--lines)}#main-profile .rsing-origin-title{display:flex;align-items:center;gap:8px;min-width:0}#main-profile .rsing-origin-title span{color:var(--group-color);font-size:7.5px;font-weight:900;letter-spacing:1px;text-transform:uppercase}#main-profile .rsing-origin-title strong{min-width:0;color:#d8d8d8;font-size:9px;line-height:120%;letter-spacing:.35px;text-transform:uppercase}#main-profile .rsing-origin-note small{display:block;margin-top:5px;font-size:8.5px;line-height:145%;opacity:.48}#main-profile .rsing-grid.is-single .rsing-card{min-height:190px;padding:30px 68px 28px 30px}#main-profile .rsing-grid.is-single .rsing-card h3{font-size:29px}#main-profile .rsing-grid.is-single .rsing-icon{width:46px;height:46px;font-size:36px}#main-profile .rsing-grid.is-single .rsing-card p{font-size:12px}#main-profile .rsing-empty{width:100%;box-sizing:border-box;padding:18px;border:1px dashed var(--lines);color:#aaa;font-size:11px;font-style:italic;text-align:center;opacity:.72}#main-profile .singularidade-editor-original{position:absolute;top:12px;right:12px;z-index:150;width:30px;min-height:30px}#main-profile .singularidade-editor-original .field_uneditable{display:block!important;width:30px;height:30px;overflow:hidden;opacity:0;pointer-events:none}#main-profile .singularidade-editor-original .field_editable.invisible{display:none!important}#main-profile .singularidade-editor-original .field_editable:not(.invisible){display:flex!important;position:absolute!important;top:34px!important;right:0!important;width:270px;max-width:calc(100vw - 70px);padding:12px;box-sizing:border-box;background:var(--bg-main);border:1px solid var(--lines);z-index:999;box-shadow:0 10px 25px rgba(0,0,0,.55)}#main-profile .singularidade-editor-original input,#main-profile .singularidade-editor-original select,#main-profile .singularidade-editor-original textarea{width:100%!important}#main-profile .singularidade-editor-original .ajax-profil_edit{position:absolute!important;top:0!important;right:0!important;bottom:auto!important;height:30px!important;display:block!important;visibility:hidden!important;opacity:0!important;transition:opacity .2s ease,visibility .2s ease}#main-profile .rsing-card:hover .singularidade-editor-original .ajax-profil_edit,#main-profile .singularidade-editor-original:has(.field_editable:not(.invisible)) .ajax-profil_edit{visibility:visible!important;opacity:1!important}#main-profile .singularidade-editor-original .ajax-profil_edit:before{top:0!important;transform:none!important}#main-profile .profile-field,#main-profile .profile-field .field_editable,#main-profile .profile-field-content{min-width:0;box-sizing:border-box}#main-profile .profile-field:not(.profile-field-personalidade) .field_editable:not(.invisible){width:100%!important;max-width:100%!important}#main-profile .profile-field .field_editable input:not([type=checkbox]):not([type=radio]),#main-profile .profile-field .field_editable select,#main-profile .profile-field .field_editable textarea{width:100%!important;max-width:100%!important;box-sizing:border-box!important}#main-profile,#main-profile .rmain-container,#main-profile .rsingularidades,#main-profile .rtab-content,#main-profile .rtabs-container{min-width:0}@media(max-width:700px){#main-profile .rsingularidades{height:500px;min-height:0;padding:18px;overflow-x:hidden;overflow-y:auto}#main-profile .rsing-grid{grid-template-columns:1fr}#main-profile .rsing-card,#main-profile .rsing-grid.is-single .rsing-card{min-height:145px;padding:22px 50px 22px 20px}#main-profile .rsing-grid.is-single .rsing-card h3{font-size:24px}}
+
+/* ==========================================================================
+   FICHA PESSOAL — CABEÇALHOS E FORMULÁRIOS PADRONIZADOS COM O TRACKER
+   ========================================================================== */
+#main-profile .rficha-standard-field{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:406px;
+  min-width:0;
+  min-height:0;
+  margin:0!important;
+  padding:0!important;
+  box-sizing:border-box;
+  overflow:hidden;
+  border:0!important;
+  background:transparent!important;
+}
+
+#main-profile .rficha-ficha-intro{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex:0 0 auto;
+  min-height:51px;
+  margin:0 0 14px;
+  padding:0 42px 13px 0;
+  box-sizing:border-box;
+  border-bottom:1px solid var(--lines);
+}
+
+#main-profile .rficha-ficha-intro>i{
+  flex:0 0 auto;
+  color:var(--group-color);
+  font-size:22px;
+  line-height:1;
+  opacity:.86;
+  transition:opacity .18s ease,transform .18s ease;
+}
+
+#main-profile .rficha-ficha-intro>div{min-width:0}
+
+#main-profile .rficha-ficha-intro strong{
+  display:block;
+  margin:0;
+  color:var(--group-color);
+  font:italic 900 18px/1 var(--font-sec-sans);
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  overflow-wrap:anywhere;
+}
+
+#main-profile .rficha-ficha-intro span{
+  display:block;
+  margin-top:5px;
+  color:inherit;
+  font-size:9px;
+  line-height:145%;
+  text-transform:uppercase;
+  letter-spacing:.65px;
+  opacity:.55;
+}
+
+#main-profile .rficha-ficha-intro:hover>i{
+  opacity:1;
+  transform:translateX(1px);
+}
+
+/* Conteúdo em modo de leitura. */
+#main-profile .rficha-standard-field>.rtxt{
+  position:relative!important;
+  display:block;
+  flex:1 1 auto;
+  width:auto!important;
+  height:auto!important;
+  min-width:0;
+  min-height:0;
+  max-height:none!important;
+  margin:0!important;
+  padding:3px 5px 0 0!important;
+  box-sizing:border-box;
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  border:0!important;
+  background:transparent!important;
+  font-size:12px;
+  line-height:1.75;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.18) transparent;
+}
+
+#main-profile .rficha-standard-field>.rtxt::-webkit-scrollbar{width:4px}
+#main-profile .rficha-standard-field>.rtxt::-webkit-scrollbar-track{background:transparent}
+#main-profile .rficha-standard-field>.rtxt::-webkit-scrollbar-thumb{
+  border:0;
+  border-radius:0;
+  background:rgba(255,255,255,.18);
+}
+#main-profile .rficha-standard-field>.rtxt::-webkit-scrollbar-thumb:hover{background:var(--group-color)}
+
+#main-profile .rficha-standard-field>.rtxt>.field_uneditable{
+  display:block;
+  min-height:100%;
+  padding:13px 13px 20px 0;
+  box-sizing:border-box;
+}
+
+/*
+ * Modo de edição: o formulário passa a ocupar imediatamente todo o espaço
+ * abaixo do cabeçalho, usando a mesma estrutura visual do editor do Tracker.
+ */
+#main-profile .rficha-standard-field:has(>.rtxt .field_editable:not(.invisible))>.rtxt{
+  display:flex!important;
+  flex-direction:column;
+  padding:0!important;
+  overflow:hidden!important;
+  scrollbar-width:none;
+}
+
+#main-profile .rficha-standard-field:has(>.rtxt .field_editable:not(.invisible))>.rtxt::-webkit-scrollbar{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+}
+
+#main-profile .rficha-standard-field:has(>.rtxt .field_editable:not(.invisible))>.rtxt>.field_uneditable{
+  display:none!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable.invisible{
+  display:none!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible){
+  position:relative!important;
+  inset:auto!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  display:flex!important;
+  flex:1 1 auto;
+  flex-direction:column;
+  width:100%!important;
+  max-width:none!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:13px!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  transform:none!important;
+  border:1px solid var(--lines)!important;
+  border-radius:0!important;
+  background:rgba(0,0,0,.34)!important;
+  box-shadow:none!important;
+  z-index:90!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible)::before{
+  content:none!important;
+  display:none!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) input,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) select,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) input,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) select{
+  min-height:34px;
+  padding:8px 10px;
+  border:1px solid var(--lines)!important;
+  border-radius:0!important;
+  background:#070707!important;
+  color:#e8e8e8!important;
+  outline:0!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea{
+  display:block!important;
+  flex:1 1 auto!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:12px!important;
+  resize:none!important;
+  overflow:auto!important;
+  border:1px solid var(--lines)!important;
+  border-radius:0!important;
+  background:#070707!important;
+  color:#e8e8e8!important;
+  font:10px/1.65 Consolas,monospace!important;
+  caret-color:var(--group-color);
+  outline:0!important;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.18) transparent;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea:focus,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) input:focus,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) select:focus{
+  border-color:var(--group-color)!important;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea::-webkit-scrollbar{width:4px}
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea::-webkit-scrollbar-track{background:transparent}
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18)}
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) textarea::-webkit-scrollbar-thumb:hover{background:var(--group-color)}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) .ajax-profil_valid{
+  position:static!important;
+  inset:auto!important;
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  align-self:flex-end;
+  flex:0 0 30px;
+  width:32px!important;
+  height:30px!important;
+  min-width:32px!important;
+  margin:10px 0 0!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  transform:none!important;
+  border:1px solid var(--lines)!important;
+  border-radius:0!important;
+  background:var(--bg-main)!important;
+  color:var(--group-color)!important;
+  font-size:14px!important;
+  line-height:1!important;
+  cursor:pointer;
+}
+
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) .ajax-profil_valid:hover,
+#main-profile .rficha-standard-field>.rtxt>.field_editable:not(.invisible) .ajax-profil_valid:focus-visible{
+  border-color:var(--group-color)!important;
+  outline:0;
+}
+
+/* Botão de edição: mesma linguagem visual do Tracker e ativado pelo cabeçalho. */
+#main-profile .rficha-standard-field>.ajax-profil_edit{
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  position:absolute!important;
+  top:0!important;
+  right:0!important;
+  bottom:auto!important;
+  left:auto!important;
+  z-index:120!important;
+  width:28px!important;
+  height:28px!important;
+  padding:0!important;
+  box-sizing:border-box;
+  border:1px solid var(--lines)!important;
+  border-radius:0!important;
+  background:rgba(0,0,0,.72)!important;
+  color:var(--group-color)!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  cursor:pointer;
+  transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease;
+}
+
+#main-profile .rficha-standard-field:has(>.rficha-ficha-intro:hover)>.ajax-profil_edit,
+#main-profile .rficha-standard-field:has(>.ajax-profil_edit:hover)>.ajax-profil_edit,
+#main-profile .rficha-standard-field:has(>.ajax-profil_edit:focus-visible)>.ajax-profil_edit,
+#main-profile .rficha-standard-field:has(>.ajax-profil_hover)>.ajax-profil_edit{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+
+#main-profile .rficha-standard-field:has(.field_editable:not(.invisible))>.ajax-profil_edit{
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+#main-profile .rficha-standard-field>.ajax-profil_edit:hover,
+#main-profile .rficha-standard-field>.ajax-profil_edit:focus-visible{
+  border-color:var(--group-color)!important;
+  background:var(--bg-main)!important;
+  outline:0;
+}
+
+#main-profile .rficha-standard-field>.ajax-profil_edit::before{
+  content:"\f5ad"!important;
+  display:block!important;
+  position:static!important;
+  top:auto!important;
+  margin:0!important;
+  transform:none!important;
+  color:var(--group-color)!important;
+  font:var(--fa-font-solid)!important;
+  font-size:12px!important;
+  line-height:1!important;
+}
+
+@media(max-width:700px){
+  #main-profile .rficha-standard-field{
+    height:406px;
+    min-height:406px;
+  }
+
+  #main-profile .rficha-ficha-intro{padding-right:38px}
+}
+
+/* ========================================================================== 
+   FICHA PESSOAL — HOVER DOS EDITORES PADRONIZADO COM O TRACKER
+   ========================================================================== */
+
+/* Os ícones dos cabeçalhos permanecem completamente estáticos. */
+#main-profile .rficha-ficha-intro:hover>i{
+  opacity:.86;
+  transform:none;
+}
+
+#main-profile .rficha-ficha-intro>i{
+  transition:none;
+}
+
+/* O botão de editar aparece ao passar o mouse por qualquer ponto da aba. */
+#main-profile .rficha-standard-field:hover>.ajax-profil_edit,
+#main-profile .rficha-standard-field:focus-within>.ajax-profil_edit,
+#main-profile .rficha-standard-field:has(>.ajax-profil_hover)>.ajax-profil_edit{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+
+/* Durante a edição, o botão continua oculto. */
+#main-profile .rficha-standard-field:has(.field_editable:not(.invisible))>.ajax-profil_edit{
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+/* Tracker e demais abas recebem a mesma borda dourada no hover/foco. */
+#main-profile .profile-tracker>.ajax-profil_edit:hover,
+#main-profile .profile-tracker>.ajax-profil_edit:focus-visible,
+#main-profile .rficha-standard-field>.ajax-profil_edit:hover,
+#main-profile .rficha-standard-field>.ajax-profil_edit:focus-visible{
+  border-color:var(--group-color)!important;
+  background:var(--bg-main)!important;
+  outline:0!important;
+}
+
+/* ==========================================================================
+   TRACKER — AJUDA DE PREENCHIMENTO IDÊNTICA À DE RELACIONAMENTOS
+   ========================================================================== */
+
+#main-profile .rtracker-titleline{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+}
+
+#main-profile .rtracker-ficha-intro .rrel-help-tip{
+  display:block!important;
+  visibility:hidden;
+  opacity:0!important;
+  position:absolute;
+  top:calc(100% + 10px);
+  left:50%;
+  transform:translateX(-50%);
+  width:340px;
+  max-width:70vw;
+  margin:0;
+  padding:12px;
+  border:1px solid var(--lines);
+  background:var(--bg-main);
+  color:#ebebeb;
+  text-align:left;
+  font:11px/160% var(--font-main);
+  text-transform:none;
+  letter-spacing:0;
+  z-index:3001;
+  pointer-events:none;
+  box-shadow:0 8px 18px rgba(0,0,0,.45);
+  transition:opacity .2s ease,visibility .2s ease;
+}
+
+#main-profile .rtracker-ficha-intro .rrel-help-tip::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:100%;
+  transform:translateX(-50%);
+  border:6px solid transparent;
+  border-bottom-color:var(--lines);
+}
+
+#main-profile .rtracker-ficha-intro .rrel-help-tip b{
+  color:var(--group-color);
+  font-weight:800;
+}
+
+#main-profile .profile-tracker:has(.rrel-help.is-open)>.ajax-profil_edit{
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+/* Ficha Pessoal: encaixa as subtabs sem criar uma segunda rolagem externa. */
+#main-profile .rhistoria{overflow:hidden!important}
+#main-profile .rficha-pessoal{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height:0!important;
+}
+#main-profile .rficha-subtabs{flex:0 0 60px}
+#main-profile .rficha-subcontent{
+  flex:1 1 auto;
+  height:auto!important;
+  min-height:0;
+}
+#main-profile .rficha-pane{height:100%;min-height:0}
+#main-profile .profile-tracker,
+#main-profile .rficha-standard-field{height:100%!important;min-height:0}
+
+
+/* ========================================================================== 
+   TRACKER — CORREÇÃO DO POSICIONAMENTO DA CAIXA DE AJUDA
+   ========================================================================== */
+
+/* A caixa passa a se orientar pelo cabeçalho inteiro, evitando que a metade
+   esquerda seja recortada pelo overflow do painel do Tracker. */
+#main-profile .rtracker-ficha-intro{
+  position:relative;
+  overflow:visible;
+}
+
+#main-profile .rtracker-ficha-intro .rrel-help{
+  position:static;
+}
+
+#main-profile .rtracker-ficha-intro .rrel-help-tip{
+  top:calc(100% + 9px);
+  left:0;
+  width:340px;
+  max-width:100%;
+  box-sizing:border-box;
+  transform:none;
+}
+
+/* Mantém a pequena seta visualmente apontada para o botão de ajuda. */
+#main-profile .rtracker-ficha-intro .rrel-help-tip::before{
+  left:150px;
+  transform:translateX(-50%);
+}
+
+@media(max-width:700px){
+  #main-profile .rtracker-ficha-intro .rrel-help-tip{
+    width:100%;
+    max-width:100%;
+  }
+
+  #main-profile .rtracker-ficha-intro .rrel-help-tip::before{
+    left:145px;
+  }
+}
+
+/* ==========================================================================
+   PERSONALIDADE — LEITURA POR IMAGENS E EDITOR DE MÚLTIPLA ESCOLHA
+   ========================================================================== */
+#main-profile .profile-field-personalidade{
+  position:relative;
+  overflow:visible;
+}
+
+#main-profile .profile-field-personalidade:not(.rpersonalidade-pronta) .field_uneditable{
+  visibility:hidden;
+}
+
+#main-profile .profile-field-personalidade:has(.field_editable:not(.invisible)){
+  z-index:900;
+}
+
+#main-profile .profile-field-personalidade .profile-field-content{
+  position:static;
+}
+
+/* Mantém os três ícones em 40 x 40 sem deixar o flex comprimir a largura. */
+#main-profile .profile-field-personalidade .field_uneditable>.profile_field_list{
+  gap:6px;
+  overflow:visible;
+}
+
+#main-profile .profile-field-personalidade .field_uneditable>.profile_field_list>li{
+  flex:0 0 40px;
+  width:40px;
+  height:40px;
+  min-width:40px;
+  overflow:visible;
+}
+
+#main-profile .profile-field-personalidade .field_uneditable>.profile_field_list>li>img{
+  display:block;
+  width:40px!important;
+  height:40px!important;
+  min-width:40px;
+  max-width:40px!important;
+  max-height:40px!important;
+  object-fit:contain!important;
+}
+
+/* O editor fica ancorado ao próprio campo. Evita position:fixed dentro da área
+   transformada das abas, que era a causa dos saltos e recortes ao selecionar. */
+#main-profile .rprofile-fields .profile-field-personalidade .rpersonalidade-editor:not(.invisible){
+  --rpersonalidade-largura:280px;
+  --rpersonalidade-altura:300px;
+  --rpersonalidade-deslocamento-x:0px;
+  position:absolute;
+  top:0;
+  left:calc(100% + 8px);
+  right:auto;
+  bottom:auto;
+  z-index:9999;
+  width:var(--rpersonalidade-largura);
+  max-width:calc(100vw - 16px);
+  height:var(--rpersonalidade-altura);
+  max-height:var(--rpersonalidade-altura);
+  margin:0;
+  padding:8px;
+  overflow:hidden;
+  box-sizing:border-box;
+  transform:none;
+  border:1px solid var(--lines);
+  background:var(--bg-main);
+  box-shadow:0 12px 28px rgba(0,0,0,.62);
+  font-size:0;
+}
+
+#main-profile .rprofile-fields .profile-field-personalidade .rpersonalidade-editor.rpersonalidade-editor-esquerda:not(.invisible){
+  left:auto;
+  right:calc(100% + 8px);
+}
+
+#main-profile .rprofile-fields .profile-field-personalidade .rpersonalidade-editor.rpersonalidade-editor-abaixo:not(.invisible){
+  top:calc(100% + 8px);
+  left:var(--rpersonalidade-deslocamento-x);
+  right:auto;
+}
+
+#main-profile .rprofile-fields .profile-field-personalidade .rpersonalidade-editor.rpersonalidade-editor-acima:not(.invisible){
+  top:auto;
+  bottom:calc(100% + 8px);
+  left:var(--rpersonalidade-deslocamento-x);
+  right:auto;
+}
+
+/* Painel interno isolado das regras antigas de .field_editable. */
+#main-profile .profile-field-personalidade .rpersonalidade-painel{
+  display:flex;
+  flex-direction:column;
+  grid-column:1 / -1;
+  grid-row:1 / -1;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  box-sizing:border-box;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-editor-cabecalho{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex:0 0 auto;
+  min-height:30px;
+  padding:0 34px 8px 2px;
+  box-sizing:border-box;
+  border-bottom:1px solid var(--lines);
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-editor-cabecalho span{
+  min-width:0;
+  color:var(--group-color);
+  font-size:10px;
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:.55px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-editor-cabecalho small{
+  flex:0 0 auto;
+  color:#aaa;
+  font-size:10px;
+  line-height:1;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1 1 auto;
+  width:100%;
+  min-width:0;
+  min-height:0;
+  margin:8px 0 0;
+  padding:0 5px 0 0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  box-sizing:border-box;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.18) transparent;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista::-webkit-scrollbar{
+  width:4px;
+  height:4px;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista::-webkit-scrollbar-button{
+  display:none;
+  width:0;
+  height:0;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista::-webkit-scrollbar-thumb{
+  border:0;
+  border-radius:0;
+  background:rgba(255,255,255,.18);
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-lista::-webkit-scrollbar-thumb:hover{
+  background:var(--group-color);
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao{
+  position:relative;
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;
+  width:100%;
+  min-width:0;
+  min-height:30px;
+  margin:0;
+  padding:6px 7px;
+  box-sizing:border-box;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.015);
+  font-size:0;
+  cursor:pointer;
+  transition:border-color .18s ease,background .18s ease,opacity .18s ease;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao:hover,
+#main-profile .profile-field-personalidade .rpersonalidade-opcao:has(input:checked){
+  border-color:var(--group-color);
+  background:rgba(255,255,255,.04);
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao-bloqueada{
+  opacity:.42;
+  cursor:not-allowed;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao>input[type=checkbox],
+#main-profile .profile-field-personalidade .rpersonalidade-opcao>input[type=radio]{
+  position:static;
+  order:2;
+  flex:0 0 13px;
+  width:13px;
+  height:13px;
+  margin:0 0 0 10px;
+  padding:0;
+  accent-color:var(--group-color);
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao-visual{
+  order:1;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:1 1 auto;
+  width:auto;
+  min-width:0;
+  font-size:11px;
+  line-height:1.35;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao-visual img{
+  display:block;
+  flex:0 0 10px;
+  width:10px;
+  height:10px;
+  max-width:10px;
+  max-height:10px;
+  object-fit:contain;
+  box-sizing:border-box;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-opcao-nome{
+  display:block;
+  flex:1 1 auto;
+  min-width:0;
+  color:#d8d8d8;
+  font-size:11px;
+  line-height:1.35;
+  text-align:left;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-editor>.ajax-profil_valid{
+  position:absolute;
+  top:7px;
+  right:7px;
+  bottom:auto;
+  left:auto;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  min-width:24px;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  border:1px solid var(--lines);
+  background:var(--bg-main);
+  color:var(--group-color);
+  font-size:12px;
+  line-height:1;
+  cursor:pointer;
+}
+
+#main-profile .profile-field-personalidade .rpersonalidade-editor>.ajax-profil_valid:hover,
+#main-profile .profile-field-personalidade .rpersonalidade-editor>.ajax-profil_valid:focus-visible{
+  border-color:var(--group-color);
+  outline:0;
+}
+
+@media(max-width:620px){
+  #main-profile .rprofile-fields .profile-field-personalidade .rpersonalidade-editor:not(.invisible){
+    --rpersonalidade-largura:min(280px,calc(100vw - 12px));
+    max-width:calc(100vw - 12px);
+    padding:7px;
+  }
+}
+
+/* Tracker: o título vira link apenas quando a trama possui um tópico. */
+#main-profile .rtracker-card h3 a{
+  color:inherit;
+  text-decoration:none;
+  outline:0;
+}
+
+#main-profile .rtracker-card h3 a>i{
+  display:inline-block;
+  margin-left:6px;
+  color:var(--group-color);
+  font-size:.62em;
+  line-height:1;
+  opacity:.48;
+  transform:translateY(-1px);
+  transition:opacity .18s ease,transform .18s ease;
+}
+
+#main-profile .rtracker-card h3 a:hover>i,
+#main-profile .rtracker-card h3 a:focus-visible>i{
+  opacity:1;
+  transform:translate(1px,-2px);
+}
+
+#main-profile .rtracker-card h3 a:focus-visible{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+/* Editor unificado de nível e XP */
+#main-profile .rxp-wrap{position:relative}
+#main-profile .rxp-wrap .profile-nivel .ajax-profil_edit,
+#main-profile .rxp-wrap .profile-pontos-de-experiencia-xp .ajax-profil_edit,
+#main-profile .rxp-wrap .profile-nivel .field_editable,
+#main-profile .rxp-wrap .profile-pontos-de-experiencia-xp .field_editable{display:none!important}
+#main-profile .rxp-wrap .profile-nivel .field_uneditable.invisible,
+#main-profile .rxp-wrap .profile-pontos-de-experiencia-xp .field_uneditable.invisible{display:inline!important}
+#main-profile .rxp-edit{position:absolute;top:14px;right:14px;z-index:150;display:flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);font-size:12px;cursor:pointer;visibility:hidden;opacity:0;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}
+#main-profile .rxp-wrap:hover>.rxp-edit,
+#main-profile .rxp-wrap:focus-within>.rxp-edit,
+#main-profile .rxp-wrap:has(.rxp-panel.is-open)>.rxp-edit{visibility:visible;opacity:1}
+#main-profile .rxp-edit:hover,
+#main-profile .rxp-edit:focus-visible{border-color:var(--group-color);background:var(--bg-main);outline:0}
+#main-profile .rxp-panel{position:absolute;top:58px;right:18px;left:18px;z-index:600;display:none;padding:16px;box-sizing:border-box;border:1px solid var(--lines);background:var(--bg-main);box-shadow:0 12px 28px rgba(0,0,0,.58);white-space:normal}
+#main-profile .rxp-panel.is-open{display:block;animation:rxp-in .18s ease both}
+@keyframes rxp-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+#main-profile .rxp-panel-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 14px;padding:0 0 10px;border-bottom:1px solid var(--lines)}
+#main-profile .rxp-panel-head b{color:var(--group-color);font:italic 900 16px/1 var(--font-sec-sans);letter-spacing:.6px;text-transform:uppercase}
+#main-profile .rxp-close{width:24px;height:24px;padding:0;border:1px solid var(--lines);background:transparent;color:#aaa;font:18px/1 var(--font-main);cursor:pointer}
+#main-profile .rxp-close:hover,
+#main-profile .rxp-close:focus-visible{border-color:var(--group-color);color:var(--group-color);outline:0}
+#main-profile .rxp-panel label{display:block;color:var(--group-color);font:800 8px/1 var(--font-main);letter-spacing:.8px;text-transform:uppercase}
+#main-profile .rxp-input{display:block;width:100%!important;height:38px;margin:8px 0 13px;padding:0 11px;box-sizing:border-box;border:1px solid var(--lines);background:#070707;color:#eee;font:12px/1 var(--font-main);outline:0}
+#main-profile .rxp-input:focus{border-color:var(--group-color)}
+#main-profile .rxp-invalid .rxp-input{border-color:#9b5353}
+#main-profile .rxp-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 13px;border:1px solid var(--lines)}
+#main-profile .rxp-preview span{min-width:0;padding:9px 7px;border-right:1px solid var(--lines);color:#888;font:700 7px/1.2 var(--font-main);letter-spacing:.55px;text-align:center;text-transform:uppercase}
+#main-profile .rxp-preview span:last-child{border-right:0}
+#main-profile .rxp-preview b{display:block;margin-top:5px;color:#ddd;font:800 12px/1 var(--font-main)}
+#main-profile .rxp-level{color:var(--group-color)!important}
+#main-profile .rxp-save{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;height:34px;padding:0;border:1px solid var(--lines);background:rgba(255,255,255,.025);color:var(--group-color);font:800 9px/1 var(--font-main);letter-spacing:.7px;text-transform:uppercase;cursor:pointer}
+#main-profile .rxp-save:hover,
+#main-profile .rxp-save:focus-visible{border-color:var(--group-color);background:rgba(255,255,255,.055);outline:0}
+
+/* Cabeçalhos e editores de inventário/relacionamentos */
+#main-profile .rinventario{height:500px;padding:20px;box-sizing:border-box;overflow:hidden}
+#main-profile .profile-inventario{position:relative!important;display:flex!important;flex-direction:column;width:100%!important;height:460px!important;min-height:0;padding:0!important;box-sizing:border-box}
+#main-profile .rinv-intro{display:flex;align-items:center;gap:12px;flex:0 0 auto;margin:0 0 14px;padding:0 42px 13px 0;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-intro>i{color:var(--group-color);font-size:22px;opacity:.86}
+#main-profile .rinv-intro strong{display:block;color:var(--group-color);font:italic 900 18px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.8px}
+#main-profile .rinv-intro span{display:block;margin-top:5px;font-size:9px;line-height:145%;text-transform:uppercase;letter-spacing:.65px;opacity:.55}
+#main-profile .profile-inventario>.rtxt{flex:1 1 auto;width:100%!important;height:auto!important;min-height:0;padding:0 4px 0 0;box-sizing:border-box;overflow:auto}
+#main-profile .profile-relacionamentos{display:flex;flex-direction:column;height:460px;min-height:0}
+#main-profile .profile-relacionamentos:has(.field_editable:not(.invisible))>.rrel-grid,
+#main-profile .profile-relacionamentos:has(.field_editable:not(.invisible))>.rrel-empty{display:none!important}
+#main-profile .rrelacionamentos .relacionamentos-editor-original{position:absolute;top:0;right:0;z-index:80;width:30px;min-width:30px;min-height:30px}
+#main-profile .rrelacionamentos .relacionamentos-editor-original .field_uneditable{display:block!important;width:30px;height:30px;overflow:hidden;opacity:0;pointer-events:none}
+#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable.invisible{display:none!important}
+#main-profile .profile-relacionamentos:has(.field_editable:not(.invisible))>.relacionamentos-editor-original{position:static!important;display:flex;flex:1 1 auto;width:100%;min-width:0;min-height:0}
+#main-profile .profile-inventario>.rtxt>.field_editable:not(.invisible),
+#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable:not(.invisible){position:relative!important;inset:auto!important;display:flex!important;flex:1 1 auto;flex-direction:column;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-height:0;margin:0;padding:14px;box-sizing:border-box;overflow:hidden;border:1px solid var(--lines);background:rgba(0,0,0,.34);box-shadow:none;z-index:90}
+#main-profile .profile-inventario>.rtxt>.field_editable:not(.invisible)::before,
+#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable:not(.invisible)::before{display:block;margin:0 0 10px;color:var(--group-color);font:800 8px/1.2 var(--font-main);text-transform:uppercase;letter-spacing:.8px}
+#main-profile .profile-inventario>.rtxt>.field_editable:not(.invisible)::before{content:"Edição do inventário · formatação em BBCode"}
+#main-profile .rrelacionamentos .relacionamentos-editor-original .field_editable:not(.invisible)::before{content:"Uma relação por linha · foto | nome | tipo"}
+#main-profile .profile-inventario .field_editable textarea,
+#main-profile .rrelacionamentos .relacionamentos-editor-original textarea{display:block;flex:1 1 auto;width:100%!important;height:auto!important;min-height:0!important;padding:12px;box-sizing:border-box;resize:none;border:1px solid var(--lines);background:#070707;color:#e8e8e8;font:12px/1.62 Consolas,monospace;caret-color:var(--group-color);outline:0}
+#main-profile .profile-inventario .field_editable textarea:focus,
+#main-profile .rrelacionamentos .relacionamentos-editor-original textarea:focus{border-color:var(--group-color)}
+#main-profile .profile-inventario .field_editable .ajax-profil_valid,
+#main-profile .rrelacionamentos .relacionamentos-editor-original .ajax-profil_valid{position:static!important;display:flex!important;align-items:center;justify-content:center;align-self:flex-end;width:32px;height:30px;margin:10px 0 0;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:var(--bg-main);color:var(--group-color);font-size:14px;cursor:pointer}
+#main-profile .profile-inventario .field_editable .ajax-profil_valid:hover,
+#main-profile .rrelacionamentos .relacionamentos-editor-original .ajax-profil_valid:hover{border-color:var(--group-color)}
+#main-profile .profile-inventario>.ajax-profil_edit,
+#main-profile .profile-relacionamentos>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:0!important;right:0!important;bottom:auto!important;left:auto!important;z-index:120!important;width:28px!important;height:28px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);visibility:hidden!important;opacity:0!important;pointer-events:none!important;cursor:pointer;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}
+#main-profile .profile-inventario:hover>.ajax-profil_edit,
+#main-profile .profile-inventario:focus-within>.ajax-profil_edit,
+#main-profile .profile-relacionamentos:hover>.ajax-profil_edit,
+#main-profile .profile-relacionamentos:focus-within>.ajax-profil_edit{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+#main-profile .profile-inventario:has(.field_editable:not(.invisible))>.ajax-profil_edit,
+#main-profile .profile-relacionamentos:has(.field_editable:not(.invisible))>.ajax-profil_edit,
+#main-profile .profile-relacionamentos:has(.rrel-help.is-open)>.ajax-profil_edit{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+#main-profile .profile-inventario>.ajax-profil_edit:hover,
+#main-profile .profile-relacionamentos>.ajax-profil_edit:hover{border-color:var(--group-color);background:var(--bg-main)}
+#main-profile .profile-inventario>.ajax-profil_edit::before,
+#main-profile .profile-relacionamentos>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}
+#main-profile .rsing-header p{text-transform:uppercase;letter-spacing:.65px}
+
+/* Remove a moldura herdada do inventário */
+#main-profile .profile-inventario{border:0!important;outline:0!important;box-shadow:none!important}
+
+/* Desativa a moldura criada pelo layout antigo */
+#main-profile .profile-inventario::before{content:none!important;display:none!important;border:0!important}
+
+/* Unifica os cabeçalhos de inventário, relacionamentos e singularidades */
+#main-profile .profile-inventario{margin:0!important}
+#main-profile .rinv-intro,
+#main-profile .rsing-header{position:relative;display:flex;align-items:center;gap:12px;flex:0 0 auto;margin:0 0 16px;padding:0 40px 14px 0;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-intro>i,
+#main-profile .rsing-header>i{flex:0 0 auto;color:var(--group-color);font-size:22px;opacity:.85}
+#main-profile .rinv-intro strong,
+#main-profile .rsing-header h2{display:block;margin:0;color:var(--group-color);font:italic 900 18px/100% var(--font-sec-sans);text-transform:uppercase;letter-spacing:1px}
+#main-profile .rinv-intro span,
+#main-profile .rsing-header p{display:block;margin:4px 0 0;font-size:11px;line-height:140%;text-transform:uppercase;letter-spacing:.7px;opacity:.65}
+#main-profile .rsing-header-text{min-width:0}
+#main-profile .rsing-header>.rsing-add{position:absolute;top:0;right:0;flex:0 0 28px;width:28px;height:28px;padding:0;border:1px solid var(--lines);background:rgba(0,0,0,.72);font:700 18px/1 var(--font-main)}
+
+/* ========================================================================== 
+   INVENTÁRIO — ARQUIVO ARCANO
+   ========================================================================== */
+#main-profile .profile-inventario>.rinv-display{display:flex;flex:1 1 auto;flex-direction:column;width:100%;min-width:0;min-height:0;overflow:hidden}
+#main-profile .rinv-resources{display:flex;align-items:center;flex:0 0 auto;min-height:43px;margin:-4px 0 0;padding:0 4px 0;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-resources>span{display:flex;align-items:center;gap:7px;min-width:118px;padding:0 20px 0 0;color:#dedede;font:600 13px/1 var(--font-main);letter-spacing:.25px}
+#main-profile .rinv-resources>span+span{padding-left:20px;border-left:1px solid var(--lines)}
+#main-profile .rinv-resources b,#main-profile .rinv-resources i{color:var(--group-color);font-style:normal;font-weight:900}
+#main-profile .rinv-filters{display:flex;align-items:stretch;flex:0 0 auto;min-height:42px;overflow-x:auto;overflow-y:hidden;border-bottom:1px solid var(--lines);scrollbar-width:none}
+#main-profile .rinv-filters::-webkit-scrollbar{display:none}
+#main-profile .rinv-filter{position:relative;flex:1 0 auto;min-width:max-content;padding:0 12px;border:0;background:transparent;color:rgba(235,235,235,.48);font:italic 800 10px/42px var(--font-sec-sans);text-transform:uppercase;letter-spacing:.7px;cursor:pointer;transition:color .18s ease,background .18s ease}
+#main-profile .rinv-filter:hover,#main-profile .rinv-filter:focus-visible{color:#ddd;background:rgba(255,255,255,.025);outline:0}
+#main-profile .rinv-filter.is-active{color:var(--group-color)}
+#main-profile .rinv-filter.is-active::after{content:"";position:absolute;right:11px;bottom:0;left:11px;height:2px;background:var(--group-color)}
+#main-profile .rinv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:min-content;align-content:start;flex:1 1 auto;min-height:0;padding:10px 4px 2px 0;overflow-x:hidden;overflow-y:auto;scrollbar-color:var(--group-color) transparent;scrollbar-width:thin}
+#main-profile .rinv-grid::-webkit-scrollbar{width:8px;height:8px}
+#main-profile .rinv-grid::-webkit-scrollbar-track{background:transparent}
+#main-profile .rinv-grid::-webkit-scrollbar-thumb{border:2px solid transparent;border-radius:0;background:var(--group-color);background-clip:padding-box}
+#main-profile .rinv-grid::-webkit-scrollbar-button{display:none;width:0;height:0}
+#main-profile .rinv-card{position:relative;display:grid;grid-template-columns:58px minmax(0,1fr);min-width:0;min-height:84px;margin:0;padding:0;border:1px solid var(--lines);border-radius:0;background:rgba(255,255,255,.008);color:#ddd;text-align:left;cursor:pointer;overflow:hidden;appearance:none;transition:background .18s ease,box-shadow .18s ease}
+#main-profile .rinv-card:nth-child(even){border-left:0}
+#main-profile .rinv-card:nth-child(n+3){border-top:0}
+#main-profile .rinv-card:hover,#main-profile .rinv-card:focus-within{background:rgba(255,255,255,.035);outline:0}
+#main-profile .rinv-card.is-open{grid-column:span 1;background:rgba(255,255,255,.025);box-shadow:inset 0 0 0 1px var(--group-color)}
+#main-profile .rinv-card.is-hidden{display:none!important}
+#main-profile .rinv-card.is-wide-last{grid-column:1/-1;border-left:1px solid var(--lines)}
+#main-profile .rinv-card-icon{display:flex;align-items:center;justify-content:center;min-width:0;border-right:1px solid var(--lines);color:var(--group-color);font-size:24px;opacity:.85}
+#main-profile .rinv-card-body{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:13px 14px}
+#main-profile .rinv-card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;min-width:0}
+#main-profile .rinv-card:has(.rinv-card-actions) .rinv-card-title{padding-right:52px}
+#main-profile .rinv-card-title strong{min-width:0;color:var(--group-color);font:italic 900 13px/1.18 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.45px;overflow-wrap:anywhere}
+#main-profile .rinv-card-title b{flex:0 0 auto;color:var(--group-color);font:800 11px/1.1 var(--font-main);white-space:nowrap}
+#main-profile .rinv-rarity{display:block;margin-top:7px;color:rgba(235,235,235,.5);font:italic 800 9px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.8px}
+#main-profile .rinv-rarity-raro,#main-profile .rinv-rarity-rara{color:#6f8fe7}
+#main-profile .rinv-rarity-incomum{color:#b69b48}
+#main-profile .rinv-rarity-epico,#main-profile .rinv-rarity-epica,#main-profile .rinv-rarity-lendario,#main-profile .rinv-rarity-lendaria{color:#9f72c7}
+#main-profile .rinv-effect{display:block;margin-top:7px;color:#e1e1e1;font:600 10px/1.35 var(--font-main);letter-spacing:.1px}
+#main-profile .rinv-card-detail{display:none;margin-top:11px;padding-top:10px;border-top:1px solid var(--lines);color:rgba(235,235,235,.62);font:11px/1.55 var(--font-main)}
+#main-profile .rinv-card.is-open .rinv-card-detail{display:block}
+#main-profile .rinv-detail-break{display:block;height:6px}
+#main-profile .rinv-card-actions{position:absolute;top:7px;right:7px;z-index:2;display:flex;gap:4px;visibility:hidden;opacity:0;transition:opacity .16s ease,visibility .16s ease}
+#main-profile .rinv-card:hover .rinv-card-actions,#main-profile .rinv-card:focus-within .rinv-card-actions{visibility:visible;opacity:1}
+#main-profile .rinv-card-actions>[role=button]{display:flex;align-items:center;justify-content:center;width:23px;height:23px;padding:0;border:1px solid var(--lines);border-radius:0;background:rgba(0,0,0,.88);color:var(--group-color);font-size:9px;cursor:pointer}
+#main-profile .rinv-card-actions>[role=button]:hover,#main-profile .rinv-card-actions>[role=button]:focus-visible{border-color:var(--group-color);background:#050505;outline:0}
+#main-profile .rinv-empty{display:flex;align-items:center;justify-content:center;flex:1 1 auto;min-height:90px;margin-top:4px;border:1px dashed var(--lines);color:rgba(235,235,235,.44);font:italic 12px/1.4 var(--font-main)}
+
+/* O conteúdo original continua no DOM para edição e para importadores externos. */
+#main-profile .profile-inventario>.rinv-source{position:absolute!important;top:0;right:0;z-index:70;width:28px!important;height:28px!important;min-width:28px;min-height:28px;padding:0!important;overflow:hidden!important;pointer-events:none}
+#main-profile .profile-inventario>.rinv-source>.field_uneditable{display:block!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}
+#main-profile .profile-inventario>.rinv-source>.field_editable.invisible{display:none!important}
+#main-profile .profile-inventario:has(.field_editable:not(.invisible))>.rinv-display{display:none!important}
+#main-profile .profile-inventario:has(.field_editable:not(.invisible))>.rinv-source{position:static!important;display:flex!important;flex:1 1 auto;width:100%!important;height:auto!important;min-width:0;min-height:0;overflow:visible!important;pointer-events:auto}
+#main-profile .profile-inventario>.rinv-source>.field_editable:not(.invisible){position:relative!important;inset:auto!important;display:flex!important;flex:1 1 auto;flex-direction:column;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-height:0;margin:0;padding:14px;box-sizing:border-box;overflow:hidden;border:1px solid var(--lines);background:rgba(0,0,0,.34);box-shadow:none;z-index:90}
+#main-profile .profile-inventario>.rinv-source>.field_editable:not(.invisible)::before{content:"Edição do inventário · a aparência será organizada automaticamente";display:block;margin:0 0 10px;color:var(--group-color);font:800 9px/1.25 var(--font-main);text-transform:uppercase;letter-spacing:.75px}
+
+@media(max-width:700px){
+  #main-profile .rinv-grid{grid-template-columns:1fr}
+  #main-profile .rinv-card:nth-child(even){border-left:1px solid var(--lines)}
+  #main-profile .rinv-card:nth-child(n+2){border-top:0}
+  #main-profile .rinv-card.is-wide-last{grid-column:auto}
+  #main-profile .rinv-filter{padding:0 10px}
+}
+
+/* Inventário por categorias */
+#main-profile .rinv-admin-probe{display:none!important}
+#main-profile .profile-inventario[data-rinv-ready=true]{position:relative!important;overflow:hidden}
+#main-profile .profile-inventario[data-rinv-ready=true]>.rinv-intro{min-height:38px;margin-bottom:0}
+#main-profile .rinv-toolbar{display:flex;align-items:stretch;flex:0 0 47px;min-width:0;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-toolbar>.rinv-resources{flex:1 1 auto;min-width:0;min-height:46px;margin:0!important;padding:0 3px!important;border:0!important}
+#main-profile .rinv-toolbar>.rinv-resources>span{flex:0 1 auto;min-width:78px!important;padding-right:13px!important;font-size:14px!important}
+#main-profile .rinv-toolbar>.rinv-resources>span+span{padding-left:13px!important}
+#main-profile .rinv-tabs{display:flex;align-items:stretch;flex:0 0 auto;min-width:0;height:46px;margin-right:2px;overflow-x:auto;overflow-y:hidden;border:0;scrollbar-width:none}
+#main-profile .rinv-tabs::-webkit-scrollbar{display:none}
+#main-profile .rinv-tab{position:relative;display:flex;align-items:center;justify-content:center;flex:0 0 50px;width:50px;min-width:50px;height:46px;padding:0;box-sizing:border-box;border:0;border-left:1px solid var(--lines);border-radius:0!important;background:transparent;color:rgba(235,235,235,.48);cursor:pointer;transition:color .18s ease,background .18s ease}
+#main-profile .rinv-tab:last-child{border-right:1px solid var(--lines)}
+#main-profile .rinv-tab i{font-size:15px}
+#main-profile .rinv-money-edit{display:flex;align-items:center;justify-content:center;flex:0 0 23px;width:23px;height:23px;margin:0 7px 0 4px;padding:0;box-sizing:border-box;border:1px solid var(--lines);border-radius:0!important;background:rgba(0,0,0,.72);color:var(--group-color);font-size:9px;opacity:0;cursor:pointer;transition:opacity .18s ease,border-color .18s ease,background .18s ease}
+#main-profile .rinv-resources:hover>.rinv-money-edit,#main-profile .rinv-resources:focus-within>.rinv-money-edit,#main-profile .rinv-money-edit:focus-visible{opacity:1}
+#main-profile .rinv-tab:hover,#main-profile .rinv-tab:focus-visible,#main-profile .rinv-money-edit:hover,#main-profile .rinv-money-edit:focus-visible{color:#ddd;background:rgba(255,255,255,.035);outline:0}
+#main-profile .rinv-tab.is-active{color:var(--group-color)}
+#main-profile .rinv-tab.is-active::after{content:"";position:absolute;right:10px;bottom:0;left:10px;height:2px;background:var(--group-color)}
+#main-profile .rinv-panels{display:flex;flex:1 1 auto;min-width:0;min-height:0;overflow:hidden}
+#main-profile .rinv-pane{position:relative;display:none;flex:1 1 auto;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+#main-profile .rinv-pane.is-active{display:flex}
+#main-profile .rinv-pane[hidden]{display:none!important}
+#main-profile .rinv-pane-head{display:flex;align-items:center;gap:10px;flex:0 0 auto;min-height:48px;padding:8px 42px 8px 3px;box-sizing:border-box;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-pane-head>i{display:flex;align-items:center;justify-content:center;flex:0 0 25px;width:25px;height:25px;color:var(--group-color);font-size:15px;opacity:.86}
+#main-profile .rinv-pane-head>div{min-width:0}
+#main-profile .rinv-pane-head strong{display:block;color:var(--group-color);font:italic 900 13px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.65px}
+#main-profile .rinv-pane-head span{display:block;margin-top:4px;color:rgba(235,235,235,.5);font:8px/1.3 var(--font-main);text-transform:uppercase;letter-spacing:.5px}
+#main-profile .rinv-pane-view{display:flex;flex:1 1 auto;min-width:0;min-height:0;overflow:hidden}
+#main-profile .rinv-pane-view>.rinv-grid{grid-template-columns:minmax(0,1fr)!important;width:100%}
+#main-profile .rinv-pane-view>.rinv-empty{width:100%;margin:10px 0 0}
+#main-profile .rinv-card{grid-template-columns:58px minmax(0,1fr)!important;min-height:82px;cursor:default!important}
+#main-profile .rinv-card:nth-child(even){border-left:1px solid var(--lines)!important}
+#main-profile .rinv-card:nth-child(n+2){border-top:0!important}
+#main-profile .rinv-card.is-wide-last{grid-column:auto!important}
+#main-profile .rinv-card-body{justify-content:flex-start!important;padding:12px 14px 14px!important}
+#main-profile .rinv-card-title{display:flex!important;align-items:baseline!important;justify-content:flex-start!important;gap:6px!important;min-width:0;line-height:1.2}
+#main-profile .rinv-card-title strong{display:block!important;flex:0 1 auto;min-width:0;font-size:14px;line-height:1.2}
+#main-profile .rinv-card-title b{position:static!important;display:block!important;flex:0 0 auto;float:none!important;margin:0!important;font-size:12px;line-height:1.2;white-space:nowrap;vertical-align:baseline}
+#main-profile .rinv-meta{display:flex!important;align-items:center;flex-wrap:wrap;gap:5px 11px;margin-top:7px}
+#main-profile .rinv-meta .rinv-rarity{display:inline;margin:0;font-size:10px}
+#main-profile .rinv-rarity-exclusivo,#main-profile .rinv-rarity-exclusiva{color:#e9b949;text-shadow:0 0 8px rgba(233,185,73,.28)}
+#main-profile .rinv-consumable{display:flex;align-items:center;margin-top:auto;padding-top:12px;color:rgba(235,235,235,.52);font:italic 800 9px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.55px}
+#main-profile .rinv-card.is-open{background:rgba(255,255,255,.008)!important;box-shadow:none!important}
+#main-profile .rinv-card::after{display:none!important;content:none!important}
+#main-profile .rinv-effect{font-size:11px;line-height:1.4}
+#main-profile .rinv-card-detail{display:block!important;font-size:12px;line-height:1.55}
+#main-profile .rinv-editor-source{position:absolute!important;top:0;right:0;width:1px!important;height:1px!important;overflow:hidden!important;pointer-events:none}
+#main-profile .rinv-editor-source>.field_uneditable{display:block!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}
+#main-profile .rinv-editor-source>.field_editable.invisible{display:none!important}
+#main-profile .rinv-pane>.ajax-profil_edit{display:flex!important;align-items:center;justify-content:center;position:absolute!important;top:9px!important;right:3px!important;bottom:auto!important;left:auto!important;z-index:120!important;width:28px!important;height:28px!important;padding:0;box-sizing:border-box;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);visibility:hidden!important;opacity:0!important;pointer-events:none!important;cursor:pointer;transition:opacity .18s ease,visibility .18s ease,border-color .18s ease,background .18s ease}
+#main-profile .rinv-pane:hover>.ajax-profil_edit,#main-profile .rinv-pane:focus-within>.ajax-profil_edit{visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+#main-profile .rinv-pane>.ajax-profil_edit:hover{border-color:var(--group-color);background:var(--bg-main)}
+#main-profile .rinv-pane>.ajax-profil_edit::before{content:"\f5ad"!important;display:block!important;position:static!important;top:auto!important;margin:0!important;transform:none!important;color:var(--group-color)!important;font:var(--fa-font-solid)!important;font-size:12px!important;line-height:1!important}
+#main-profile .rinv-pane:has(.field_editable:not(.invisible))>.rinv-pane-view{display:none!important}
+#main-profile .rinv-pane:has(.field_editable:not(.invisible))>.ajax-profil_edit{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+#main-profile .rinv-pane:has(.field_editable:not(.invisible))>.rinv-editor-source{position:static!important;display:flex!important;flex:1 1 auto;width:100%!important;height:auto!important;min-width:0;min-height:0;overflow:visible!important;pointer-events:auto}
+#main-profile .rinv-editor-source>.field_editable:not(.invisible){position:relative!important;inset:auto!important;display:flex!important;flex:1 1 auto;flex-direction:column;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-height:0;margin:10px 0 0;padding:13px;box-sizing:border-box;overflow:hidden;border:1px solid var(--lines);background:rgba(0,0,0,.34);box-shadow:none;z-index:90}
+#main-profile .rinv-editor-source>.field_editable:not(.invisible)::before{content:"Uma entrada por item · formatação em BBCode";display:block;margin:0 0 9px;color:var(--group-color);font:800 9px/1.25 var(--font-main);text-transform:uppercase;letter-spacing:.75px}
+#main-profile .rinv-pane[data-rinv-pane=monetario] .rinv-editor-source>.field_editable:not(.invisible)::before{content:"G$ 500 em uma linha · ★ 10 na seguinte"}
+#main-profile .rinv-editor-source>.field_editable textarea{font-size:12px}
+#main-profile .rinv-money-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:10px;width:100%;padding:12px 0 0;box-sizing:border-box;overflow:auto}
+#main-profile .rinv-money-card{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-rows:auto auto;min-height:76px;padding:12px 14px;border:1px solid var(--lines);background:rgba(255,255,255,.012)}
+#main-profile .rinv-money-card>i{grid-row:1/3;align-self:center;color:var(--group-color);font-size:22px;opacity:.86}
+#main-profile .rinv-money-card>span{align-self:end;color:rgba(235,235,235,.5);font:italic 800 9px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.7px}
+#main-profile .rinv-money-card>strong{align-self:start;margin-top:6px;color:#e7e7e7;font:700 16px/1 var(--font-main)}
+#main-profile .rinv-legacy-toggle{position:absolute;top:0;right:0;z-index:180;display:flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0;border:1px solid var(--lines);background:rgba(0,0,0,.72);color:var(--group-color);font-size:11px;cursor:pointer}
+#main-profile .rinv-legacy-toggle:hover,#main-profile .rinv-legacy-toggle:focus-visible{border-color:var(--group-color);background:var(--bg-main);outline:0}
+#main-profile .rinv-legacy-panel{position:absolute;inset:53px 0 0;z-index:210;display:none;flex-direction:column;min-width:0;min-height:0;border:1px solid var(--lines);background:#070707}
+#main-profile .rinv-legacy-panel.is-open{display:flex}
+#main-profile .rinv-legacy-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex:0 0 auto;min-height:48px;padding:9px 10px 9px 14px;box-sizing:border-box;border-bottom:1px solid var(--lines)}
+#main-profile .rinv-legacy-head strong{display:block;color:var(--group-color);font:italic 900 13px/1 var(--font-sec-sans);text-transform:uppercase;letter-spacing:.65px}
+#main-profile .rinv-legacy-head span{display:block;margin-top:4px;color:rgba(235,235,235,.5);font:8px/1.25 var(--font-main);text-transform:uppercase;letter-spacing:.5px}
+#main-profile .rinv-legacy-close{display:flex;align-items:center;justify-content:center;flex:0 0 28px;width:28px;height:28px;padding:0;border:1px solid var(--lines);background:transparent;color:var(--group-color);cursor:pointer}
+#main-profile .rinv-legacy-close:hover,#main-profile .rinv-legacy-close:focus-visible{border-color:var(--group-color);background:rgba(255,255,255,.035);outline:0}
+#main-profile .rinv-legacy-body{flex:1 1 auto;min-height:0;padding:15px 17px;overflow:auto;color:#ddd;font:12px/1.6 var(--font-main);scrollbar-color:var(--group-color) transparent;scrollbar-width:thin}
+#main-profile .rinv-legacy-body::-webkit-scrollbar{width:8px;height:8px}
+#main-profile .rinv-legacy-body::-webkit-scrollbar-track{background:transparent}
+#main-profile .rinv-legacy-body::-webkit-scrollbar-thumb{border:2px solid transparent;border-radius:0;background:var(--group-color);background-clip:padding-box}
+#main-profile .rinv-legacy-body::-webkit-scrollbar-button{display:none;width:0;height:0}
+@media(max-width:700px){
+  #main-profile .rinv-tab{padding:0 10px}
+  #main-profile .rinv-money-grid{grid-template-columns:1fr}
+}
+
+/* Impede que a lateral do perfil crie rolagem horizontal em qualquer aba. */
+html:has(#main-profile){overflow-x:hidden!important}
+body:has(#main-profile){width:100%!important;max-width:100vw!important;min-width:0!important;overflow-x:hidden!important}
+body:has(#main-profile)>.conteneur_minwidth_IE{width:100%!important;max-width:100vw!important;overflow-x:hidden!important}
+

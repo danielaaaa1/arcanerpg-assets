@@ -1,0 +1,156 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aqira');
+@font-face {font-family: 'obrige'; src:url(fonts/la-obrige.otf);}
+@font-face {
+    font-family: 'Gondgir';
+    src: url('fonts/Gondgir.eot');
+    src: url('fonts/Gondgir.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gondgir.woff2') format('woff2'),
+        url('fonts/Gondgir.woff') format('woff'),
+        url('fonts/Gondgir.ttf') format('truetype'),
+        url('fonts/Gondgir.svg#Gondgir') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gondgir';
+    src: url('fonts/Gondgir_1.eot');
+    src: url('fonts/Gondgir_1.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gondgir_1.woff2') format('woff2'),
+        url('fonts/Gondgir_1.woff') format('woff'),
+        url('fonts/Gondgir_1.ttf') format('truetype'),
+        url('fonts/Gondgir_1.svg#Gondgir') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+#arcane-fisc {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  --width: 630px;
+  --bg-dark: #0B0B0B;
+  --bg-light: #262626;
+  --t-font: 'Gondgir';
+  --m-font: 'Lunasima';
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  background: var(--bg-dark);
+  padding: 15px;
+  position: relative;
+  border: 1px solid #5c5c5c26;
+  outline: 1px solid #47474787;
+  outline-offset: -3px;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .header {
+  position: relative;
+  top: 0px;
+  margin-top: 0px;
+  background: transparent;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .header .title {
+  position: relative;
+  color: var(--ppt-2);
+  font: 500 32px var(--t-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  font-style: normal;
+  line-height: 80%;
+  text-align: left;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .header .subtitle {
+  position: relative;
+  color: var(--ppt-2);
+  font: 700 13px Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.9);
+  font-style: normal;
+  line-height: 100%;
+  text-align: left;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .header .subtitle {
+  position: relative;
+  color: var(--ppt-2);
+  font: 700 13px Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.9);
+  font-style: normal;
+  line-height: 100%;
+  text-align: left;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .txt {
+  text-align: left;
+  color: #ABABAB;
+  font: 500 13px var(--m-font);
+  line-height: 160%;
+  padding: 20px;
+  background: #090808;
+  border-top: 1px solid #242322;
+  border-left: 1px solid #242322;
+  border-right: 1px solid #242322;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .txt b {
+  border-bottom: 2px solid var(--ppt-2);
+  font: 700 13px 'Montserrat';
+  text-transform: uppercase;
+  color: #d1d1d1bf;
+  text-decoration: none;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .subheader {
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #242322;
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] ~.container .subheader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ppt) center / cover;
+    background-blend-mode: multiply;
+    filter: brightness(.5) saturate(.8)
+}
+
+#arcane-fisc a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ #arcane-fisc:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:2px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
