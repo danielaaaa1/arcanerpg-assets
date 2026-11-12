@@ -1,0 +1,158 @@
+/* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Gondgir';
+    src: url('fonts/Gondgir.eot');
+    src: url('fonts/Gondgir.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gondgir.woff2') format('woff2'),
+        url('fonts/Gondgir.woff') format('woff'),
+        url('fonts/Gondgir.ttf') format('truetype'),
+        url('fonts/Gondgir.svg#Gondgir') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@charset "UTF-8";
+@font-face {font-family: "honeybee";src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot");src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot?#iefix") format("embedded-opentype"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.woff") format("woff"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.ttf") format("truetype"),url("//solrainha.github.io/honeybee/honeybee.svg#honeybee") format("svg");font-weight: normal;font-style: normal;}
+[data-icon]:before {font-family: "honeybee" !important;content: attr(data-icon);font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"]:before,[class*=" th-"]:before {font-family: "honeybee" !important;font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+[class^="th-"],[class*=" th-"]{display:inline-grid;}
+
+@font-face {
+    font-family: 'Gondgir';
+    src: url('fonts/Gondgir_1.eot');
+    src: url('fonts/Gondgir_1.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gondgir_1.woff2') format('woff2'),
+        url('fonts/Gondgir_1.woff') format('woff'),
+        url('fonts/Gondgir_1.ttf') format('truetype'),
+        url('fonts/Gondgir_1.svg#Gondgir') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.th-chevron-right:before{content:"\ebc6";}
+
+#arcane-fgeral {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  --width: 630px;
+  --bg-dark: #0B0B0B;
+  --soli: #143319;
+  --soli-2: #25542d url(https://i.imgur.com/dJCbavJ.png);
+  --bg-light: #2f2f2f;
+  --t-font: 'Gondgir';
+  --m-font: 'Lunasima';
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container {
+  width: var(--width);
+  outline: 1px solid var(--bg-light);
+  outline-offset: -3px;
+  position: relative;
+  padding: 5px;
+  background: var(--bg-dark);
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header {
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--soli-2) center / cover;
+    background-blend-mode: multiply;
+    filter: brightness(.5) saturate(.8)
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .title {
+  position: relative;
+  color: #d1d1d1e3;
+  font: 500 32px var(--t-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.9);
+  margin-top: 5px;
+  margin-bottom: -9px;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .subtitle {
+  position: relative;
+  color: #d1d1d1e3;
+  font: 700 11px Montserrat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  filter: brightness(.9);
+  opacity: .9;
+  margin-top: 0px;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt {
+  text-align: left;
+  color: #ABABAB;
+  font: 500 13px var(--m-font);
+  line-height: 160%;
+  padding: 25px;
+  background: #090808;
+  border-top: 1px solid #242322;
+  border-bottom: 1px solid #242322;
+  margin-bottom: 3px;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt b {
+  border-bottom: 2px solid var(--soli);
+  font: 700 13px 'Montserrat';
+  text-transform: uppercase;
+  color: #d1d1d1bf;
+  text-decoration: none;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt b::before {
+  content: "\ebc6";
+  font-size: 10px;
+  margin-right: 4px;
+  font-family: "honeybee" !important;
+  border-bottom: 0px solid !important;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .line {
+  margin: 0 auto;
+  height:2px;
+  background-color: #143319;
+  width:25%;
+  display:block;
+  position: relative;
+  top: 1px;
+  transition: 500ms;
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ #arcane-fgeral:after{
+    content: "「arcane」";
+    font: bold 8.5px 'Consolas';
+    color: #969696;
+    margin-top:2px;
+    display:block;
+    text-align:center;
+    opacity: .8;
+    text-transform: uppercase;
+}
+
