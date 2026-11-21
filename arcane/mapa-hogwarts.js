@@ -11,7 +11,7 @@ if(window.__arcaneMapa)return;window.__arcaneMapa=true;
 /* ---------- configurações ---------- */
 var CONFIG={
   paginas:/^\/f11(p\d+)?(-|$)/,          // página onde o mapa aparece
-  altura:"min(78vh, 720px)",             // altura do mapa dentro da página
+  altura:"max(560px, min(88vh, 900px))", // altura do mapa dentro da página
   substituirLista:true,                  // true = o mapa fica no lugar da lista de subfóruns · false = mapa em cima e a lista continua embaixo
   forcar:!!window.ARCANE_MAPA_FORCAR,    // usado só no preview local
   base:"https://arcane.forumeiros.com"
@@ -25,7 +25,7 @@ var FONTES="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700
 var ICONES="https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets@main/arcane/game-icons.css";
 
 var CSS=`
-:host{all:initial;display:block;position:relative;height:${CONFIG.altura};min-height:520px;margin:0 0 20px;background:#080808;border:1px solid #262626;overflow:hidden;contain:layout paint}
+:host{all:initial;display:block;position:relative;height:${CONFIG.altura};min-height:520px;margin:0;background:#080808;border:0;overflow:hidden;contain:layout paint}
 :host(.full){position:fixed;inset:0;height:100vh;min-height:0;margin:0;border:0;z-index:2147483000}
 .wrap{position:absolute;inset:0;overflow:hidden;color:#d1d1d1;font-family:Poppins,system-ui,sans-serif;font-size:14px;line-height:1.4;text-align:left;
   --p1:#0e0e0e;--p2:#0a0a0a;--line:#262626;--line2:#313131;--gold:#c4a459;--gold2:#e1c677;--ink:#d1d1d1;--muted:#8a8a8a}
@@ -453,7 +453,7 @@ function chrome(){
     levels.insertAdjacentHTML("beforeend",`<div class="h">ÁREAS</div>`);
     mk("Tudo",cnt(S.subs),true,()=>setFocus(null),null,null);
     S.subs.forEach(f=>{const c=cnt([f]);if(c)mk(FORUMS[f][0],c,false,()=>setFocus(f),FHOUSE[f]?HOUSE[FHOUSE[f]][1]:null,f)})}
-  hint.textContent=view.type==="grounds"?"CLIQUE NO CASTELO PARA ENTRAR":view.type==="castle"?"ESCOLHA UMA ALA":"";
+  hint.textContent=view.type==="grounds"?"CLIQUE NO CASTELO PARA ENTRAR":"";
   hint.style.display=hint.textContent?"":"none";
   layoutUI();
 }
@@ -526,6 +526,10 @@ function fitView(instant){
   if(view.type==="sec"){const pts=T.filter(t=>secOf[t.f]===view.id).map(stagePos);
     if(view.id!=="sub")WING[view.id].forEach(d=>{const n=d.match(/[\d.]+/g).map(Number);for(let i=0;i<n.length-1;i+=2)pts.push(cp([n[i],n[i+1]]))});
     boxAround(pts,instant,70,true)}
+  else if(view.type==="castle"){
+    /* só a planta do castelo (com torres e nomes), não o mapa inteiro */
+    const b=view.layer==="subsolo"?[[578,405],[1035,680]]:[[565,280],[1065,648]];
+    const [x1,y1]=cp(b[0]),[x2,y2]=cp(b[1]);fitBox(x1,y1,x2-x1,y2-y1,instant,480,true)}
   else fitBox(0,0,SW,SH,instant,480,true);
 }
 
@@ -535,7 +539,7 @@ const shrink=()=>Math.max(.55,Math.min(1,z/baseZ));
 function apply(){stage.style.transform=`translate(${tx}px,${ty}px) scale(${z})`;stage.style.setProperty("--inv",(shrink()/z).toFixed(4));placeLabels();positionCard()}
 function area(){const w=W(),h=H(),n=narrow();const l=mapLeft();
   const lv=levels.childElementCount?rel(levels.getBoundingClientRect()).bottom:rel(root.querySelector(".top").getBoundingClientRect()).bottom;
-  const t=Math.max(lv,n?0:76)+16;const b=n?(side.classList.contains("closed")?64:h*.52+12):76;const r=n?14:22;
+  const t=Math.max(lv,n?0:76)+12;const b=n?(side.classList.contains("closed")?64:h*.52+12):58;const r=n?14:22;
   return{x:l,y:t,w:Math.max(160,w-l-r),h:Math.max(160,h-t-b)}}
 function clampPan(){const A=area(),[x,y,w,h]=lastFit;const cx=A.x+A.w/2,cy=A.y+A.h/2;
   const l=tx+x*z,r=tx+(x+w)*z,t=ty+y*z,b=ty+(y+h)*z;
@@ -543,8 +547,11 @@ function clampPan(){const A=area(),[x,y,w,h]=lastFit;const cx=A.x+A.w/2,cy=A.y+A
   if(b-t<=A.h){ty+=cy-(t+b)/2}else{if(t>A.y)ty-=t-A.y;if(b<A.y+A.h)ty+=A.y+A.h-b}}
 function fitBox(x,y,w,h,instant,ms=480,mark){const A=area();const nz=Math.min(A.w/w,A.h/h,3.2);if(mark){baseZ=nz;lastFit=[x,y,w,h]}
   animTo(nz,A.x+(A.w-w*nz)/2-x*nz,A.y+(A.h-h*nz)/2-y*nz,instant?0:ms)}
-function animTo(nz,nx,ny,ms){cancelAnimationFrame(anim);if(!ms){z=nz;tx=nx;ty=ny;apply();return}const s=[z,tx,ty],t0=performance.now();
-  const st=n=>{const p=Math.min(1,(n-t0)/ms),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;z=s[0]+(nz-s[0])*e;tx=s[1]+(nx-s[1])*e;ty=s[2]+(ny-s[2])*e;apply();if(p<1)anim=requestAnimationFrame(st)};anim=requestAnimationFrame(st)}
+let animId=0;
+function animTo(nz,nx,ny,ms){cancelAnimationFrame(anim);const id=++animId;if(!ms){z=nz;tx=nx;ty=ny;apply();return}const s=[z,tx,ty],t0=performance.now();
+  const st=n=>{if(id!==animId)return;const p=Math.min(1,(n-t0)/ms),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;z=s[0]+(nz-s[0])*e;tx=s[1]+(nx-s[1])*e;ty=s[2]+(ny-s[2])*e;apply();if(p<1)anim=requestAnimationFrame(st)};anim=requestAnimationFrame(st);
+  /* garantia: se o navegador pausar a animação, vai direto para o final */
+  setTimeout(()=>{if(id===animId&&(z!==nz||tx!==nx||ty!==ny)){cancelAnimationFrame(anim);z=nz;tx=nx;ty=ny;apply()}},ms+200)}
 function zoomAt(f,cx,cy){cancelAnimationFrame(anim);const nz=Math.max(baseZ,Math.min(baseZ*MAXZ,z*f));if(Math.abs(nz-z)<1e-6)return false;tx=cx-(cx-tx)*nz/z;ty=cy-(cy-ty)*nz/z;z=nz;clampPan();apply();return true}
 /* roda do mouse: só segura a rolagem da página quando o zoom realmente muda */
 vp.addEventListener("wheel",e=>{const h=HR();if(zoomAt(Math.exp(-e.deltaY*.0015),e.clientX-h.left,e.clientY-h.top))e.preventDefault()},{passive:false});
