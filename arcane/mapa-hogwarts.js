@@ -112,9 +112,6 @@ button{font:inherit;color:inherit;margin:0}
 .it.sel{background:#c4a45922;border-left-color:var(--gold)}
 .it .go{margin-left:auto;color:var(--gold);font-size:13px;opacity:0;transition:opacity .12s;font-family:Montserrat,sans-serif}
 .it:hover .go,.it.hot .go{opacity:1}
-.it .open{margin-left:auto;flex:none;width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--line2);color:var(--gold2);text-decoration:none;font-size:13px;opacity:.55;transition:opacity .12s,border-color .12s,background .12s}
-.it:hover .open,.it.hot .open,.it.sel .open{opacity:1}
-.it .open:hover{border-color:var(--gold);background:var(--gold);color:#14110b}
 /* guia da primeira visita */
 .intro{position:absolute;inset:0;z-index:20;background:#080808cc;display:grid;place-items:center;padding:20px;backdrop-filter:blur(2px)}
 .intro[hidden]{display:none}
@@ -205,7 +202,7 @@ var HTML=`
   <ol>
    <li><b>1</b><span>Clique no <em>castelo</em> para entrar e depois escolha uma <em>ala</em>.</span></li>
    <li><b>2</b><span>Clique num <em>ícone</em> (ou no nome) e depois em <em>Abrir tópico</em>.</span></li>
-   <li><b>3</b><span>Com pressa? Use a <em>busca</em> ou a <em>lista</em> ao lado. O botão <em>↗</em> abre o tópico direto.</span></li>
+   <li><b>3</b><span>Com pressa? Use a <em>busca</em> ou a <em>lista</em> ao lado.</span></li>
   </ol>
   <button id="introok">Entendi</button>
 </div></div>
@@ -492,7 +489,11 @@ function chrome(){
 function mapLeft(){if(narrow())return 16;return side.classList.contains("closed")?76:rel(side.getBoundingClientRect()).right+20}
 function layoutUI(){wrap.classList.toggle("narrow",narrow());const l=mapLeft();levels.style.left=(narrow()?14:l)+"px";
   levels.style.top=(narrow()?rel(root.querySelector(".top").getBoundingClientRect()).bottom+4:92)+"px";
-  hint.style.left=(l+(W()-l)/2)+"px";hint.style.visibility=W()-l<620?"hidden":"visible"}
+  /* dica centralizada no espaço entre a lista e os botões; some se não couber */
+  hint.style.visibility="hidden";hint.style.left="0px";
+  requestAnimationFrame(()=>{const tl=rel(root.querySelector(".tools").getBoundingClientRect()).left,hw=hint.offsetWidth;const free=tl-12-l;
+    if(!hint.textContent||hw>free){hint.style.visibility="hidden";return}
+    hint.style.left=(l+free/2)+"px";hint.style.visibility="visible"})}
 
 /* ===== painel lateral com abas ===== */
 const TABS=[["here","Aqui"],["aulas","Aulas"],["casas","Casas"],["todos","Todos"]];
@@ -501,8 +502,7 @@ function drawTabs(){tabsEl.innerHTML="";const counts={here:null,aulas:T.filter(t
   TABS.forEach(([id,n])=>{const b=document.createElement("button");b.className="tab"+(mode===id?" on":"");b.textContent=n;if(counts[id]!=null)b.title=counts[id]+" locais";b.onclick=()=>{mode=id;drawTabs();buildList();dims()};tabsEl.appendChild(b)});
   const c=document.createElement("button");c.className="collapse";c.title="Esconder lista";c.setAttribute("aria-label","Esconder lista");c.textContent="‹";c.onclick=()=>toggleSide(false);tabsEl.appendChild(c)}
 function item(t,sub){const b=document.createElement("button");b.className="it"+(sel===t?" sel":"");
-  b.innerHTML=`${riHTML(t)}<span>${t.n}${sub?`<small>${sub}</small>`:""}</span><a class="open" href="${BASE+t.u}-" target="_blank" rel="noopener" title="Abrir tópico" aria-label="Abrir o tópico ${t.n}">↗</a>`;
-  b.querySelector(".open").addEventListener("click",e=>e.stopPropagation());
+  b.innerHTML=`${riHTML(t)}<span>${t.n}${sub?`<small>${sub}</small>`:""}</span><span class="go">›</span>`;
   b.onclick=()=>{if(inView(t))flyTo(t);else go(t);if(narrow())side.classList.add("closed")};
   b.onpointerenter=()=>{if(inView(t))hot(t,true)};b.onpointerleave=()=>{if(inView(t))hot(t,false)};
   if(inView(t))t.li=b;return b}
