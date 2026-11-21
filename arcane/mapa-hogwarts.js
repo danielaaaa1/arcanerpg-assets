@@ -46,6 +46,11 @@ button{font:inherit;color:inherit;margin:0}
 .gi::before{display:block}
 .pin .l{position:absolute;left:0;top:0;transform-origin:0 0;white-space:nowrap;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:.04em;color:#fff;background:#080808e6;border:1px solid var(--line2);padding:3px 7px;pointer-events:none;opacity:0;transition:opacity .15s}
 .pin.lv .l,.pin:hover .l,.pin.sel .l,.pin.hot .l{opacity:1}
+.pin.lv .l,.pin.sel .l,.pin.hot .l{pointer-events:auto;cursor:pointer}
+.pin .l:hover{border-color:var(--gold);color:var(--gold2)}
+.pin .b::after{content:"";position:absolute;inset:-9px}
+.pin.sel .b{background:var(--gold);border-color:var(--gold2)!important}
+.pin.sel .b svg,.pin.sel .b .gi{fill:#14110b!important;color:#14110b!important}
 .pin.dim .l{opacity:0!important}
 .pin .b:hover,.pin.sel .b,.pin.hot .b{background:#1b2213;box-shadow:0 0 0 3px #080808,0 0 0 5px #c4a45966,0 0 18px #e1c67766}
 .pin.hot .b,.pin.sel .b{transform:translate(-50%,-50%) scale(calc(var(--inv,1)*1.18)) rotate(45deg)}
@@ -107,6 +112,21 @@ button{font:inherit;color:inherit;margin:0}
 .it.sel{background:#c4a45922;border-left-color:var(--gold)}
 .it .go{margin-left:auto;color:var(--gold);font-size:13px;opacity:0;transition:opacity .12s;font-family:Montserrat,sans-serif}
 .it:hover .go,.it.hot .go{opacity:1}
+.it .open{margin-left:auto;flex:none;width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--line2);color:var(--gold2);text-decoration:none;font-size:13px;opacity:.55;transition:opacity .12s,border-color .12s,background .12s}
+.it:hover .open,.it.hot .open,.it.sel .open{opacity:1}
+.it .open:hover{border-color:var(--gold);background:var(--gold);color:#14110b}
+/* guia da primeira visita */
+.intro{position:absolute;inset:0;z-index:20;background:#080808cc;display:grid;place-items:center;padding:20px;backdrop-filter:blur(2px)}
+.intro[hidden]{display:none}
+.intro .box{width:min(460px,100%);background:linear-gradient(180deg,#101010,#0a0a0a);border:1px solid var(--line2);border-top:2px solid var(--gold);padding:24px 26px 22px;box-shadow:0 30px 80px #000}
+.intro h4{margin:0 0 4px;font-family:Montserrat,sans-serif;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2)}
+.intro p{margin:0 0 16px;color:var(--muted);font-size:13px}
+.intro ol{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.intro li{display:flex;gap:14px;align-items:flex-start;font-size:14px;line-height:1.45}
+.intro li b{flex:none;width:26px;height:26px;display:grid;place-items:center;border:1.5px solid var(--gold);color:var(--gold2);font-family:Montserrat,sans-serif;font-size:12px}
+.intro li span em{font-style:normal;color:var(--gold2)}
+.intro button{width:100%;padding:12px;border:0;background:var(--gold);color:#14110b;font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.intro button:hover{background:var(--gold2)}
 .sidetoggle{position:absolute;top:92px;left:22px;z-index:6;width:40px;height:40px;cursor:pointer;color:var(--gold2);font-size:16px;display:none}
 .side.closed~.sidetoggle{display:grid;place-items:center}
 .collapse{height:39px;background:none;border:0;color:var(--muted);cursor:pointer;font-size:15px}
@@ -134,7 +154,7 @@ button{font:inherit;color:inherit;margin:0}
 .tip small{display:block;font-family:Poppins,sans-serif;font-weight:400;letter-spacing:0;text-transform:none;font-size:11.5px;color:var(--muted);margin-top:1px}
 .tip.show{opacity:1}
 /* cartão */
-.card{position:fixed;z-index:2147483002;width:310px;padding:16px 18px 18px;box-shadow:0 18px 50px #000;display:none;border-top:2px solid var(--gold)!important}
+.card{position:fixed;z-index:2147483002;width:310px;padding:16px 18px 18px;box-shadow:0 18px 50px #000,0 0 0 1px #c4a45955,0 0 30px #c4a45926;display:none;border-top:2px solid var(--gold)!important}
 .card.show{display:block;animation:cardin .18s ease-out}
 @keyframes cardin{from{opacity:0;transform:translateY(6px)}}
 .card .cr{font-family:Montserrat,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:1.6;padding-right:20px}
@@ -180,7 +200,16 @@ var HTML=`
 <button class="sidetoggle orn" id="sidetoggle" aria-label="Mostrar lista">☰</button>
 <div class="levels orn" id="levels"></div>
 <div class="credit">Ícones: <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a> · CC BY 3.0</div>
-<div class="tools"><button class="orn txt on" id="nmb" aria-pressed="true" title="Mostrar ou esconder os nomes">NOMES</button><button class="orn" id="zin" aria-label="Aproximar">+</button><button class="orn" id="zout" aria-label="Afastar">−</button><button class="orn" id="zfit" aria-label="Enquadrar" style="font-size:14px">⌂</button><button class="orn" id="full" aria-label="Tela cheia" title="Tela cheia" style="font-size:15px">⛶</button></div>
+<div class="intro" id="intro" hidden><div class="box" role="dialog" aria-label="Como usar o mapa">
+  <h4>Mapa de Hogwarts</h4><p>Todos os locais do fórum de Hogwarts, em um lugar só.</p>
+  <ol>
+   <li><b>1</b><span>Clique no <em>castelo</em> para entrar e depois escolha uma <em>ala</em>.</span></li>
+   <li><b>2</b><span>Clique num <em>ícone</em> (ou no nome) e depois em <em>Abrir tópico</em>.</span></li>
+   <li><b>3</b><span>Com pressa? Use a <em>busca</em> ou a <em>lista</em> ao lado. O botão <em>↗</em> abre o tópico direto.</span></li>
+  </ol>
+  <button id="introok">Entendi</button>
+</div></div>
+<div class="tools"><button class="orn" id="help" aria-label="Como usar" title="Como usar" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:14px">?</button><button class="orn txt on" id="nmb" aria-pressed="true" title="Mostrar ou esconder os nomes">NOMES</button><button class="orn" id="zin" aria-label="Aproximar">+</button><button class="orn" id="zout" aria-label="Afastar">−</button><button class="orn" id="zfit" aria-label="Enquadrar" style="font-size:14px">⌂</button><button class="orn" id="full" aria-label="Tela cheia" title="Tela cheia" style="font-size:15px">⛶</button></div>
 <div class="hint orn" id="hint"></div>
 <div class="tip orn" id="tip"></div>
 <div class="card orn" id="card"><button class="x" id="cx" aria-label="Fechar">×</button><div class="cr" id="ccr"></div><h3 id="cn"></h3><div class="m" id="cm"></div><a id="ca" target="_blank" rel="noopener"><span>Abrir tópico</span><span>↗</span></a></div>
@@ -397,7 +426,10 @@ function makePin(t,i){
   t.lab=p.lastChild;t.lw=0;
   const b=p.firstChild;
   b.addEventListener("click",e=>{e.stopPropagation();if(!dragged)select(t)});
+  b.addEventListener("dblclick",e=>{e.stopPropagation();window.open(BASE+t.u+"-","_blank","noopener")});
   b.addEventListener("keydown",e=>{if(e.key==="Enter")select(t)});
+  t.lab.addEventListener("click",e=>{e.stopPropagation();if(!dragged)select(t)});
+  t.lab.addEventListener("pointerdown",e=>e.stopPropagation());
   b.addEventListener("pointerenter",()=>hot(t,true));b.addEventListener("pointerleave",()=>hot(t,false));
   p.addEventListener("animationend",()=>p.classList.remove("pop"),{once:true});
   setTimeout(()=>p.classList.remove("pop"),1200+i*30);
@@ -453,7 +485,7 @@ function chrome(){
     levels.insertAdjacentHTML("beforeend",`<div class="h">ÁREAS</div>`);
     mk("Tudo",cnt(S.subs),true,()=>setFocus(null),null,null);
     S.subs.forEach(f=>{const c=cnt([f]);if(c)mk(FORUMS[f][0],c,false,()=>setFocus(f),FHOUSE[f]?HOUSE[FHOUSE[f]][1]:null,f)})}
-  hint.textContent=view.type==="grounds"?"CLIQUE NO CASTELO PARA ENTRAR":"";
+  hint.textContent=view.type==="grounds"?"CLIQUE NO CASTELO PARA ENTRAR":view.type==="sec"?"CLIQUE NUM ÍCONE PARA VER O TÓPICO":"";
   hint.style.display=hint.textContent?"":"none";
   layoutUI();
 }
@@ -469,7 +501,8 @@ function drawTabs(){tabsEl.innerHTML="";const counts={here:null,aulas:T.filter(t
   TABS.forEach(([id,n])=>{const b=document.createElement("button");b.className="tab"+(mode===id?" on":"");b.textContent=n;if(counts[id]!=null)b.title=counts[id]+" locais";b.onclick=()=>{mode=id;drawTabs();buildList();dims()};tabsEl.appendChild(b)});
   const c=document.createElement("button");c.className="collapse";c.title="Esconder lista";c.setAttribute("aria-label","Esconder lista");c.textContent="‹";c.onclick=()=>toggleSide(false);tabsEl.appendChild(c)}
 function item(t,sub){const b=document.createElement("button");b.className="it"+(sel===t?" sel":"");
-  b.innerHTML=`${riHTML(t)}<span>${t.n}${sub?`<small>${sub}</small>`:""}</span><span class="go">›</span>`;
+  b.innerHTML=`${riHTML(t)}<span>${t.n}${sub?`<small>${sub}</small>`:""}</span><a class="open" href="${BASE+t.u}-" target="_blank" rel="noopener" title="Abrir tópico" aria-label="Abrir o tópico ${t.n}">↗</a>`;
+  b.querySelector(".open").addEventListener("click",e=>e.stopPropagation());
   b.onclick=()=>{if(inView(t))flyTo(t);else go(t);if(narrow())side.classList.add("closed")};
   b.onpointerenter=()=>{if(inView(t))hot(t,true)};b.onpointerleave=()=>{if(inView(t))hot(t,false)};
   if(inView(t))t.li=b;return b}
@@ -639,11 +672,19 @@ q.addEventListener("keydown",e=>{if(!hits.length)return;if(e.key==="ArrowDown"||
 res.addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(hits[+b.dataset.i])});
 root.addEventListener("pointerdown",e=>{if(!e.target.closest||!e.target.closest(".search"))res.classList.remove("show")});
 document.addEventListener("pointerdown",e=>{if(e.target!==host){res.classList.remove("show");if(!host.contains(e.target))closeCard()}});
-root.addEventListener("keydown",e=>{if(e.target===q&&e.key!=="Escape")return;if(e.key==="Escape"){if(card.classList.contains("show"))closeCard();else if(res.classList.contains("show"))res.classList.remove("show");else if(host.classList.contains("full"))setFull(false);else if(view.type!=="grounds")$("back").click()}});
+root.addEventListener("keydown",e=>{if(e.target===q&&e.key!=="Escape")return;if(e.key==="Escape"){if(!$("intro").hidden)$("introok").click();else if(card.classList.contains("show"))closeCard();else if(res.classList.contains("show"))res.classList.remove("show");else if(host.classList.contains("full"))setFull(false);else if(view.type!=="grounds")$("back").click()}});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&host.classList.contains("full"))setFull(false)});
 
 /* se a fonte de ícones não carregar, usa ícones simples */
 if(document.fonts&&document.fonts.load){Promise.race([document.fonts.load('16px "game-icons"',""),new Promise(r=>setTimeout(()=>r([]),4000))]).then(f=>{if(!f||!f.length){useGI=false;render(view,{instant:true})}else{T.forEach(t=>t.lw=0);placeLabels()}})}
+
+/* guia da primeira visita (aparece uma vez; o botão ? mostra de novo) */
+const intro=$("intro");
+const showIntro=on=>{intro.hidden=!on;if(on)$("introok").focus()};
+$("introok").onclick=()=>{showIntro(false);try{localStorage.setItem("arcane-mapa-intro","1")}catch(e){}};
+$("help").onclick=()=>showIntro(true);
+intro.addEventListener("click",e=>{if(e.target===intro)$("introok").click()});
+try{if(!localStorage.getItem("arcane-mapa-intro"))showIntro(true)}catch(e){showIntro(true)}
 
 if(narrow())side.classList.add("closed");
 drawTabs();
