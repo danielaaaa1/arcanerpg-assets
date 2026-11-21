@@ -97,7 +97,10 @@ button{font:inherit;color:inherit;margin:0}
 .tab b{font-family:Poppins,sans-serif;font-weight:500;font-size:10.5px;letter-spacing:0;color:var(--muted)}
 .sh{padding:13px 18px 10px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line);line-height:1.45}
 .sh strong{display:block;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
-.ls{overflow:auto;flex:1;padding:4px 10px 16px;scrollbar-width:thin;scrollbar-color:#313131 transparent}
+.ls{overflow:auto;flex:1;padding:4px 10px 16px}
+/* mesmo scroll do Arcane (o CSS do fórum não entra aqui dentro, então repete a regra dele) */
+::-webkit-scrollbar{width:15px;height:15px;background:var(--bg-main,#080808)}
+::-webkit-scrollbar-thumb{background:var(--bg-accent,#7B6E3D);border:5px solid var(--bg-main,#080808);background-clip:content-box;border-radius:5px}
 .gh{display:flex;align-items:center;gap:10px;padding:16px 8px 6px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .gh::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#c4a45955,transparent)}
 .gh .n{order:3;font-family:Poppins,sans-serif;letter-spacing:0;font-weight:500;color:var(--muted)}
