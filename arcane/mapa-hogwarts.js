@@ -144,8 +144,14 @@ button{font:inherit;color:inherit;margin:0}
 .tools button:hover{border-color:var(--gold);position:relative}
 .tools button.txt{width:auto;padding:0 12px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em}
 .tools button.txt.on{color:#14110b;background:var(--gold);border-color:var(--gold)}
-.credit{position:absolute;right:22px;bottom:68px;z-index:3;font-size:10px;color:#5d5d5d;text-align:right}
-.credit a{color:inherit}
+/* etiqueta ao passar o mouse nos botões */
+.tools button{position:relative}
+.tools button[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translate(-50%,4px);white-space:nowrap;background:#0b0b0b;border:1px solid var(--line2);color:var(--ink);font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;pointer-events:none;opacity:0;transition:opacity .12s,transform .12s;z-index:5}
+.tools button[data-tip]:hover::after,.tools button[data-tip]:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+.tools button:last-child[data-tip]::after{left:auto;right:0;transform:translateY(4px)}
+.tools button:last-child[data-tip]:hover::after{transform:none}
+.intro .cred{margin-top:14px;text-align:center;font-size:10.5px;color:#5d5d5d}
+.intro .cred a{color:inherit}
 .hint{position:absolute;bottom:26px;transform:translateX(-50%);font-family:Montserrat,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.24em;color:var(--gold2);padding:10px 18px;z-index:3;pointer-events:none;white-space:nowrap}
 .tip{position:fixed;z-index:2147483001;pointer-events:none;padding:8px 13px;font-family:Montserrat,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);opacity:0;transform:translate(-50%,-135%);white-space:nowrap;border-color:var(--gold)!important}
 .tip small{display:block;font-family:Poppins,sans-serif;font-weight:400;letter-spacing:0;text-transform:none;font-size:11.5px;color:var(--muted);margin-top:1px}
@@ -196,7 +202,6 @@ var HTML=`
 <aside class="side orn" id="side"><div class="tabs" id="tabs"></div><div class="sh" id="sh"></div><div class="ls" id="ls"></div></aside>
 <button class="sidetoggle orn" id="sidetoggle" aria-label="Mostrar lista">☰</button>
 <div class="levels orn" id="levels"></div>
-<div class="credit">Ícones: <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a> · CC BY 3.0</div>
 <div class="intro" id="intro" hidden><div class="box" role="dialog" aria-label="Como usar o mapa">
   <h4>Mapa de Hogwarts</h4><p>Todos os locais do fórum de Hogwarts, em um lugar só.</p>
   <ol>
@@ -206,7 +211,7 @@ var HTML=`
   </ol>
   <button id="introok">Entendi</button>
 </div></div>
-<div class="tools"><button class="orn" id="help" aria-label="Como usar" title="Como usar" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:14px">?</button><button class="orn txt on" id="nmb" aria-pressed="true" title="Mostrar ou esconder os nomes">NOMES</button><button class="orn" id="zin" aria-label="Aproximar">+</button><button class="orn" id="zout" aria-label="Afastar">−</button><button class="orn" id="zfit" aria-label="Enquadrar" style="font-size:14px">⌂</button><button class="orn" id="full" aria-label="Tela cheia" title="Tela cheia" style="font-size:15px">⛶</button></div>
+<div class="tools"><button class="orn" id="help" aria-label="Como usar" data-tip="Como usar" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:14px">?</button><button class="orn txt on" id="nmb" aria-pressed="true" data-tip="Mostrar / esconder nomes">NOMES</button><button class="orn" id="zin" aria-label="Aproximar" data-tip="Aproximar">+</button><button class="orn" id="zout" aria-label="Afastar" data-tip="Afastar">−</button><button class="orn" id="zfit" aria-label="Enquadrar" data-tip="Enquadrar" style="font-size:14px">⌂</button><button class="orn" id="full" aria-label="Tela cheia" data-tip="Tela cheia" style="font-size:15px">⛶</button></div>
 <div class="hint orn" id="hint"></div>
 <div class="tip orn" id="tip"></div>
 <div class="card orn" id="card"><button class="x" id="cx" aria-label="Fechar">×</button><div class="cr" id="ccr"></div><h3 id="cn"></h3><div class="m" id="cm"></div><a id="ca" target="_blank" rel="noopener"><span>Abrir tópico</span><span>↗</span></a></div>
@@ -605,7 +610,7 @@ let rt=0;const refitSoon=()=>{clearTimeout(rt);rt=setTimeout(refit,60)};
 if(window.ResizeObserver)new ResizeObserver(refitSoon).observe(host);else addEventListener("resize",refitSoon);
 const toggleSide=open=>{side.classList.toggle("closed",!open);setTimeout(refit,260)};
 $("sidetoggle").onclick=()=>toggleSide(true);
-const setFull=on=>{host.classList.toggle("full",on);$("full").textContent=on?"✕":"⛶";$("full").title=on?"Sair da tela cheia":"Tela cheia";document.documentElement.style.overflow=on?"hidden":"";setTimeout(refit,30)};
+const setFull=on=>{host.classList.toggle("full",on);$("full").textContent=on?"✕":"⛶";$("full").dataset.tip=on?"Sair da tela cheia":"Tela cheia";document.documentElement.style.overflow=on?"hidden":"";setTimeout(refit,30)};
 $("full").onclick=()=>setFull(!host.classList.contains("full"));
 
 /* nomes ligados por padrão, sem sobrepor */
