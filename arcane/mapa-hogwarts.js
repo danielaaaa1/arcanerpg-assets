@@ -25,7 +25,7 @@ var FONTES="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700
 var ICONES="https://cdn.jsdelivr.net/gh/danielaaaa1/arcanerpg-assets@main/arcane/game-icons.css";
 
 var CSS=`
-:host{all:initial;display:block;position:relative;height:${CONFIG.altura};min-height:520px;margin:0;background:#080808;border:0;overflow:hidden;contain:layout paint}
+:host{all:initial;display:block;position:relative;height:${CONFIG.altura};min-height:520px;margin:0;background:#080808;border:0;border-top:1px solid #262626;overflow:hidden;contain:layout paint}
 :host(.full){position:fixed;inset:0;height:100vh;min-height:0;margin:0;border:0;z-index:2147483000}
 .wrap{position:absolute;inset:0;overflow:hidden;color:#d1d1d1;font-family:Poppins,system-ui,sans-serif;font-size:14px;line-height:1.4;text-align:left;
   --p1:#0e0e0e;--p2:#0a0a0a;--line:#262626;--line2:#313131;--gold:#c4a459;--gold2:#e1c677;--ink:#d1d1d1;--muted:#8a8a8a}
