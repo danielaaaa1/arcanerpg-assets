@@ -248,7 +248,7 @@
 #arcaneNormal .container .indice :is(nome, titulo1, titulo2, titulo3) {
   display: block;
   margin: 12px 0 0;
-  font: 400 20px/1.2 'Hulbert Hopper Display', Cinzel, serif;
+  font: 700 11px/1.5 Montserrat, sans-serif;
   letter-spacing: .4px;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -259,9 +259,10 @@
 #arcaneNormal .container .indice > :is(a, strong, b) {
   display: block;
   margin-top: 16px;
-  font: 700 18px/1.3 Montserrat, sans-serif;
+  font: 400 24px/1.2 'Hulbert Hopper Display', Cinzel, serif;
   overflow-wrap: anywhere;
 }
+#arcaneNormal .container .indice > :is(a, strong, b) :is(a, strong, b, span) { font: inherit !important; }
 #arcaneNormal .container .indice div {
   display: grid;
   grid-template-columns: inherit;
