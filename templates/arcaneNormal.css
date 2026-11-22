@@ -227,55 +227,90 @@
 #arcaneNormal .box info { padding: 12px 16px; }
 #arcaneNormal .box info b { color: var(--green-lt); display: inline-block; }
 
-/* índice em cartões numerados */
-#arcaneNormal .indice {
+/* Índice: duas colunas alinhadas, sem numeração. */
+#arcaneNormal .container .indice {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   margin: 18px 24px 0;
   padding: 0;
   background: none;
   border: 0;
   text-align: left;
-  font-size: 0;
+  font: 400 12px/1.5 Poppins, sans-serif;
 }
-#arcaneNormal .indice br { display: none; }
-#arcaneNormal .indice nome {
+#arcaneNormal .container .indice br { display: none; }
+#arcaneNormal .container .indice > :is(nome, titulo1, titulo2, titulo3, a, strong, b, span) {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+#arcaneNormal .container .indice :is(nome, titulo1, titulo2, titulo3) {
   display: block;
-  margin-bottom: 10px;
-  font: 400 20px/1 'Hulbert Hopper Display', Cinzel, serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--gold-dk);
-}
-#arcaneNormal .indice div { display: block; width: auto; float: none; margin: 0; padding: 0; }
-#arcaneNormal .indice indice {
-  counter-increment: idx;
-  display: block;
-  width: auto;
-  margin: 0;
-}
-#arcaneNormal .indice indice a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 7px 12px;
-  border-bottom: 1px solid var(--lines);
-  font: 700 11px/1.4 Montserrat, sans-serif;
+  margin: 12px 0 0;
+  font: 400 20px/1.2 'Hulbert Hopper Display', Cinzel, serif;
   letter-spacing: .4px;
   text-transform: uppercase;
+  color: var(--gold-dk);
+  text-align: left;
+}
+#arcaneNormal .container .indice > :first-child { margin-top: 0; }
+#arcaneNormal .container .indice nome a { font: inherit; color: inherit !important; }
+#arcaneNormal .container .indice > :is(a, strong, b) {
+  display: block;
+  margin-top: 16px;
+  font: 700 18px/1.3 Montserrat, sans-serif;
+  overflow-wrap: anywhere;
+}
+#arcaneNormal .container .indice div {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: 1 / -1;
+  gap: 10px;
+  width: auto;
+  min-width: 0;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+#arcaneNormal .container .indice div > :is(nome, titulo1, titulo2, titulo3) { grid-column: 1 / -1; }
+#arcaneNormal .container .indice indice {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  vertical-align: top;
+  font: 400 11px/1.5 Poppins, sans-serif;
+}
+#arcaneNormal .container .indice indice a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  min-height: 50px;
+  height: auto;
+  padding: 12px 16px;
+  border: 1px solid var(--lines);
+  background: rgba(255,255,255,.02);
+  font: 700 11px/1.5 Montserrat, sans-serif;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  text-align: left;
+  overflow-wrap: anywhere;
   color: var(--txt) !important;
-  transition: .2s;
+  transition: background .2s, border-color .2s;
 }
-#arcaneNormal .indice indice a::before {
-  content: counter(idx, decimal-leading-zero);
-  flex: none;
-  min-width: 20px;
-  font: 400 14px/1 'Hulbert Hopper Display', Cinzel, serif;
-  color: var(--green-lt);
+#arcaneNormal .container .indice indice a::before { content: none; display: none; }
+#arcaneNormal .container .indice indice a:hover {
+  background: var(--gold-dk);
+  border-color: var(--gold-dk);
+  color: #fff !important;
 }
-#arcaneNormal .indice indice a:hover { background: var(--gold-dk); color: #fff !important; }
-#arcaneNormal .indice indice a:hover::before { color: #fff; }
-#arcaneNormal .indice nome, #arcaneNormal .indice titulo1, #arcaneNormal .indice titulo2 { display: block; margin: 16px 0 0; font-size: 15px; }
-#arcaneNormal .indice > nome:first-child { margin-top: 0; }
+@media (max-width: 700px) {
+  #arcaneNormal .container .indice { grid-template-columns: minmax(0, 1fr); }
+}
 /* créditos */
 #arcaneNormal:after {
   content: "「arcane」";
