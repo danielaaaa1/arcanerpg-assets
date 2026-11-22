@@ -392,3 +392,6 @@
   #arcaneNormal .posicaoConteudo { padding: 14px 12px; }
   #arcaneNormal .listaQuad { grid-template-columns: minmax(0,1fr); }
 }
+
+/* ícone do card: losango sem girar a letra */
+#arcaneNormal .posicaoIcone { transform: none; }
