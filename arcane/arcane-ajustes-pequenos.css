@@ -24,6 +24,7 @@
 
 .rcurrently-online > .rflex:not(.rrtitle) > div > a:not(:last-of-type)::after {
   content: ",";
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 }
 
 
@@ -34,6 +35,22 @@
 
 .poster-list.posts-users-list,
 #push-bell {
+/* Roda da Fortuna: titulos em Hulbert Hopper Display.
+   O CSS da roda e injetado por script no head (--rw-title: Arsenica, peso 700), entao a troca e feita aqui. */
+.arcane-wheel,
+.arcane-wheel-post {
+  --rw-title: 'Hulbert Hopper Display', Cinzel, serif !important;
+}
+.arcane-wheel__header-title,
+.arcane-wheel h2,
+.arcane-wheel__section-title,
+.arcane-wheel__prize-card,
+.arcane-wheel__result-title,
+.arcane-wheel-post__title,
+.arcane-wheel-post__card-title {
+  font-weight: 400 !important;
+}
+
   display: none !important;
 }
 
