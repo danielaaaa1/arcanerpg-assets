@@ -249,38 +249,36 @@
   text-transform: uppercase;
   color: var(--gold-dk);
 }
+#arcaneNormal .indice div { display: block; width: auto; float: none; margin: 0; padding: 0; }
 #arcaneNormal .indice indice {
   counter-increment: idx;
-  display: inline-block;
-  width: calc(50% - 5px);
-  margin: 0 10px 10px 0;
-  vertical-align: top;
+  display: block;
+  width: auto;
+  margin: 0;
 }
-#arcaneNormal .indice indice:nth-of-type(2n) { margin-right: 0; }
 #arcaneNormal .indice indice a {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-height: 50px;
-  padding: 10px 16px;
-  background: var(--bg-t);
-  border: 1px solid var(--lines);
-  font: 700 11.5px/1.4 Montserrat, sans-serif;
+  gap: 12px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--lines);
+  font: 700 11px/1.4 Montserrat, sans-serif;
   letter-spacing: .4px;
   text-transform: uppercase;
   color: var(--txt) !important;
-  transition: .25s;
+  transition: .2s;
 }
 #arcaneNormal .indice indice a::before {
   content: counter(idx, decimal-leading-zero);
   flex: none;
-  font: 400 20px/1 'Hulbert Hopper Display', Cinzel, serif;
+  min-width: 20px;
+  font: 400 14px/1 'Hulbert Hopper Display', Cinzel, serif;
   color: var(--green-lt);
 }
-#arcaneNormal .indice indice a:hover { background: var(--gold-dk); border-color: var(--gold-dk); color: #fff !important; }
+#arcaneNormal .indice indice a:hover { background: var(--gold-dk); color: #fff !important; }
 #arcaneNormal .indice indice a:hover::before { color: #fff; }
-#arcaneNormal .indice titulo1, #arcaneNormal .indice titulo2 { font-size: 15px; margin: 10px 0; }
-
+#arcaneNormal .indice nome, #arcaneNormal .indice titulo1, #arcaneNormal .indice titulo2 { display: block; margin: 16px 0 6px; font-size: 15px; }
+#arcaneNormal .indice > nome:first-child { margin-top: 0; }
 /* créditos */
 #arcaneNormal:after {
   content: "「arcane」";
@@ -300,5 +298,4 @@
   #arcaneNormal .bottom, #arcaneNormal .indice { margin-left: 10px; margin-right: 10px; }
   #arcaneNormal .bottom { padding: 18px 16px; }
   #arcaneNormal titulo1 { font-size: 21px; }
-  #arcaneNormal .indice indice { width: 100%; margin-right: 0; }
 }
