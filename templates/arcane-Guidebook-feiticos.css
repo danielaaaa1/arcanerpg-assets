@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 /* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (keposhkas) e eu irei fazê-lo por um preço razoável! :D */
 
 @font-face {
@@ -49,7 +50,7 @@
     width: auto;
     border-bottom: 1px solid #313131;
     padding: 10px;
-    font: 900 26px / 100% 'Arsenica';
+    font: 400 26px / 100% 'Hulbert Hopper Display', Cinzel, serif;
     text-transform: uppercase;
     text-align: left;
     text-shadow: 1px 1px 1px black;
@@ -204,7 +205,7 @@ a.menu.active:before {
     width: 100%;
     background: #0000008f;
     padding: 10.5px;
-    font: 700 25px/100% 'Arsenica';
+    font: 400 25px/100% 'Hulbert Hopper Display', Cinzel, serif;
     text-transform: uppercase;
     border-bottom: 1px solid #313131;
     display: flex;
