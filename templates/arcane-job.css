@@ -1,6 +1,7 @@
 /* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
 
 /* fontes */
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 @import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/aqira');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
@@ -208,4 +209,95 @@ font: 500 18px 'obrige';
     text-align:center;
     opacity: .8;
     text-transform: uppercase;
+}
+
+
+/* ===== Fiscalização de cargos: mesmo visual do Quadro de Cargos =====
+   Escopo: só o post com data-arc-template="fiscalizacao-cargos". O formulário (.arc-form-box) não é tocado. */
+#arcane-job[data-arc-template="fiscalizacao-cargos"] { --width: 900px; }
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container {
+  width: var(--width);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  background: linear-gradient(180deg, #080808 0%, #080808 50%, color-mix(in srgb, var(--ppt-2, #617c8c) 32%, transparent) 100%);
+  border: 1px solid #262626;
+  outline: 0;
+  color: #bcbcbc;
+  font: 12px/1.7 Poppins, Arial, sans-serif;
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 215px;
+  padding: 22px 30px 30px;
+  overflow: hidden;
+  text-align: left;
+  background: #080808;
+  border: 0;
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ppt) center / cover no-repeat;
+  background-blend-mode: multiply;
+  filter: brightness(.9);
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #080808 0%, rgba(8,8,8,.75) 38%, rgba(8,8,8,.15) 75%, rgba(8,8,8,.4) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0) 55%, #080808 100%);
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header .title {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 600px;
+  margin: 0;
+  padding: 0 0 0 18px;
+  border-left: 3px solid var(--ppt-2, #617c8c);
+  font: 400 38px/35px 'Hulbert Hopper Display', Cinzel, serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #f3ecd9;
+  text-shadow: 0 6px 30px rgba(0,0,0,.65);
+  filter: none;
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header .subtitle {
+  display: table;
+  margin: 10px 0 0;
+  padding: 6px 18px;
+  font: 700 9px/1.6 Poppins, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #d1d1d1;
+  text-shadow: none;
+  filter: none;
+  background: rgba(0,0,0,.55);
+  border: 1px solid color-mix(in srgb, var(--ppt-2, #617c8c) 18%, transparent);
+}
+#arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .txt {
+  margin: 16px 18px 18px;
+  padding: 18px 20px 20px;
+  background: #080808;
+  border: 1px solid color-mix(in srgb, var(--ppt-2, #617c8c) 22%, transparent);
+  box-shadow: 0 0 40px rgba(0,0,0,.6);
+  color: #bcbcbc;
+  font: 12px/1.7 Poppins, Arial, sans-serif;
+  text-align: justify;
+}
+@media (max-width: 640px) {
+  #arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header { min-height: 170px; padding: 18px; }
+  #arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header .title { font-size: 26px; line-height: 25px; padding-left: 12px; }
+  #arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .txt { margin: 12px 10px 10px; padding: 14px; }
 }
