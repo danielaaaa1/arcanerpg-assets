@@ -335,3 +335,60 @@
   #arcaneNormal .bottom { padding: 18px 16px; }
   #arcaneNormal titulo1 { font-size: 21px; }
 }
+
+
+/* ===== Quadribol: cards de posição/atributo, cartões de CD e tabela de ações =====
+   Estrutura: .areaPosicoes > .posicaoQuad > .posicaoTopo (.posicaoIcone + .posicaoTitulo[titulo1 + .posicaoSub])
+                                           + .posicaoConteudo > .posicaoBloco (.resumoFuncao | .alertaQuad)
+   Dentro dos blocos: .miniTitulo, .listaQuad > span, .dificuldades > .difCard (b + span), .notaQuad
+   Tabela: <div class="areaAcoesTabela"><table class="acoesTabela"> ... <tr class="destaque"> */
+#arcaneNormal .areaPosicoes { position: relative; margin: 28px 24px 0; text-align: left; }
+#arcaneNormal .areaPosicoes br { display: none; }
+#arcaneNormal .posicaoQuad { position: relative; margin: 0 0 14px; background: rgba(16,16,16,.92); border: 1px solid var(--lines); outline: 1px solid rgba(123,110,61,.25); outline-offset: 4px; overflow: hidden; }
+#arcaneNormal .posicaoQuad:last-child { margin-bottom: 0; }
+#arcaneNormal .posicaoTopo { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: linear-gradient(90deg, rgba(36,64,40,.35), rgba(0,0,0,.35)); border-bottom: 1px solid var(--lines); }
+#arcaneNormal .posicaoIcone { flex: 0 0 38px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font: 400 19px/1 'Hulbert Hopper Display', Cinzel, serif; color: var(--gold); background: rgba(123,110,61,.1); border: 1px solid rgba(123,110,61,.55); transform: rotate(45deg); }
+#arcaneNormal .posicaoIcone > * { transform: rotate(-45deg); }
+#arcaneNormal .posicaoTitulo { flex: 1; min-width: 0; margin-left: 4px; }
+#arcaneNormal .posicaoTitulo titulo1 { display: block; margin: 0; font: 400 22px/1.1 'Hulbert Hopper Display', Cinzel, serif; letter-spacing: .6px; text-transform: uppercase; color: var(--gold-dk); text-shadow: 0 2px 14px rgba(0,0,0,.6); }
+#arcaneNormal .posicaoSub { display: block; margin-top: 5px; font: 700 8.5px/1.4 Montserrat, sans-serif; letter-spacing: 2.4px; text-transform: uppercase; color: var(--green-lt); }
+#arcaneNormal .posicaoConteudo { padding: 18px 20px; text-align: left; overflow-wrap: break-word; }
+#arcaneNormal .posicaoBloco { margin: 0 0 14px; padding: 0 0 14px; border-bottom: 1px solid rgba(255,255,255,.05); line-height: 1.75; text-align: left; }
+#arcaneNormal .posicaoBloco:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+#arcaneNormal .posicaoBloco.resumoFuncao, #arcaneNormal .posicaoBloco.alertaQuad { padding: 12px 16px; border-bottom: 0; }
+#arcaneNormal .resumoFuncao { background: rgba(0,0,0,.3); border-left: 2px solid var(--green-lt); }
+#arcaneNormal .alertaQuad { background: rgba(123,110,61,.1); border-left: 2px solid var(--gold); }
+#arcaneNormal .miniTitulo { display: block; margin-bottom: 7px; font: 700 9.5px/1.4 Montserrat, sans-serif; letter-spacing: 2.2px; text-transform: uppercase; color: var(--gold); }
+#arcaneNormal .miniTitulo::before { content: '\2726'; margin-right: 7px; color: var(--green-lt); }
+#arcaneNormal .notaQuad { display: block; margin-top: 10px; padding: 8px 12px; font-size: 11px; line-height: 1.6; text-align: left; background: rgba(123,110,61,.07); border: 1px solid rgba(123,110,61,.2); }
+#arcaneNormal .listaQuad { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 6px 12px; margin-top: 8px; }
+#arcaneNormal .listaQuad span { display: block; padding: 6px 10px; font: 500 12px/1.4 Poppins, sans-serif; color: var(--txt); background: rgba(0,0,0,.28); border-left: 2px solid var(--gold-dk); overflow-wrap: break-word; }
+#arcaneNormal .listaQuad span::before { content: '\2726'; margin-right: 7px; color: var(--green-lt); font-size: 9px; }
+#arcaneNormal .dificuldades { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin-top: 8px; }
+#arcaneNormal .difCard { padding: 10px 8px; text-align: center; background: rgba(0,0,0,.35); border: 1px solid var(--lines); border-top: 2px solid var(--green); overflow-wrap: break-word; }
+#arcaneNormal .difCard b { display: block; margin: 0 0 5px; font: 700 10px/1.3 Montserrat, sans-serif; letter-spacing: 1px; text-transform: uppercase; color: var(--green-lt); }
+#arcaneNormal .difCard span { display: block; font: 500 11px/1.4 Poppins, sans-serif; color: var(--txt); }
+
+/* tabela de ações */
+#arcaneNormal .areaAcoesTabela { margin: 18px 24px 0; overflow-x: auto; }
+#arcaneNormal .container > .acoesTabela { display: table; width: calc(100% - 48px); margin: 18px 24px 0; }
+#arcaneNormal .acoesTabela { width: 100%; border-collapse: collapse; font: 400 11.5px/1.6 Poppins, sans-serif; text-align: left; background: rgba(16,16,16,.92); border: 1px solid var(--lines); }
+#arcaneNormal .acoesTabela th { padding: 10px 12px; font: 700 9.5px/1.4 Montserrat, sans-serif; letter-spacing: 2px; text-transform: uppercase; text-align: left; color: var(--gold); background: linear-gradient(90deg, rgba(36,64,40,.45), rgba(0,0,0,.4)); border-bottom: 1px solid var(--gold-dk); }
+#arcaneNormal .acoesTabela td { padding: 9px 12px; vertical-align: top; border-bottom: 1px solid rgba(255,255,255,.05); }
+#arcaneNormal .acoesTabela tbody tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+#arcaneNormal .acoesTabela tbody tr:hover td { background: rgba(36,64,40,.22); }
+#arcaneNormal .acoesTabela td:first-child b { color: var(--gold); }
+#arcaneNormal .acoesTabela tr.destaque td { background: rgba(123,110,61,.1); border-bottom-color: rgba(123,110,61,.35); }
+#arcaneNormal .acoesTabela tr.destaque td:first-child { border-left: 2px solid var(--gold); }
+
+/* "detalhes técnicos" (dl) */
+#arcaneNormal .bottom dl { margin: 12px 0 0; padding: 10px 14px; background: rgba(0,0,0,.3); border-left: 2px solid var(--green-lt); }
+#arcaneNormal .bottom dt { font: 700 9.5px/1.4 Montserrat, sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+#arcaneNormal .bottom dd { margin: 4px 0 0; }
+
+@media (max-width: 640px) {
+  #arcaneNormal .areaPosicoes, #arcaneNormal .areaAcoesTabela { margin-left: 10px; margin-right: 10px; }
+  #arcaneNormal .container > .acoesTabela { width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; }
+  #arcaneNormal .posicaoConteudo { padding: 14px 12px; }
+  #arcaneNormal .listaQuad { grid-template-columns: minmax(0,1fr); }
+}
