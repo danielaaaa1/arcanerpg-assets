@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 /* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
 Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
 Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
@@ -73,7 +74,7 @@ para conversarmos sobre valores e demais detalhes. Beijocas */
   margin: 0px;
   margin-bottom: -10px;
   color: #ababab;
-  font: 500 1.8rem / 100% "Modern Aesthetic";
+  font: 400 1.8rem / 100% 'Hulbert Hopper Display', Cinzel, serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.65);
