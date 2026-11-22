@@ -128,7 +128,6 @@
   text-align: left;
   text-shadow: 0 2px 14px rgba(0,0,0,.6);
 }
-#arcaneNormal titulo1 + br { display: none; }
 
 /* título 2: maiúsculo com sublinhado do tamanho do texto */
 #arcaneNormal titulo2 {
@@ -142,7 +141,6 @@
   color: var(--txt);
   text-align: left;
 }
-#arcaneNormal titulo2 + br { display: none; }
 
 /* título 3: pequeno e espaçado, com linha pontilhada até o fim */
 #arcaneNormal titulo3 {
@@ -161,7 +159,6 @@
   flex: 1;
   border-bottom: 2px dotted rgba(185,158,89,.55);
 }
-#arcaneNormal titulo3 + br { display: none; }
 
 /* títulos dentro de componentes próprios (quadribol, tabelas, cards): só fonte e cor */
 #arcaneNormal :not(.bottom):not(.indice):not(.highlight) > titulo1 {
