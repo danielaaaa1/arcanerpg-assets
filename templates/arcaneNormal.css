@@ -247,8 +247,8 @@
 }
 #arcaneNormal .container .indice :is(nome, titulo1, titulo2, titulo3) {
   display: block;
-  margin: 12px 0 -10px;
-  margin-bottom: -10px !important;
+  margin: 12px 0 -4px;
+  margin-bottom: -4px !important;
   font: 400 20px/1.2 'Hulbert Hopper Display', Cinzel, serif;
   letter-spacing: .4px;
   text-transform: uppercase;
