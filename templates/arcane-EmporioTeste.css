@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 /* esse codigo ta uma bagunça kk esteja avisadoh */
 
 @import url('https://fonts.cdnfonts.com/css/modern-aesthetic');
@@ -122,7 +123,7 @@
 .recibo .titulo {
  margin: 0;
  color: var(--bg-accent);
- font: 500 2rem / 100% 'Modern Aesthetic';
+ font: 400 2rem / 100% 'Hulbert Hopper Display', Cinzel, serif;
  letter-spacing: 1px;
  text-align: left;
  text-transform: uppercase;
@@ -334,7 +335,7 @@
   padding-bottom: 12px;
   border-bottom: 1px solid var(--lines);
   color: var(--bg-accent);
-  font: 500 1.6rem / 100% 'Modern Aesthetic';
+  font: 400 1.6rem / 100% 'Hulbert Hopper Display', Cinzel, serif;
   letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
