@@ -225,7 +225,7 @@ font: 500 18px 'obrige';
   border: 1px solid #262626;
   outline: 0;
   color: #bcbcbc;
-  font: 12px/1.7 Poppins, Arial, sans-serif;
+  font: 13px/1.7 Poppins, Arial, sans-serif;
 }
 #arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header {
   position: relative;
@@ -293,7 +293,7 @@ font: 500 18px 'obrige';
   border: 1px solid color-mix(in srgb, var(--ppt-2, #617c8c) 22%, transparent);
   box-shadow: 0 0 40px rgba(0,0,0,.6);
   color: #bcbcbc;
-  font: 12px/1.7 Poppins, Arial, sans-serif;
+  font: 13px/1.7 Poppins, Arial, sans-serif;
   text-align: justify;
 }
 @media (max-width: 640px) {
