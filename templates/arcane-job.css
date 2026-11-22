@@ -230,7 +230,7 @@ font: 500 18px 'obrige';
 #arcane-job[data-arc-template="fiscalizacao-cargos"] a[href="https://is.gd/arcanerpg"] ~ .container .header {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   box-sizing: border-box;
   min-height: 215px;
   padding: 22px 30px 30px;
