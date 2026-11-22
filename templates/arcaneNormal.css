@@ -1,251 +1,304 @@
-/* Olá! Aqui é a Dune, criadora deste código desenvolvido para o Arcane.  
-Se você está lendo isto, provavelmente resolveu dar uma espiada no código fonte, não é?  
-Caso tenha interesse em um código ou template parecido, é só me contatar pelo Discord (keposhkas)  
-para conversarmos sobre valores e demais detalhes. Beijocas */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Arcane · template "Normal" (tópicos de regras e sistemas)
+   Tags: <titulo>, <subtitulo>, <titulo1>, <titulo2>, <titulo3> (nova, opcional), <b2>, <b3>, .highlight, .indice, .box.
+   Trocar a arte do cabeçalho: <div id="arcaneNormal" style="--img:url(LINK)">
+   Trocar a arte das caixas de destaque: style="--img2:url(LINK)"
+   Artes padrão: "Late night magic castle", de 尹 明 (artstation.com/nishizx)
+                 "Magic forest 002", de Julian Calle (artstation.com/handsdigitalstudio). */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
 
 #arcaneNormal {
- margin-top: 25px;
- margin-bottom: 10px;
- --bg-main: #080808;
- --bg-darker: #080808;
- --bg-transparent: #00000070;
- --bg-green: #244028;
- --bg-accent: #7B6E3D;
- --lines: #313131;
- --text-color: #d1d1d1;
- --text-lighter: #fff;
- --text-dark: #000;
- --text-accent: #b99e59;
- --text-green: #538353;
- --width: 90%;
+  --img: url(https://cdnb.artstation.com/p/assets/images/images/072/173/637/large/-2.jpg);
+  --img2: url(https://cdnb.artstation.com/p/assets/images/images/037/554/481/large/julian-calle-magical-forest-002.jpg);
+  --bg: #0a0a0a;
+  --bg-t: rgba(16,16,16,.92);
+  --tint: #7a7a7a;
+  --green: #244028;
+  --gold-dk: #7B6E3D;
+  --gold: #b99e59;
+  --green-lt: #538353;
+  --lines: #313131;
+  --txt: #d1d1d1;
+  --width: 90%;
+  margin: 30px auto 10px;
 }
+#arcaneNormal * { box-sizing: border-box; }
 
 #arcaneNormal .container {
- font: 13px / 150% Poppins, sans-serif;
- color: var(--text-color);
- text-align: justify;
- background: #0A0A0A;
- padding: 0px;
- margin: 0 auto;
- width: var(--width);
- border: 1px solid var(--lines);
- position: relative;
+  position: relative;
+  width: var(--width);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0 24px;
+  font: 400 12.5px/1.8 Poppins, sans-serif;
+  color: var(--txt);
+  text-align: justify;
+  background: var(--bg);
+  border: 1px solid var(--lines);
+  outline: 1px solid rgba(123,110,61,.35);
+  outline-offset: 5px;
+  counter-reset: idx;
 }
+#arcaneNormal .container::before { content: none; }
 
+/* cabeçalho: arte em preto e branco + degradê */
 #arcaneNormal .top {
- background: transparent;
- position: relative;
- z-index: 99;
- text-align: justify;
- padding: 10px;
- padding-left: 20px;
- padding-top: 20px;
+  position: relative;
+  min-height: 215px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px 30px 22px;
+  text-align: left;
+  background-color: var(--tint);
+  background-image:
+    linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.7) 38%, rgba(10,10,10,.12) 75%, rgba(10,10,10,.35) 100%),
+    linear-gradient(180deg, rgba(10,10,10,0) 45%, var(--bg) 100%),
+    var(--img);
+  background-size: auto, auto, cover;
+  background-position: center, center, center 42%;
+  background-repeat: no-repeat;
+  background-blend-mode: normal, normal, luminosity;
 }
-
-#arcaneNormal .container::before {
- position: absolute;
- top: 0px;
- left: 0px;
- content: '';
- display: block;
- background-image: url(https://i.imgur.com/405x71T.png);
- background-size: 100%;
- height: 100%;
- width: 300px;
- background-repeat: no-repeat;
- mix-blend-mode: soft-light;
- z-index: 10;
- background-position-y: -10px;
-}
-
+#arcaneNormal .top br { display: none; }
 #arcaneNormal .top titulo {
- display: flex;
- font: 500 2rem/100% 'Modern Aesthetic';
- text-transform: uppercase;
- color: #7B6E3D;
- letter-spacing: 1px;
- position: relative;
- align-items: center;
- z-index: 99;
+  display: block;
+  font: 400 36px/1 'Hulbert Hopper Display', Cinzel, serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  text-shadow: 0 4px 22px rgba(0,0,0,.8);
 }
-
-#arcaneNormal .top subtitulo::before {
- content: "";
- position: relative;
- width: 30px;
- margin-right: 10px;
- height: 3px;
- background-color: #7B6E3D;
- display: block;
- z-index: 99;
-}
-
 #arcaneNormal .top subtitulo {
- display: flex;
- font: 600 13px / 100% Montserrat;
- opacity: 1;
- letter-spacing: .3px;
- position: relative;
- z-index: 99;
- align-items: center;
- margin-right: 30px;
-}
+  display: table;
+  max-width: 560px;
+  margin: 8px 0 0;
+  padding: 6px 18px;
+  font: 700 9px/1.6 Poppins, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--txt);
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(123,110,61,.35);
+  text-align: left;
+}#arcaneNormal .top subtitulo::before { content: none; }
 
+/* conteúdo: contorno fino que sobe num arco gótico no meio do topo */
 #arcaneNormal .bottom {
- position: relative;
- z-index: 99;
- padding: 20px;
- margin-top: -10px;
+  position: relative;
+  margin: 38px 24px 0;
+  padding: 30px 32px 28px;
+  background: var(--bg);
+  border: 1px solid var(--lines);
 }
-
-#arcaneNormal .indice {
- padding: 20px;
- background: var(--bg-darker);
- z-index: 99;
- position: relative;
- border-top: 1px solid var(--lines);
- transition: 500ms;
+#arcaneNormal .bottom::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 200px;
+  height: 30px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='30' viewBox='0 0 200 30'%3E%3Cpath d='M46 30 L46 29.5 Q84 29.5 100 4 Q116 29.5 154 29.5 L154 30 Z' fill='%230a0a0a'/%3E%3Cpath d='M42 29.5 L46 29.5 Q84 29.5 100 4 Q116 29.5 154 29.5 L158 29.5' fill='none' stroke='%23313131'/%3E%3Cpath d='M68 29 Q91 26.5 100 14 Q109 26.5 132 29' fill='none' stroke='%237B6E3D'/%3E%3Cpath d='M100 18.5 L103.5 22.5 L100 26.5 L96.5 22.5 Z' fill='%237B6E3D'/%3E%3C/svg%3E") center / 200px 30px no-repeat;
 }
-
-#arcaneNormal .indice nome {
- font: 700 1.3rem/100% 'Montserrat';
- text-transform: uppercase;
- color: var(--text-green);
- display: block;
- position: relative;
- transition: 500ms;
+#arcaneNormal .bottom + .bottom { margin-top: 44px; }
+/* capitular quando o texto começa direto */
+#arcaneNormal .bottom:not(:has(> titulo1:first-child, > titulo2:first-child, > titulo3:first-child, > .highlight:first-child, > .box:first-child))::first-letter {
+  float: left;
+  margin: 5px 10px 0 0;
+  font: 400 44px/.8 'Hulbert Hopper Display', Cinzel, serif;
+  color: var(--gold-dk);
 }
+#arcaneNormal a { color: var(--gold); text-decoration: none; }
+#arcaneNormal a:hover { color: #fff; }
+#arcaneNormal b, #arcaneNormal strong { color: var(--gold); font-weight: 600; }
+#arcaneNormal i, #arcaneNormal em { color: #fff; }
+#arcaneNormal ul { margin: 6px 0; padding-left: 0; list-style: none; }
+#arcaneNormal ul li { position: relative; padding-left: 20px; margin-bottom: 4px; }
+#arcaneNormal ul li::before { content: ''; position: absolute; left: 3px; top: .72em; width: 6px; height: 6px; background: var(--green-lt); transform: rotate(45deg); }
 
-#arcaneNormal .indice indice a, #arcaneNormal indice a:link {
- color: var(--text-color) !important;
- text-decoration: none;
- background-size: 2px;
- transition: 500ms;
-}
-
-#arcaneNormal .indice indice a::before {
- content: "✦";
- margin-right: 5px;
- position: relative;
- color: var(--text-green);
- transition: 500ms;
-}
-
-#arcaneNormal .indice a:hover::before {
- color: var(--text-accent);
- transition: 500ms;
-}
-
-#arcaneNormal .indice a:hover {
- margin-left: 5px;
- transition: 500ms;
-}
-
-#arcaneNormal .indice titulo1 {
- font: 500 23px/100% 'Modern Aesthetic';
- text-transform: uppercase;
- letter-spacing: .5px;
- display: block;
- color: var(--text-accent);
- opacity: .8;
-}
-
-#arcaneNormal .indice titulo2 {
-  font: 700 15px 'Montserrat';
-  text-transform: uppercase;
-  color: #FFFFFF;
+/* título 1: grande, Hulbert dourado */
+#arcaneNormal titulo1 {
   display: block;
-  opacity: .6;
+  margin: 20px 0 10px;
+  font: 400 24px/1.1 'Hulbert Hopper Display', Cinzel, serif;
+  letter-spacing: .3px;
+  color: var(--gold-dk);
+  text-align: left;
+  text-shadow: 0 2px 14px rgba(0,0,0,.6);
 }
+#arcaneNormal titulo1 + br { display: none; }
 
-#arcaneNormal .bottom titulo1 {
- font: 500 23px/100% 'Modern Aesthetic';
- text-transform: uppercase;
- letter-spacing: .5px;
- display: block;
- color: var(--text-accent);
- opacity: .8;
-}
-
-#arcaneNormal .bottom titulo2 {
-  font: 700 15px 'Montserrat';
+/* título 2: maiúsculo com sublinhado do tamanho do texto */
+#arcaneNormal titulo2 {
+  display: table;
+  margin: 16px 0 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--gold-dk);
+  font: 400 17px/1.2 'Hulbert Hopper Display', Cinzel, serif;
+  letter-spacing: .8px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--txt);
+  text-align: left;
+}
+#arcaneNormal titulo2 + br { display: none; }
+
+/* título 3: pequeno e espaçado, com linha pontilhada até o fim */
+#arcaneNormal titulo3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0 6px;
+  font: 700 10.5px/1.4 Montserrat, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--txt);
+  text-align: left;
+}
+#arcaneNormal titulo3::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px dotted rgba(185,158,89,.55);
+}
+#arcaneNormal titulo3 + br { display: none; }
+
+/* títulos dentro de componentes próprios (quadribol, tabelas, cards): só fonte e cor */
+#arcaneNormal :not(.bottom):not(.indice):not(.highlight) > titulo1 {
+  margin: 0;
+  font-size: 22px;
+}
+#arcaneNormal :not(.bottom):not(.indice):not(.highlight) > titulo2 {
   display: block;
-  opacity: .6;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-#arcaneNormal .bottom b {
- color: var(--text-accent);
-}
-
-#arcaneNormal .bottom b2 {
- color: var(--text-green);
- font-weight: 700;
- position: relative;
-}
-
-#arcaneNormal .bottom b3 {
-  background: #244028;
-  padding: 0px 7px;
-  vertical-align: middle;
-  font-weight: 700;
+#arcaneNormal b2 { color: var(--green-lt); font-weight: 700; }
+#arcaneNormal b2::before { content: '\2726'; margin-right: 6px; }
+#arcaneNormal b3 {
   display: inline-block;
+  padding: 0 8px;
+  vertical-align: middle;
+  font: 700 11.5px/1.75 Poppins, sans-serif;
+  color: var(--txt);
+  background: var(--green);
+  border-left: 2px solid var(--green-lt);
 }
 
-#arcaneNormal .bottom b2:before {
- content: "✦";
- margin-right: 5px;
-}
-
-#arcaneNormal .box {
- display: flex;
- background: rgba(0,0,0,0.5);
- outline: 1px solid var(--lines);
- outline-offset: 3px;
- align-items: center;
- position: relative;
- overflow: hidden;
-}
-
-#arcaneNormal .box icon {
- display: flex;
- position: relative;
-}
-#arcaneNormal .box icon i {
- font-size: 30px;
- position: relative;
- color: var(--text-accent);
- margin-right: 50px;
- left: 25px;
-}
-
-#arcaneNormal .box info {
- border-left: 1px solid var(--lines);
- padding: 10px;
-}
-
-#arcaneNormal .box info b {
- color: var(--text-green);
- display: inline-block;
-}
-
+/* caixa de destaque: moldura dupla com uma arte esmaecida atrás */
 #arcaneNormal .highlight {
-  border-left: 1px solid #7B6E3D;
-  padding: 5px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  position: relative;
+  margin: 16px 5px;
+  padding: 20px 24px;
+  background-color: var(--tint);
+  background-image:
+    linear-gradient(90deg, rgba(14,14,14,.97) 0%, rgba(14,14,14,.9) 40%, rgba(14,14,14,.45) 100%),
+    var(--img2);
+  background-size: auto, cover;
+  background-position: center, right center;
+  background-repeat: no-repeat;
+  background-blend-mode: normal, luminosity;
+  border: 1px solid var(--lines);
+  outline: 1px solid var(--lines);
+  outline-offset: 4px;
+}
+#arcaneNormal .highlight titulo1 { margin-top: 0; font-size: 21px; }
+#arcaneNormal .highlight titulo2 { margin-top: 0; }
+#arcaneNormal .highlight b3 {
+  padding: 3px 12px;
+  margin: 2px 0;
+  font: 700 10.5px/1.6 Montserrat, sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(0,0,0,.45);
+  border: 1px solid var(--lines);
 }
 
-#arcaneNormal:after{
-    content: "「arcane」";
-    font: bold 8.5px 'Consolas';
-    color: #969696;
-    margin-top: 6px;
-    display:block;
-    text-align:center;
-    opacity: .8;
-    text-transform: uppercase;
+/* caixa com ícone */
+#arcaneNormal .box {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  background: rgba(36,64,40,.18);
+  border: 1px solid var(--lines);
+}
+#arcaneNormal .box icon { display: flex; align-self: stretch; align-items: center; padding: 0 20px; background: rgba(36,64,40,.35); border-right: 1px solid var(--lines); }
+#arcaneNormal .box icon i { font-size: 24px; color: var(--gold); }
+#arcaneNormal .box info { padding: 12px 16px; }
+#arcaneNormal .box info b { color: var(--green-lt); display: inline-block; }
+
+/* índice em cartões numerados */
+#arcaneNormal .indice {
+  position: relative;
+  margin: 18px 24px 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-size: 0;
+}
+#arcaneNormal .indice br { display: none; }
+#arcaneNormal .indice nome {
+  display: block;
+  margin-bottom: 10px;
+  font: 400 20px/1 'Hulbert Hopper Display', Cinzel, serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+}
+#arcaneNormal .indice indice {
+  counter-increment: idx;
+  display: inline-block;
+  width: calc(50% - 5px);
+  margin: 0 10px 10px 0;
+  vertical-align: top;
+}
+#arcaneNormal .indice indice:nth-of-type(2n) { margin-right: 0; }
+#arcaneNormal .indice indice a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 50px;
+  padding: 10px 16px;
+  background: var(--bg-t);
+  border: 1px solid var(--lines);
+  font: 700 11.5px/1.4 Montserrat, sans-serif;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: var(--txt) !important;
+  transition: .25s;
+}
+#arcaneNormal .indice indice a::before {
+  content: counter(idx, decimal-leading-zero);
+  flex: none;
+  font: 400 20px/1 'Hulbert Hopper Display', Cinzel, serif;
+  color: var(--green-lt);
+}
+#arcaneNormal .indice indice a:hover { background: var(--gold-dk); border-color: var(--gold-dk); color: #fff !important; }
+#arcaneNormal .indice indice a:hover::before { color: #fff; }
+#arcaneNormal .indice titulo1, #arcaneNormal .indice titulo2 { font-size: 15px; margin: 10px 0; }
+
+/* créditos */
+#arcaneNormal:after {
+  content: "「arcane」";
+  display: block;
+  margin-top: 12px;
+  font: bold 8.5px 'Consolas';
+  color: #969696;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+@media (max-width: 640px) {
+  #arcaneNormal .container { width: 100%; outline-offset: 3px; }
+  #arcaneNormal .top { min-height: 190px; padding: 22px 18px 20px; }
+  #arcaneNormal .top titulo { font-size: 26px; }
+  #arcaneNormal .bottom, #arcaneNormal .indice { margin-left: 10px; margin-right: 10px; }
+  #arcaneNormal .bottom { padding: 18px 16px; }
+  #arcaneNormal titulo1 { font-size: 21px; }
+  #arcaneNormal .indice indice { width: 100%; margin-right: 0; }
 }
