@@ -248,12 +248,13 @@
 #arcaneNormal .container .indice :is(nome, titulo1, titulo2, titulo3) {
   display: block;
   margin: 12px 0 0;
-  font: 700 11px/1.5 Montserrat, sans-serif;
+  font: 400 20px/1.2 'Hulbert Hopper Display', Cinzel, serif;
   letter-spacing: .4px;
   text-transform: uppercase;
   color: var(--gold-dk);
   text-align: left;
 }
+#arcaneNormal .container .indice > :is(a, strong, b) + nome { font: 700 11px/1.5 Montserrat, sans-serif; }
 #arcaneNormal .container .indice > :first-child { margin-top: 0; }
 #arcaneNormal .container .indice nome a { font: inherit; color: inherit !important; }
 #arcaneNormal .container .indice > :is(a, strong, b) {
