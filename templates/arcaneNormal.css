@@ -395,3 +395,28 @@
 
 /* ícone do card: losango sem girar a letra */
 #arcaneNormal .posicaoIcone { transform: none; }
+
+
+/* compat: os posts do quadribol trazem <style> próprio (largura 100% e variáveis do template antigo) */
+#arcaneNormal {
+  --bg-main: #0a0a0a;
+  --bg-darker: #080808;
+  --bg-green: var(--green);
+  --bg-accent: var(--gold-dk);
+  --text-color: var(--txt);
+  --text-lighter: #fff;
+  --text-accent: var(--gold);
+  --text-green: var(--green-lt);
+}
+#arcaneNormal .areaAcoesTabela {
+  box-sizing: border-box;
+  width: auto !important;
+  max-width: 100%;
+  margin: 18px 24px 0 !important;
+  border: 1px solid var(--lines) !important;
+  overflow-x: auto;
+}
+#arcaneNormal table.acoesTabela { width: 100% !important; }
+@media (max-width: 640px) {
+  #arcaneNormal .areaAcoesTabela { margin: 18px 10px 0 !important; }
+}
