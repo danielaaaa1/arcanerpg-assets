@@ -36,9 +36,10 @@
   padding: 0;
   position: relative;
   background: var(--box);
-  border: 1px solid var(--g-dk);
-  outline: 0;
-  box-shadow: inset 0 0 60px rgba(0,0,0,.7);
+    border: 1px solid #313131;
+  outline: 1px solid #313131;
+  outline-offset: -4px;
+box-shadow: inset 0 0 60px rgba(0,0,0,.7);
   color: #bcbcbc;
   font: 13px/1.7 Poppins, Arial, sans-serif;
   text-align: left;
@@ -179,3 +180,4 @@
   #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .title { font-size: 24px; }
   #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt { padding: 12px 18px 20px; }
 }
+
