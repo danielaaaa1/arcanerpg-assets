@@ -1,140 +1,158 @@
 /* Template para o Arcane RPG, logo não está permitido copiá-lo de nenhuma forma (copiando o design, entre outras coisas), mas usar como inspiração ou ver como certo código funciona está permitido. Caso desejar algum template para o seu fórum me chame pelo discord (danielaaaaaa) e eu irei fazê-lo por um preço razoável! :D */
 
 /* fontes */
-@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@font-face {
-    font-family: 'Gondgir';
-    src: url('fonts/Gondgir.eot');
-    src: url('fonts/Gondgir.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gondgir.woff2') format('woff2'),
-        url('fonts/Gondgir.woff') format('woff'),
-        url('fonts/Gondgir.ttf') format('truetype'),
-        url('fonts/Gondgir.svg#Gondgir') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@charset "UTF-8";
-@font-face {font-family: "honeybee";src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot");src:url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.eot?#iefix") format("embedded-opentype"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.woff") format("woff"),url("https://files.jcink.net/uploads/ghostsongs/fonts/honeybee.ttf") format("truetype"),url("//solrainha.github.io/honeybee/honeybee.svg#honeybee") format("svg");font-weight: normal;font-style: normal;}
-[data-icon]:before {font-family: "honeybee" !important;content: attr(data-icon);font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-[class^="th-"]:before,[class*=" th-"]:before {font-family: "honeybee" !important;font-style: normal !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-[class^="th-"],[class*=" th-"]{display:inline-grid;}
+@import url('https://fonts.cdnfonts.com/css/hulbert-hopper-display');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
 
-@font-face {
-    font-family: 'Gondgir';
-    src: url('fonts/Gondgir_1.eot');
-    src: url('fonts/Gondgir_1.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gondgir_1.woff2') format('woff2'),
-        url('fonts/Gondgir_1.woff') format('woff'),
-        url('fonts/Gondgir_1.ttf') format('truetype'),
-        url('fonts/Gondgir_1.svg#Gondgir') format('svg');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+/* ícones: SVG em máscara (herdam a cor do texto) */
+#arcane-fgeral {
+  --ic-star: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z'/></svg>");
+  --ic-moon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M20.5 14.5A9 9 0 1 1 9.5 3.5a7.2 7.2 0 0 0 11 11z'/></svg>");
+  --ic-key: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'><circle cx='7.5' cy='12' r='4.2'/><path d='M11.7 12H22M18 12v4.5M21.5 12v3'/></svg>");
+  --ic-quill: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 2C12 2 6.5 7 5.5 15L3 22l1 .5 5-2.5c8-1 12-7 12-18z'/><path d='M8 16l7-7'/></svg>");
+  --ic-wand: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'><path d='M3 21L14 10'/><path d='M18 1.5v7M14.5 5h7M19.5 14v4M17.5 16h4'/></svg>");
+  --ic-eye: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2'><path d='M1.5 12C5 6 19 6 22.5 12 19 18 5 18 1.5 12z'/><circle cx='12' cy='12' r='3' fill='black'/></svg>");
 }
-
-.th-chevron-right:before{content:"\ebc6";}
 
 #arcane-fgeral {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-  --width: 630px;
-  --bg-dark: #0B0B0B;
-  --soli: #143319;
-  --soli-2: #25542d url(https://i.imgur.com/dJCbavJ.png);
-  --bg-light: #2f2f2f;
-  --t-font: 'Gondgir';
-  --m-font: 'Lunasima';
+  --width: 660px;
+  --box: #0d0c09;
+  --g: #538353;
+  --g-dk: #244028;
+  --g-lt: #6b996b;
+  --ic: var(--ic-star);
+  /* imagem do cabeçalho: Occult, David Mrelashvili (ArtStation) https://www.artstation.com/artwork/xDmqZr */
+  --img: url(https://cdnb.artstation.com/p/assets/images/images/063/902/617/large/david-mrelashvili-composition-27-fin-mariam-ergemlidze-x-david-mrelashvili.jpg?1686653298);
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container {
+  box-sizing: border-box;
   width: var(--width);
-  outline: 1px solid var(--bg-light);
-  outline-offset: -3px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
   position: relative;
-  padding: 5px;
-  background: var(--bg-dark);
+  background: var(--box);
+  border: 1px solid var(--g-dk);
+  outline: 0;
+  box-shadow: inset 0 0 60px rgba(0,0,0,.7);
+  color: #bcbcbc;
+  font: 13px/1.7 Poppins, Arial, sans-serif;
+  text-align: left;
 }
 
+/* cabeçalho: imagem em preto e branco + degradê até a cor da caixa */
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header {
-  padding: 25px;
-  text-align: center;
   position: relative;
+  top: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 34px 28px 46px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--box);
+  border: 0;
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--soli-2) center / cover;
-    background-blend-mode: multiply;
-    filter: brightness(.5) saturate(.8)
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--img, none) center / cover no-repeat;
+  filter: grayscale(1) contrast(1.08) brightness(.62);
+}
+
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(13,12,9,.25) 0%, rgba(13,12,9,0) 30%, rgba(13,12,9,.8) 80%, var(--box) 100%);
+}
+
+/* (compat) wrapper antigo do banner: não deve mais desenhar nada */
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .subheader {
+  display: contents;
+}
+#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .subheader::before {
+  content: none;
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .title {
   position: relative;
-  color: #d1d1d1e3;
-  font: 500 32px var(--t-font);
-  text-transform: uppercase;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font: 400 34px/1 'Hulbert Hopper Display', Cinzel, serif;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 1px #000;
-  filter: brightness(.9);
-  margin-top: 5px;
-  margin-bottom: -9px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f3ecd9;
+  text-shadow: 0 4px 22px #000;
+  filter: none;
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .subtitle {
   position: relative;
-  color: #d1d1d1e3;
-  font: 700 11px Montserrat;
+  z-index: 2;
+  display: table;
+  margin: 6px auto 0;
+  padding: 6px 18px;
+  font: 700 9px/1.6 Montserrat, sans-serif;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 1px #000;
-  filter: brightness(.9);
-  opacity: .9;
-  margin-top: 0px;
+  text-align: center;
+  color: var(--g-lt);
+  text-shadow: none;
+  filter: none;
+  background: rgba(0,0,0,.55);
+  border: 1px solid color-mix(in srgb, #538353 40%, transparent);
 }
 
+/* campos do formulário */
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt {
+  margin: 0;
+  padding: 16px 32px 26px;
+  background: transparent;
+  border: 0;
   text-align: left;
-  color: #ABABAB;
-  font: 500 13px var(--m-font);
-  line-height: 160%;
-  padding: 25px;
-  background: #090808;
-  border-top: 1px solid #242322;
-  border-bottom: 1px solid #242322;
-  margin-bottom: 3px;
+  color: #bcbcbc;
+  font: 13px/1.7 Poppins, Arial, sans-serif;
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt b {
-  border-bottom: 2px solid var(--soli);
-  font: 700 13px 'Montserrat';
+  color: var(--g);
+  font: 700 12px Montserrat, sans-serif;
+  letter-spacing: .8px;
   text-transform: uppercase;
-  color: #d1d1d1bf;
   text-decoration: none;
+  border: 0;
 }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt b::before {
-  content: "\ebc6";
-  font-size: 10px;
-  margin-right: 4px;
-  font-family: "honeybee" !important;
-  border-bottom: 0px solid !important;
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+  vertical-align: -2px;
+  background: currentColor;
+  -webkit-mask: var(--ic) center / contain no-repeat;
+  mask: var(--ic) center / contain no-repeat;
 }
 
-#arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .line {
-  margin: 0 auto;
-  height:2px;
-  background-color: #143319;
-  width:25%;
-  display:block;
-  position: relative;
-  top: 1px;
-  transition: 500ms;
-}
+/* ícone opcional por campo: <b class="i-key">, i-moon, i-quill, i-wand, i-eye, i-star */
+#arcane-fgeral .txt b.i-star::before { --ic: var(--ic-star); }
+#arcane-fgeral .txt b.i-moon::before { --ic: var(--ic-moon); }
+#arcane-fgeral .txt b.i-key::before { --ic: var(--ic-key); }
+#arcane-fgeral .txt b.i-quill::before { --ic: var(--ic-quill); }
+#arcane-fgeral .txt b.i-wand::before { --ic: var(--ic-wand); }
+#arcane-fgeral .txt b.i-eye::before { --ic: var(--ic-eye); }
 
 #arcane-fgeral a[href="https://is.gd/arcanerpg"] {
     height: 12px;
@@ -156,3 +174,8 @@
     text-transform: uppercase;
 }
 
+@media (max-width: 640px) {
+  #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header { padding: 26px 16px 38px; }
+  #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .header .title { font-size: 24px; }
+  #arcane-fgeral a[href="https://is.gd/arcanerpg"] ~.container .txt { padding: 12px 18px 20px; }
+}
